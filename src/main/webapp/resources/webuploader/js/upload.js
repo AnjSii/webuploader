@@ -149,10 +149,10 @@
             },
             dnd: '#dndArea',
             paste: '#uploader',
-            swf: BASE_URL + '/resources/uploader/Uploader.swf',
+            swf: BASE_URL + '/resources/webuploader/flash/Uploader.swf',
             chunked: false,
             chunkSize: 512 * 1024,
-            server: BASE_URL + '/upload.json',
+            server: BASE_URL + '/upload.htm',
             // runtimeOrder: 'flash',
 
             // accept: {

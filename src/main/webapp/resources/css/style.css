@@ -84,7 +84,7 @@ table {
     min-height: 238px;
     padding-top: 158px;
     text-align: center;
-    background: url(./icon/image.png) center 93px no-repeat;
+    background: url(../webuploader/icon/image.png) center 93px no-repeat;
     color: #cccccc;
     font-size: 18px;
     position: relative;
@@ -191,7 +191,7 @@ table {
     overflow: hidden;
     width: 0;
     height: 100%;
-    background: #1483d8 url(./icon/progress.png) repeat-x;
+    background: #1483d8 url(../webuploader/icon/progress.png) repeat-x;
 
     -webit-transition: width 200ms linear;
     -moz-transition: width 200ms linear;
@@ -279,7 +279,7 @@ table {
     height: 40px;
     width: 100%;
     z-index: 200;
-    background: url(./icon/success.png) no-repeat right bottom;
+    background: url(../webuploader/icon/success.png) no-repeat right bottom;
 }
 
 #uploader .filelist div.file-panel {
@@ -301,7 +301,7 @@ table {
     float: right;
     text-indent: -9999px;
     overflow: hidden;
-    background: url(./icon/icons.png) no-repeat;
+    background: url(../webuploader/icon/icons.png) no-repeat;
     margin: 5px 1px 1px;
     cursor: pointer;
 }
