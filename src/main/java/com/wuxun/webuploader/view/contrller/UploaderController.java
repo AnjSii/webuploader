@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -24,16 +25,15 @@ public class UploaderController {
 	@RequestMapping(value = "/view.htm", method = RequestMethod.GET)
 	public ModelAndView view(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mv = new ModelAndView();
-
+		mv.setViewName("WEB-INF/view/webuploader.html");
 		return mv;
 	}
 
 	@RequestMapping(value = "/upload.htm", method = RequestMethod.POST)
-	public ModelAndView upload(HttpServletRequest request, HttpServletResponse response) {
-		ModelAndView mv = new ModelAndView();
+	public void upload(HttpServletRequest request, HttpServletResponse response, Model model) {
 		UploadResult result = this.uploaderService
-				.getUploadResult(request, "/data", "filenameUploader", "/uploader", null, 1024 * 1024);
-		mv.addObject("result", result);
-		return mv;
+				.getUploadResult(request, "C:/Users/29416/Desktop/data", "MyFiledName",
+						"/uploader", null, 1024 * 1024);
+		model.addAttribute("result", result);
 	}
 }
