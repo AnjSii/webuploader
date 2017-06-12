@@ -32,6 +32,8 @@ public class UploaderServiceImpl implements UploaderService {
 
 		String successCode = UploadResult.CODE_0;
 		String successInfo = UploadResult.DESC_0;
+		String falseCode = UploadResult.CODE_1;
+		String falseInfo = UploadResult.DESC_3;
 
 		UploadResult result = new UploadResult();
 		/*提供其他方法，以处理一个简单的servlet请求中的部分内容，允许上载文件的访问*/
@@ -47,11 +49,10 @@ public class UploaderServiceImpl implements UploaderService {
 		List<String> list = new ArrayList<>();
 		List<MultipartFile> multipartFileList = multipartHttpServletRequest.getFiles(formFileName);
 		if (multipartFileList.isEmpty()) {
-			result.setCode(successCode);
-			// 添加一个空路径
+			result.setCode(falseCode);
 			list.add(UploadResult.EMPTY_URL);
 			result.setUrls(list);
-			result.setDesc(successInfo);
+			result.setDesc(falseInfo);
 			return result;
 		}
 
@@ -72,11 +73,10 @@ public class UploaderServiceImpl implements UploaderService {
 			for (MultipartFile multipartFile : multipartFileList) {
 				String originalFilename = multipartFile.getOriginalFilename();
 				if (originalFilename.isEmpty()) {
-					result.setCode(successCode);
-					//添加一个空路径
+					result.setCode(falseCode);
 					list.add(UploadResult.EMPTY_URL);
 					result.setUrls(list);
-					result.setDesc(successInfo);
+					result.setDesc(falseInfo);
 					return result;
 				}
 				/* 获取文件的后缀 */

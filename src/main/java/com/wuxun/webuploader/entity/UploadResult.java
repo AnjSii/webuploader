@@ -14,16 +14,19 @@ public class UploadResult {
 
 	public static final String CODE_2 = "2";
 
-	/** 成功 success */
+	/* 成功 success */
 	public static final String DESC_0 = "成功";
 
-	/** 上传文件格式不正确 upload pattern not true */
+	/* 上传文件格式不正确 upload pattern not true */
 	public static final String DESC_1 = "上传文件格式不正确";
 
-	/** 上传文件大小超过了%sKB upload file size gt %s KB */
-	public static final String DESC_2 = "上传文件大小超过了%sKB";
+	/* 上传文件大小超过了%sKB upload file size gt 10M */
+	public static final String DESC_2 = "上传文件大小超过了10M";
 
-	/** 空路径 */
+	/*上传文件失败*/
+	public static final String DESC_3 = "上传文件失败";
+
+	/* 空路径 */
 	public static final String EMPTY_URL = "";
 
 	private String code; // 返回码
