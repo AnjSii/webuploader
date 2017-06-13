@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.nutz.json.Json;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -28,18 +27,19 @@ public class UploaderController {
 	@Autowired
 	UploaderService uploaderService;
 
-	@RequestMapping(value = "/view.htm", method = RequestMethod.GET)
+	@RequestMapping (value = "/view.htm", method = RequestMethod.GET)
 	public ModelAndView view(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("WEB-INF/view/webuploader.html");
 		return mv;
 	}
 
-	@RequestMapping(value = "/upload.htm", method = RequestMethod.POST)
+	@RequestMapping (value = "/upload.htm", method = RequestMethod.POST)
 	public void upload(HttpServletRequest request, HttpServletResponse response) {
+		String win_userName = System.getProperty("user.name");
 		UploadResult result = this.uploaderService
-				.getUploadResult(request, "C:/Users/Wu/Desktop", "MyFiledName",
-						"/uploader", null, 1024 * 1024);
+				.saveFile(request, "C:/Users/" + win_userName + "/Desktop", "MyFiledName",
+						"/webuploader", null, 1024 * 1024);
 		Map<String, Object> json_map = new HashMap<>();
 		json_map.put("code", result.getCode());
 		json_map.put("desc", result.getDesc());

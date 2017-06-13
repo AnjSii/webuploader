@@ -8,23 +8,24 @@ import java.util.List;
  */
 public class UploadResult {
 
-	public static final String CODE_0 = "0";
+	public static final String CODE_0 = "0"; //上传成功返回码
 
-	public static final String CODE_1 = "1";
-
-	public static final String CODE_2 = "2";
+	public static final String CODE_1 = "1"; //上传失败返回码
 
 	/* 成功 success */
 	public static final String DESC_0 = "成功";
 
-	/* 上传文件格式不正确 upload pattern not true */
-	public static final String DESC_1 = "上传文件格式不正确";
-
-	/* 上传文件大小超过了%sKB upload file size gt 10M */
-	public static final String DESC_2 = "上传文件大小超过了10M";
+	/*上传文件失败*/
+	public static final String DESC_1 = "获取文件失败";
 
 	/*上传文件失败*/
-	public static final String DESC_3 = "上传文件失败";
+	public static final String DESC_2 = "上传文件失败";
+
+	/* 上传文件格式不正确*/
+	public static final String DESC_3 = "上传文件格式不正确";
+
+	/* 上传文件大小超过了规定的大小 */
+	public static final String DESC_4 = "上传文件大小超过了规定的大小";
 
 	/* 空路径 */
 	public static final String EMPTY_URL = "";
