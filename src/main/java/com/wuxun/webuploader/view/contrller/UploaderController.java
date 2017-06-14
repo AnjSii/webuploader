@@ -27,6 +27,20 @@ public class UploaderController {
 	@Autowired
 	UploaderService uploaderService;
 
+	@RequestMapping (value = "/simpleuploader1.htm", method = RequestMethod.GET)
+	public ModelAndView simpleuploader1(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("WEB-INF/view/simpleuploader1.html");
+		return mv;
+	}
+
+	@RequestMapping (value = "/simpleuploader2.htm", method = RequestMethod.GET)
+	public ModelAndView simpleuploader2(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("WEB-INF/view/simpleuploader2.html");
+		return mv;
+	}
+
 	@RequestMapping (value = "/view.htm", method = RequestMethod.GET)
 	public ModelAndView view(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mv = new ModelAndView();
