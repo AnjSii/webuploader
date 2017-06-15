@@ -62,7 +62,9 @@
 				formData: { //文件上传请求的参数表，每次发送都会发送此对象中的参数。
 					uid: 123
 				},
-				dnd: '#dndArea', //指定Drag And Drop拖拽的容器，如果不指定，则不启动。
+				prepareNextFile: true, //是否允许在文件传输时提前把下一个文件准备好。 对于一个文件的准备工作比较耗时，比如图片压缩，md5序列化。 如果能提前在当前文件传输期处理，可以节省总体耗时。
+				compress: false, //配置压缩的图片的选项。如果此选项为false, 则图片在上传前不进行压缩。
+				dnd: '#uploader', //指定Drag And Drop拖拽的容器，如果不指定，则不启动。
 				paste: '#uploader', //指定监听paste事件的容器，如果不指定，不启用此功能。此功能为通过粘贴来添加截屏的图片
 				chunked: false, //是否要分片处理大文件上传。
 				//chunkSize: 512 * 1024, //如果要分片，分多大一片？ 默认大小为5M。
@@ -431,7 +433,17 @@
 		//Q_EXCEED_SIZE_LIMIT 在设置了Q_EXCEED_SIZE_LIMIT且尝试给uploader添加的文件总大小超出这个值时派送。
 		//Q_TYPE_DENIED 当文件类型不满足时触发。
 		uploader.onError = function (code) {
-			alert('Eroor: ' + code);
+			if (code == "Q_TYPE_DENIED") {
+				alert("请上传" + uploader.option("accept")[0].extensions +"格式的文件");
+			} else if (code == "F_EXCEED_SIZE") {
+				alert("文件大小不能超过" + uploader.option("fileSingleSizeLimit")/(1024*1024) + "M");
+			} else if (code == "F_DUPLICATE") {
+				alert("文件重复");
+			} else if (code == "Q_EXCEED_NUM_LIMIT") {
+				alert("添加图片数量超出" + uploader.option("fileNumLimit"));
+			} else if (code == "Q_EXCEED_SIZE_LIMIT") {
+				alert("添加图片总大小超出" + uploader.option("fileSizeLimit")/(1024*1024) + "M");
+			}
 		};
 
 		$upload.on('click', function () {
@@ -452,7 +464,29 @@
 		});
 
 		$info.on('click', '.ignore', function () {
-			alert('todo');
+			for (var i = 0; i < uploader.getFiles().length; i++) {
+				if ($("#" + uploader.getFiles()[i].id).attr('class') == "state-error") {
+					// 将图片从上传序列移除
+					uploader.removeFile(uploader.getFiles()[i]);
+					//uploader.removeFile(uploader.getFiles()[i], true);
+					//delete uploader.getFiles()[i];
+					// 将图片从缩略图容器移除
+					var $li = $('#' + uploader.getFiles()[i].id);
+					$li.off().remove();
+				}
+				fileSize -= uploader.getFiles()[i].size;
+			}
+			if (fileCount == 0) {
+				setState('pedding');
+				fileSize = 0;
+				uploader.reset();
+				updateStatus();
+			} else {
+				var showInfo = '共' + fileCount + '张（' +
+					WebUploader.formatSize(fileSize) +
+					'），已成功上传' + uploader.getStats().successNum + '张';
+				$info.html(showInfo);
+			}
 		});
 
 		$upload.addClass('state-' + state);
