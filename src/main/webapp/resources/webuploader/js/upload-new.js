@@ -459,6 +459,27 @@
 			}
 		});
 
+		uploader.on('uploadFinished',function () {
+			var ret = true;
+			var stats = uploader.getStats();
+			for (var i = 0; i < uploader.getFiles().length; i++) {
+				if ($("#" + uploader.getFiles()[i].id).attr('class') == "state-error") {
+					ret = false;
+					break;
+				}
+			}
+			if (ret) {
+				$info.html("");
+				setTimeout(function () {
+					alert('共' + fileCount + '张（' +
+						WebUploader.formatSize(fileSize) +
+						'），已成功上传' + stats.successNum + '张');
+					uploader.destroy();
+					window.location.reload();
+				}, 1000);
+			}
+		});
+
 		$info.on('click', '.retry', function () {
 			uploader.retry();
 		});
