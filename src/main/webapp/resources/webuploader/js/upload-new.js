@@ -73,7 +73,7 @@
 				accept: { //指定接受哪些类型的文件。 由于目前还有ext转mimeType表，所以这里需要分开指定。
 					title: 'Images',
 					extensions: 'gif,jpg,jpeg,bmp,png',
-					mimeTypes: 'image/*'
+					mimeTypes: 'image/gif,image/jpg,image/jpeg,image/bmp,image/png'
 				},
 				disableGlobalDnd: true, //是否禁掉整个页面的拖拽功能，如果不禁用，图片拖进来的时候会默认被浏览器打开。
 				fileNumLimit: 300, //验证文件总数量, 超出则不允许加入队列。
