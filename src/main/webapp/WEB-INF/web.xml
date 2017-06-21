@@ -47,7 +47,7 @@
 	</filter-mapping>
 
 	<welcome-file-list>
-		<welcome-file>view.htm</welcome-file>
+		<welcome-file>shop.htm</welcome-file>
 	</welcome-file-list>
 
 </web-app>
