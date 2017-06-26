@@ -41,6 +41,13 @@ public class UploaderController {
 		return mv;
 	}
 
+	@RequestMapping (value = "/cropper.htm", method = RequestMethod.GET)
+	public ModelAndView cropper(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("WEB-INF/view/cropper.html");
+		return mv;
+	}
+
 	@RequestMapping (value = "/view.htm", method = RequestMethod.GET)
 	public ModelAndView view(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mv = new ModelAndView();
