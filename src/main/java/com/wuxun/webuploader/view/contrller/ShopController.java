@@ -40,6 +40,7 @@ public class ShopController {
 						"/webuploader", null, 1024 * 1024);
 		Map<String, Object> json_map = new HashMap<>();
 		json_map.put("code", result.getCode());
+		json_map.put("url", result.getUrls());
 		json_map.put("desc", result.getDesc());
 		try {
 			PrintWriter writer = response.getWriter();
