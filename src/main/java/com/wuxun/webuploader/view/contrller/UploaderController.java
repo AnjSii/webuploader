@@ -48,6 +48,13 @@ public class UploaderController {
 		return mv;
 	}
 
+	@RequestMapping (value = "/cropper_non_jQuery.htm", method = RequestMethod.GET)
+	public ModelAndView cropper_non_jQuery(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("WEB-INF/view/cropper_non_jQuery.html");
+		return mv;
+	}
+
 	@RequestMapping (value = "/view.htm", method = RequestMethod.GET)
 	public ModelAndView view(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mv = new ModelAndView();

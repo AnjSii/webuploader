@@ -1,0 +1,202 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>webuploader-cropper</title>
+<link rel="stylesheet" type="text/css" href="$!web.contextPath/resources/cropper/css/1.0.0-non-jQuery/cropper.css" />
+	<link rel="stylesheet" type="text/css" href="$!web.contextPath/resources/css/style.css" />
+<link rel="stylesheet" type="text/css" href="$!web.contextPath/resources/css/simple_style.css" />
+<link rel="stylesheet" type="text/css" href="$!web.contextPath/resources/webuploader/css/webuploader.css" />
+<link rel="stylesheet" type="text/css" href="$!web.contextPath/resources/css/cropper_non_jQuery_style.css" />
+<script type="text/javascript" src="$!web.contextPath/resources/js/jquery/1.12.4/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="$!web.contextPath/resources/webuploader/js/webuploader.js"></script>
+<script type="text/javascript" src="$!web.contextPath/resources/cropper/1.0.0-non-jQuery/cropper-non-jQuery.js"></script>
+<script>
+var BASE_URL = "$!web.contextPath";
+jQuery(function() {
+	var uploader;
+	var btn = $('#ctlBtn');
+	var image = jQuery("#image")[0];
+	var previews = document.querySelectorAll('.preview');
+	/*----------------------------------------cropper-start-------------------------------------------------------*/
+	var options = {
+		ready: function () {
+			var clone = this.cloneNode();
+			clone.className = '';
+			clone.style.cssText = (
+					'display: block;' +
+					'width: 100%;' +
+					'min-width: 0;' +
+					'min-height: 0;' +
+					'max-width: none;' +
+					'max-height: none;'
+			);
+			each(previews, function (elem) {
+				elem.appendChild(clone.cloneNode());
+			});
+		},
+		crop: function (e) {
+			var data = e.detail;
+			var cropper = this.cropper;
+			var imageData = cropper.getImageData();
+			var previewAspectRatio = data.width / data.height;
+
+			each(previews, function (elem) {
+				var previewImage = elem.getElementsByTagName('img').item(0);
+				var previewWidth = elem.offsetWidth;
+				var previewHeight = previewWidth / previewAspectRatio;
+				var imageScaledRatio = data.width / previewWidth;
+				elem.style.height = previewHeight + 'px';
+				previewImage.style.width = imageData.naturalWidth / imageScaledRatio + 'px';
+				previewImage.style.height = imageData.naturalHeight / imageScaledRatio + 'px';
+				previewImage.style.marginLeft = -data.x / imageScaledRatio + 'px';
+				previewImage.style.marginTop = -data.y / imageScaledRatio + 'px';
+			});
+		}
+	};
+	function each(arr, callback) {
+		var length = arr.length;
+		var i;
+		for (i = 0; i < length; i++) {
+			callback.call(arr, arr[i], i, arr);
+		}
+		return arr;
+	}
+	var cropper = new Cropper(image, options);
+	/*-----------------------------------------cropper-end--------------------------------------------------------*/
+
+	/*---------------------------------------WebUploader-start----------------------------------------------------*/
+	WebUploader.Uploader.register({
+		'before-send-file': 'cropImage'
+	}, {
+		cropImage: function( file ) {
+			var data1 = file._cropData;
+			var data = cropper.getData(),
+					image, deferred;
+			file = this.request( 'get-file', file );
+			deferred = WebUploader.Deferred();
+			image = new WebUploader.Lib.Image();
+			deferred.always(function() {
+				image.destroy();
+				image = null;
+			});
+			image.once( 'error', deferred.reject );
+			image.once( 'load', function() {
+				image.crop( data.x, data.y, data.width, data.height, data.scale );
+			});
+			image.once( 'complete', function() {
+				var blob, size;
+				try {
+					blob = image.getAsBlob();
+					size = file.size;
+					file.source = blob;
+					file.size = blob.size;
+
+					file.trigger( 'resize', blob.size, size );
+
+					deferred.resolve();
+				} catch ( e ) {
+					console.log( e );
+					// 出错了直接继续，让其上传原始图片
+					deferred.resolve();
+				}
+			});
+			file._info && image.info( file._info );
+			file._meta && image.meta( file._meta );
+			image.loadFromBlob( file.source );
+			return deferred.promise();
+		}
+	});
+	uploader = WebUploader.create({
+		fileVal: 'MyFiledName',
+		server: BASE_URL + '/upload.htm',
+		pick: '#filePicker',
+		accept: {
+			 title: 'Images',
+			 extensions: 'gif,jpg,jpeg,bmp,png',
+			 mimeTypes: 'image/gif,,image/jpg,image/jpeg,image/bmp,image/png'
+		}
+	});
+
+	uploader.on('ready', function () {
+		window.uploader = uploader;
+	});
+
+	uploader.on( 'fileQueued', function( file ) {
+		var img = jQuery("#image");
+		uploader.makeThumb( file, function( error, src ) {
+			if (error) {
+				img.replaceWith('<span>不能预览</span>');
+				return;
+			}
+			img.attr( 'src', src );
+			image.src = src;
+			cropper.destroy();
+			var previews2 = jQuery(".preview");
+			var i = 0;
+			for (i; i < previews2.length; i++) {
+				previews2[i].innerHTML = "";
+			}
+			cropper = new Cropper(image, options);
+		}, 1, 1 );
+		btn.show();
+	});
+
+	uploader.onError = function (code) {
+		if (code == "Q_TYPE_DENIED") {
+			alert("请上传" + uploader.option("accept")[0].extensions +"格式的文件");
+		} else if (code == "F_EXCEED_SIZE") {
+			alert("文件大小不能超过" + uploader.option("fileSingleSizeLimit")/(1024*1024) + "M");
+		} else if (code == "F_DUPLICATE") {
+			alert("文件重复");
+		} else if (code == "Q_EXCEED_NUM_LIMIT") {
+			alert("添加图片数量超出" + uploader.option("fileNumLimit"));
+		} else if (code == "Q_EXCEED_SIZE_LIMIT") {
+			alert("添加图片总大小超出" + uploader.option("fileSizeLimit")/(1024*1024) + "M");
+		}
+	};
+
+	uploader.on( 'uploadSuccess', function(file, response) {
+		if(response['code'] == 0){
+			alert("上传成功！");
+		} else {
+			alert("上传失败！失败原因" + response['desc']);
+		}
+	});
+
+	uploader.on( 'uploadError', function(file) {
+		alert("图片“" + file.name + "”上传失败，请重新上传");
+	});
+
+	btn.on( 'click', function() {
+		uploader.upload();
+	});
+	/*---------------------------------------WebUploader-end-----------------------------------------------------*/
+});
+</script>
+</head>
+<body>
+<!--dom结构部分-->
+<div id="uploader-demo">
+	<!--用来存放item-->
+	<div id="fileList" class="uploader-list"></div>
+	<div id="filePicker">选择图片</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col col-6">
+			<img id="image">
+		</div>
+		<div class="col col-3">
+			<div class="preview"></div>
+		</div>
+		<div class="col col-2">
+			<div class="preview"></div>
+		</div>
+		<div class="col col-1">
+			<div class="preview"></div>
+		</div>
+	</div>
+</div>
+<div id="ctlBtn" class="upload-btn" style="display: none">上传所选区域</div>
+</body>
+</html>

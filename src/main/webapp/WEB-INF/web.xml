@@ -47,7 +47,7 @@
 	</filter-mapping>
 
 	<welcome-file-list>
-		<welcome-file>cropper.htm</welcome-file>
+		<welcome-file>cropper_non_jQuery.htm</welcome-file>
 	</welcome-file-list>
 
 </web-app>
