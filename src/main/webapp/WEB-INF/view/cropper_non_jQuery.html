@@ -54,7 +54,8 @@ jQuery(document).ready(function() {
 					previewImage.style.height = imageData.naturalHeight / imageScaledRatio + 'px';
 					previewImage.style.marginLeft = -data.x / imageScaledRatio + 'px';
 					previewImage.style.marginTop = -data.y / imageScaledRatio + 'px';
-					previewImage.style.transform = data.scaleY + " " + data.scaleX;
+					previewImage.style.transform ="scaleY(" + data.scaleY + ")" +
+							"scaleX(" + data.scaleX + ")" + "rotate(" + data.rotate + "deg)";
 				});
 			}
 		};
@@ -87,7 +88,7 @@ jQuery(document).ready(function() {
 				});
 				image.once('error', deferred.reject);
 				image.once('load', function () {
-					image.crop(data.x, data.y, data.width, data.height, data.scaleX, data.scaleY);
+					image.crop(data.x, data.y, data.width, data.height, data.scaleX, data.scaleY, data.rotate);
 				});
 				image.once('complete', function () {
 					var blob, size;
@@ -120,6 +121,10 @@ jQuery(document).ready(function() {
 				title: 'Images',
 				extensions: 'gif,jpg,jpeg,bmp,png',
 				mimeTypes: 'image/gif,,image/jpg,image/jpeg,image/bmp,image/png'
+			},
+			duplicate: true,
+			thumb: {
+				crop: true
 			}
 		});
 
