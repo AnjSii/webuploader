@@ -32,3 +32,8 @@ img {
 .col-1 {
     width: 8.3%;
 }
+
+.docs-buttons {
+    display: -webkit-box;
+    margin-left: 326px;
+}
