@@ -43,7 +43,7 @@ jQuery(document).ready(function() {
 				var cropper = this.cropper;
 				var imageData = cropper.getImageData();
 				var previewAspectRatio = data.width / data.height;
-
+				console.log(e.detail);
 				each(previews, function (elem) {
 					var previewImage = elem.getElementsByTagName('img').item(0);
 					var previewWidth = elem.offsetWidth;
@@ -77,8 +77,10 @@ jQuery(document).ready(function() {
 			'before-send-file': 'cropImage'
 		}, {
 			cropImage: function (file) {
+				var asda123 = this.getOrientation;
 				var data = cropper.getData(),
 						image, deferred;
+				data.scale = cropper.image.naturalWidth / file._info.width;
 				file = this.request('get-file', file);
 				deferred = WebUploader.Deferred();
 				image = new WebUploader.Lib.Image();
@@ -88,7 +90,17 @@ jQuery(document).ready(function() {
 				});
 				image.once('error', deferred.reject);
 				image.once('load', function () {
-					image.crop(data.x, data.y, data.width, data.height, data.scaleX, data.scaleY, data.rotate);
+					var orientation;
+					if (data.scaleX === -1) {
+						orientation = 2;
+					} else if (data.scaleY === -1) {
+						orientation = 4;
+					} else if (data.rotate === -90) {
+						orientation = 8;
+					} else if (data.rotate === 90) {
+						orientation = 6;
+					}
+					image.crop(data.x, data.y, data.width, data.height, data.scale, orientation);
 				});
 				image.once('complete', function () {
 					var blob, size;
@@ -350,17 +362,17 @@ jQuery(document).ready(function() {
 		</div>
 		<div class="docs-buttons">
 		<div class="btn-group">
-			<button type="button" class="btn btn-primary" data-method="rotate" data-option="-45" title="Rotate Left">
-				<span class="docs-tooltip" data-toggle="tooltip" title="cropper.rotate(-45)">
+			<button type="button" class="btn btn-primary" data-method="rotate" data-option="-90" title="Rotate Left">
+				<span class="docs-tooltip" data-toggle="tooltip" title="cropper.rotate(-90)">
 					<span class="fa fa-rotate-left"></span>
 				</span>
-				cropper.rotate(-45) 左旋45
+				cropper.rotate(-90) 左旋90
 			</button>
-			<button type="button" class="btn btn-primary" data-method="rotate" data-option="45" title="Rotate Right">
-				<span class="docs-tooltip" data-toggle="tooltip" title="cropper.rotate(45)">
+			<button type="button" class="btn btn-primary" data-method="rotate" data-option="90" title="Rotate Right">
+				<span class="docs-tooltip" data-toggle="tooltip" title="cropper.rotate(90)">
 					<span class="fa fa-rotate-right"></span>
 				</span>
-				cropper.rotate(45) 右旋45
+				cropper.rotate(90) 右旋90
 			</button>
 		</div>
 
