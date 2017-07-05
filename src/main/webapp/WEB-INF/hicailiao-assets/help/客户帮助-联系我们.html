@@ -1,0 +1,49 @@
+<ul class="help-tab">
+<li id="a1" class="tabon" onClick="tab('a','tabcon','1','1','1','tabon','taboff');"><span>联系我们</span></li>
+</ul>
+
+
+<div id="tabcon1" class="ov db">
+ 
+ <h1 style="display:block; text-align:center; margin:50px 0px 80px 50px; font-size:18px; color:#1D1E88; ">联系我们</h1>
+ <div style=" ">
+  
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">采料网（海南）</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">联系电话：0898-66892833</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">客服热线：400-0203-789（服务时间周一至周五早8点至晚19点，周六周日早10点至晚19点）</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">客服邮箱：services@hicailiao.com</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">媒体关系：pr@hicailiao.com</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">业务合作：bd@hicailiao.com</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">公司名称：海南采料科技有限公司</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">总部地址：海南省海口市龙华区金贸西路15号环海大厦二单元11A</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">邮 编：570025</p>
+
+
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px; margin-top:45px;">Company Headquarters</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">Address：11A,Unit 2,Huanhai Building,Jinmao West Rd 15#, Longhua District,Haikou  China PRC</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">Zip Code：570025</p>	
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">Customer Service Email：services@hicailiao.com</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">Public Relations Email：pr@hicailiao.com</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">Business Development Email：bd@hicailiao.com</p>
+<p style="font-size:14px;text-indent:2em; margin-bottom:5px;">Tel：(86) 898 66892833</p>
+ </div>
+
+</div>
+<script>
+ function tab(name,name2,cursel,n,n2,s,s2)
+{
+	for(i=n;i<=n2;i++)
+	{
+		if(i==cursel)
+		{
+			document.getElementById(name2+i).style.display="block";
+			document.getElementById(name+i).className=s;
+		}
+		else
+		{
+			document.getElementById(name2+i).style.display="none";
+			document.getElementById(name+i).className=s2;
+		}
+	}
+}
+</script>

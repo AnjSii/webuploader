@@ -1,0 +1,40 @@
+@charset "utf-8";
+.hb-search input{width:325px;height:40px;}
+.hb-search a{color: white;margin-left: 20px;}
+
+.shop_content{background-color: #ebecef;}
+.shop-tab{padding: 20px 0px;width:1200px;margin:0px auto;}
+.tt-tab {background-color: white;height:60px; clear:both; }
+.tt-tab span {text-align:center;width:356px;border-right:2px solid #ebecef; height:60px; line-height:60px; font-size:20px; color:#404144; padding:0px 20px; cursor:pointer; display:block; float:left;}
+.tt-tab>#a3{border-right:none;}
+.tt-tab span.tabon {height:60px; color:#1D1F88}
+#tabcon1,#tabcon2,#tabcon3{padding: 22px 0px 16px 0px;}
+#tabcon1>p,#tabcon2>p,#tabcon3>p{background-color: #f5f5f5;height:22px;padding: 16px 0px 16px 18px;color:#010101;font-size: 18px;font-weight: 9000;}
+.s_refer{height:280px;background-color: white;}
+.shop_success{padding: 26px 6px 24px 6px;}
+.shop_success p{text-align: center;height: 115px;line-height: 115px;font-size: 16px;}
+.shop_success button{width: 112px;height:36px;background-color: #1c1e87;color:white;font-size: 18px;border: 0px;margin: 0 544px;font-weight: bold;}
+.shop_su p{float:left;width: 192px;font-weight: bold;font-family: "Microsoft YaHei"}
+.shop_su ul{float: left;width:972px;height: 142px;}
+.shop_su ul>li{color:#bab6af;font-size: 16px;font-weight: bold;line-height: 25px;}
+.shop_su strong{font-family: "Microsoft YaHei";color:#8d8d8e}
+.shop_su span{margin-left: 170px;}
+.shop_su b{color:#eb3434}
+.s_user{background-color: white;padding: 16px 0px 48px 42px}
+.s_contact>dl>dt{color:#1c1e87;font-size: 17px}
+.s_contact>dl>dd{margin: 20px;font-size: 15px;color: #676767;}
+.s_contact>dl>dd>span,.s_contact>dl>dt>span{color:#fe2626;font-size: 12px}
+.s_contact>dl>dd input,.s_contact>dl>dd select{width:276px;height:30px}
+.s_contact>dl>.s_blank{margin-left: 28px;}
+.s_contact>dl>.s_blank>select{width:87px;height:20px;font-size: 10px}
+.s_contact>.s_id{overflow: hidden;}
+.s_contact>.s_id>.s_id2{border:none;}
+.s_contact>.s_id>dd{float: left;}
+.s_contact>.s_id img{border:1px solid #ccc;}
+.s_contact>.s_id .s_picture{color:#fe2626;margin: 10px 0px;font-size: 12px}
+.s_contact>.s_id .s_picid{margin-left: 34px;width:192px;height:122px}
+.s_contact>.s_id .s_picid2{width:272px;height:150px;}
+.s_contact>p{color: #676767;margin-left: 20px;font-weight: 600;margin-top: 58px}
+.s_contact>p>span{color:#fe2626;}
+.s_contact h1{margin: 86px 452px 0px;}
+.s_contact button{width: 112px;height:36px;background-color: #1c1e87;color:white;font-size: 18px;border: 0px;font-weight: bold;}

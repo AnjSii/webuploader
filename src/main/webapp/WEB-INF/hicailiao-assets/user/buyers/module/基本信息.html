@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/buyers.css"></head>
+
+  <body>
+    <!--为了方便直接双击查阅，本次加入了HEAD和样式，真正模块化时请使用如下代码即可-->
+    <!--复制代码-->
+    <div class="m-box-all">
+      <div class="m-add-all">
+        <a href="">我的账户</a>
+        <span>基本信息</span></div>
+      <div class="m-con-all">
+        <div class="m-main">
+          <div class="m-tab">
+            <span id="a1" class="tabon" onClick="tab('a','tabcon','1','1','5','tabon','taboff');">基本信息</span>
+            <span id="a2" class="taboff" onClick="tab('a','tabcon','2','1','5','tabon','taboff');">修改密码</span>
+            <span id="a3" class="taboff" onClick="tab('a','tabcon','3','1','5','tabon','taboff');">修改电子邮件</span>
+            <span id="a4" class="taboff" onClick="tab('a','tabcon','4','1','5','tabon','taboff');">修改手机号码</span>
+            <span id="a5" class="taboff" onClick="tab('a','tabcon','5','1','5','tabon','taboff');">更换头像</span></div>
+          <p class="db ov cl"></p>
+          <div id="tabcon1" class="ov db p-30-t">
+            <table width="100%" class="m-table-details">
+              <tr>
+                <td width="20%" valign="middle" align="right">用户名称：</td>
+                <td width="80%" valign="middle">hicailiao</td></tr>
+              <tr>
+                <td width="20%" valign="middle" align="right">可用余额：</td>
+                <td width="80%" valign="middle">¥355074.40</td></tr>
+              <tr>
+                <td width="20%" valign="middle" align="right">冻结余额：</td>
+                <td width="80%" valign="middle">¥ 0</td></tr>
+              <tr>
+                <td width="20%" valign="middle" align="right">金币余额：</td>
+                <td width="80%" valign="middle">19110</td></tr>
+              <tr>
+                <td width="20%" valign="middle" align="right">电子邮箱：</td>
+                <td width="80%" valign="middle">
+                  <span class="di m-10-r">93972092@qq.com</span>
+                  <a href="" class="f-c-ff0000">未校验,重新发送校验邮件</a></td>
+              </tr>
+              <tr>
+                <td width="20%" valign="middle" align="right">手机号码：</td>
+                <td width="80%" valign="middle">
+                  <a class="f-14 f-st" href="">[去绑定]</a></td>
+              </tr>
+              <tr>
+                <td valign="middle" align="right">联系电话：</td>
+                <td valign="middle">
+                  <input type="text" class="db"></td>
+              </tr>
+              <tr>
+                <td valign="middle" align="right">真实姓名：</td>
+                <td valign="middle">
+                  <input type="text" class="db"></td>
+              </tr>
+              <tr>
+                <td valign="middle" align="right">性别：</td>
+                <td valign="middle">
+                  <div class="radio-box"><label><input type="radio"><span>男</span></label></div>
+                  <div class="radio-box"><label><input type="radio" ><span>女</span></label></div>
+                  <div class="radio-box"><label><input type="radio" ><span>保密</span></label></div></td>
+              </tr>
+              <tr>
+                <td valign="middle" align="right">生日：</td>
+                <td valign="middle">
+                  <input type="text" class="db"></td>
+              </tr>
+              <tr>
+                <td valign="middle" align="right">所在地区：</td>
+                <td valign="middle">
+                 <select class="sel-box radius-5 m-10-r"><option>11</option></select>
+                 <select class="sel-box radius-5 m-10-r"><option>11</option></select>
+                 <select class="sel-box radius-5 m-10-r"><option>11</option></select>
+                </td>
+              </tr>
+              <tr>
+                <td valign="middle" align="right"></td>
+                <td valign="middle">
+                  <input type="button" value="提交" class="btn-b"></td>
+              </tr>
+            </table>
+            <script>$('[name="nice-select"]').click(function(e) {
+                $('[name="nice-select"]').find('ul').hide();
+                $(this).find('ul').show();
+                e.stopPropagation();
+              });
+              $('[name="nice-select"] li').hover(function(e) {
+                $(this).toggleClass('on');
+                e.stopPropagation();
+              });
+              $('[name="nice-select"] li').click(function(e) {
+                var val = $(this).text();
+                $(this).parents('[name="nice-select"]').find('input').val(val);
+                $('[name="nice-select"] ul').hide();
+                e.stopPropagation();
+              });
+              $(document).click(function() {
+                $('[name="nice-select"] ul').hide();
+              });</script>
+          </div>
+          <div id="tabcon2" class="ov db p-35-t" style="display:none;">
+            <table width="100%" class="m-table-details">
+              <tr>
+                <td width="20%" valign="middle" align="right">
+                  <span class="f-c-ff0000">*</span>你的密码：</td>
+                <td width="80%" valign="middle">
+                  <div class="m-pos">
+                    <input type="text">
+                    <b>
+                    </b>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td width="20%" valign="middle" align="right">
+                  <span class="f-c-ff0000">*</span>新密码：</td>
+                <td width="80%" valign="middle">
+                  <div class="m-pos">
+                    <input type="text">
+                    <b>
+                    </b>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td width="20%" valign="middle" align="right">
+                  <span class="f-c-ff0000">*</span>重复密码：</td>
+                <td width="80%" valign="middle">
+                  <div class="m-pos">
+                    <input type="text">
+                    <b>
+                    </b>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td valign="middle" align="right"></td>
+                <td valign="middle">
+                  <input type="button" value="提交" class="btn-b"></td>
+              </tr>
+            </table>
+          </div>
+          <div id="tabcon3" class="ov db p-35-t" style="display:none;">
+            <table width="100%" class="m-table-details">
+              <tr>
+                <td width="20%" valign="middle" align="right">
+                  <span class="f-c-ff0000">*</span>你的密码：</td>
+                <td width="80%" valign="middle">
+                  <div class="m-pos">
+                    <input type="text">
+                    <b>
+                    </b>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td width="20%" valign="middle" align="right">
+                  <span class="f-c-ff0000">*</span>电子邮件：</td>
+                <td width="80%" valign="middle">
+                  <div class="m-pos">
+                    <input type="text"></div>
+                </td>
+              </tr>
+              <tr>
+                <td valign="middle" align="right"></td>
+                <td valign="middle">
+                  <input type="button" value="提交" class="btn-b"></td>
+              </tr>
+            </table>
+          </div>
+          <div id="tabcon4" class="ov db p-35-t" style="display:none;">
+            <table width="100%" class="m-table-details">
+              <tr>
+                <td width="20%" valign="middle" align="right">
+                  <span class="f-c-ff0000">*</span>新手机号码：</td>
+                <td width="80%" valign="middle">
+                  <div class="m-pos">
+                    <input type="text"></div>
+                  <div class="m-verification">
+                    <input type="button" value="获取验证码" class="bg-a radius-15"></div>
+                </td>
+              </tr>
+              <tr>
+                <td width="20%" valign="middle" align="right">
+                  <span class="f-c-ff0000">*</span>手机验证码：</td>
+                <td width="80%" valign="middle">
+                  <div class="m-pos">
+                    <input type="text"></div>
+                </td>
+              </tr>
+              <tr>
+                <td valign="middle" align="right"></td>
+                <td valign="middle">
+                  <input type="button" value="提交" class="btn-b"></td>
+              </tr>
+            </table>
+          </div>
+          <div id="tabcon5" class="ov db" style="display:none;">
+            <div class="upload_pic">
+              <div class="upload_pic_left">
+                <button class="upload_pic_left_bu">点击上传本地图片</button>
+                <p>仅支持GIF、JPG、JPGE、BMP、PNG、TBI图片文件，且文件小于1M</p>
+                <dl>
+                  <dt>没有预览图片</dt>
+                  <dd>
+                    <ul>
+                      <li class="upload_pic_left_li1"><span></span><b></b></li>
+                      <li class="upload_pic_left_li2"><span></span><b></b></li>
+                      <li class="upload_pic_left_li3">
+                        <span class="upload_pic_left_sp1"></span>
+                        <span class="upload_pic_left_sp2"></span>
+                        <span class="upload_pic_left_sp3"></span>
+                        <span class="upload_pic_left_sp4"></span>
+                      </li>
+                      <li class="upload_pic_left_li5"><span></span></li>
+                    </ul>
+                    <input type="submit" value="保存"/>
+                  </dd>
+                  <script>
+                    $(function(){
+                      $(".upload_pic_left input").addClass("upload_uncheck")
+                      $(".upload_pic_left input").click(function(){
+                        $(this).toggleClass("upload_uncheck").toggleClass("upload_check");
+                      })
+                    })
+                  </script>
+                </dl>
+              </div>
+              <div class="upload_pic_right">
+                <p>系统根据您上传的图片自动生成三个尺寸，请留意图片是否清晰</p>
+                <div class="upload_pic_rigle">
+                  <dl>
+                    <dt>没有预览图片</dt>
+                    <dd><span>大头像</span><b>157X157像素</b></dd>
+                  </dl>
+                </div>
+                <div class="upload_pic_rigri">
+                  <dl class="upload_pic_rigdl1">
+                    <dt>没有预览图片</dt>
+                    <dd>中头像</dd>
+                    <dd>56X56像素</dd>
+                  </dl>
+                  <dl class="upload_pic_rigdl2">
+                    <dt></dt>
+                    <dd>小头像</dd>
+                    <dd>26X26像素</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          function tab(name, name2, cursel, n, n2, s, s2) {
+            for (i = n; i <= n2; i++) {
+              if (i == cursel) {
+                document.getElementById(name2 + i).style.display = "block";
+                document.getElementById(name + i).className = s;
+              } else {
+                document.getElementById(name2 + i).style.display = "none";
+                document.getElementById(name + i).className = s2;
+              }
+            }
+          }
+        </script>
+      </div>
+    </div>
+    <!--复制代码-->
+  </body>
+
+</html>

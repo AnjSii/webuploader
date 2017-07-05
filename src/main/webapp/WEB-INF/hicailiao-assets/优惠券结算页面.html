@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/shopping_cart.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/SimpleTree.js"></script>
+    <script src="js/jquery.spinner.js"></script> <!--计算器-->
+    <style>
+        ul.hb-con-list li { height:auto;}
+    </style>
+</head>
+
+<body>
+<!--top begin-->
+<div class="hb-top">
+    <div class="main">
+        <a href="登陆界面.html" class="top-a">hi.请登录</a>
+        <a href="注册界面.html" class="top-b">免费注册</a>
+        <div class="top-user">
+            <div class="top-c">
+                <a class="top-h" href="用户.html">
+                    <b>
+                    </b>买家中心</a>
+                <ul class="t-u">
+                    <li>
+                        <a href="用户.html">已经买到的宝贝</a>
+                        <a href="用户.html">店铺动态</a>
+                        <a href="用户.html">好友动态</a></li>
+                </ul>
+            </div>
+            <div class="top-c">
+                <a class="top-h" href="用户.html">
+                    <b>
+                    </b>卖家中心</a>
+                <ul class="t-s">
+                    <li>
+                        <a href="用户.html">已卖出的宝贝</a>
+                        <a href="用户.html">出售中的宝贝</a></li>
+                </ul>
+            </div>
+            <div class="top-c">
+                <a class="top-h" href="用户.html">
+                    <b>
+                    </b>购物车
+                    <i>0</i>种商品
+                    <span></span></a>
+                <ul class="t-p">
+                    <!--购物车无内容-->
+                    <li style="display:none;">购物车暂时为空，赶紧挑选自己喜欢的商品去</li>
+                    <!--购物车无内容-->
+                    <!--购物车有内容,举例多商品排列，嵌套数据调用时请删除多余-->
+                    <li>
+                        <h1>购物车商品总价：¥32.00</h1>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-4.png"></dt>
+                            <dd>
+                                <a href="产品页.html">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-1.png"></dt>
+                            <dd>
+                                <a href="产品页.html">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-2.png"></dt>
+                            <dd>
+                                <a href="产品页.html">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-5.png"></dt>
+                            <dd>
+                                <a href="产品页.html">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <div class="look-shop">
+                            <a href="用户.html">查看我的购物车</a></div>
+                    </li>
+                    <!--购物车有内容--></ul>
+            </div>
+            <div class="top-c">
+                <a class="top-d" href="用户.html">站内短信</a></div>
+            <div class="top-c">
+                <a class="top-d" href="用户.html">我的收藏</a></div>
+            <div class="top-c">
+                <a class="top-d" href="用户.html">帮助中心</a></div>
+        </div>
+    </div>
+</div>
+<!--.top end-->
+<div class="hb-logo">
+    <div class="logo">
+        <img src="images/LOGO.png"></div>
+    <dl class="hb-search">
+        <dt>
+            <input type="text" placeholder="请输入您想要的商品名、店铺、装修公司">
+            <input type="button" value="搜索"></dt>
+        <dd>
+            <b>热门搜索：</b>
+            <a href="产品页.html">接线板</a>
+            <a href="产品页.html">接线板</a>
+            <a href="产品页.html">接线板</a>
+            <a href="产品页.html">接线板</a>
+            <a href="产品页.html">接线板</a></dd>
+    </dl>
+    <dl class="eym">
+        <dt class="eym-1">
+            <img src="images/eym.png">
+        <p>专享周二采料专场</p>
+        </dt>
+        <dt class="eym-2" style="display:none">
+            <img src="images/eym.png">
+        <p>专享周日采料专场</p>
+        </dt>
+        <dd>
+            <span class="eym-btn-on"></span>
+            <span class="eym-btn-mov"></span>
+        </dd>
+    </dl>
+    <script>$(function() {
+        $(".eym-btn-mov").hover(function() {
+                    $(".eym-2").show();
+                    $(".eym-1").hide();
+                },
+                function() {
+                    $(".eym-2").hide();
+                    $(".eym-1").show();
+                })
+    })</script>
+</div>
+<div class="main">
+    <div class="confirm_order">
+        <dl>
+            <dt><img src="images/confirm_step2.png" alt=""/></dt>
+            <dd>
+                <ul>
+                    <li>1.我的购物车</li>
+                    <li>2.填写核对订单信息</li>
+                    <li>3.成功提交订单</li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <div class="coupon_account">
+        <div class="coupon_account1">
+            <h2>收件人信息</h2>
+            <p><a href="###">新增收货地址</a></p>
+            <ul>
+                <li class="coupon_account1_2">
+                    <span>寄送至</span>
+                </li>
+                <li class="coupon_account1_3">
+                    <label><input type="radio" name="address" checked="checked"/></label>
+                    <div>石丽丽<span>福建省泉州市鲤城区高新科技创业中心E座8楼</span><span>15208080943</span></div>
+                </li>
+                <li class="coupon_account1_4" style="display: none">
+                    <dl>
+                        <dd class="coupon_account1_3">
+                            <label><input type="radio" name="address"/></label>
+                            <div>石丽丽<span>福建省泉州市鲤城区高新科技创业中心E座8楼</span><span>15208080943</span></div>
+                        </dd>
+                        <dd class="coupon_account1_3">
+                            <label><input type="radio" name="address"/></label>
+                            <div>石丽丽<span>福建省泉州市鲤城区高新科技创业中心E座8楼</span><span>15208080943</span></div>
+                        </dd>
+                        <dd class="coupon_account1_3">
+                            <label><input type="radio" name="address"/></label>
+                            <div>石丽丽<span>福建省泉州市鲤城区高新科技创业中心E座8楼</span><span>15208080943</span></div>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+            <h1>显示更多地址</h1>
+            <h3 style="display: none">使用新地址</h3>
+        </div>
+        <script>
+            $(function() {
+                $(".coupon_account1>h1").click(function(){
+                    $(".coupon_account1 .coupon_account1_4").show();
+                    $(".coupon_account1>h1").hide();
+                    $(".coupon_account1>h3").show();
+                })
+            })
+        </script>
+        <div class="coupon_account2">
+            <h2>送货清单</h2>
+            <div class="coupon_account2_1">
+                <ul>
+                    <li class="coupon_account2_li1"><a href="###"><span></span><p>店铺：采料自营</p></a></li>
+                    <li><a href="###">卖家：马可波罗</a></li>
+                    <li class="coupon_account2_li2"><a href="###"><p></p><span>和我联系</span></a></li>
+                </ul>
+                <div class="coupon_account2_2">
+                    <dl>
+                        <dt><img src="images/cou_account-product.png" alt=""/></dt>
+                        <dd class="coupon_account2_dd1">马可波罗瓷砖客厅卧室防滑耐磨<span>全抛釉</span>大地板砖琥珀玉CZ8173AS</dd>
+                        <dd class="coupon_account2_dd2">规格800*800mm</dd>
+                    </dl>
+                    <ul>
+                        <li class="coupon_account2_2li1">￥128.00</li>
+                        <li><span><input type="text" class="spinner" width="1rem"></span></li>
+                        <li class="coupon_account2_2li2">0.080kg</li>
+                        <li class="coupon_account2_2li3">￥128.00</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="width: 100%;border-bottom:1px solid #e5e5e5;margin: 15px 0"></p>
+            <div class="coupon_account2_1">
+                <ul>
+                    <li class="coupon_account2_li1"><a href="###"><span></span><p>店铺：采料自营</p></a></li>
+                    <li><a href="###">卖家：马可波罗</a></li>
+                    <li class="coupon_account2_li2"><a href="###"><p></p><span>和我联系</span></a></li>
+                </ul>
+                <div class="coupon_account2_2">
+                    <dl>
+                        <dt><img src="images/cou_account-product.png" alt=""/></dt>
+                        <dd class="coupon_account2_dd1">马可波罗瓷砖客厅卧室防滑耐磨<span>全抛釉</span>大地板砖琥珀玉CZ8173AS</dd>
+                        <dd class="coupon_account2_dd2">规格800*800mm</dd>
+                    </dl>
+                    <ul>
+                        <li class="coupon_account2_2li1">￥128.00</li>
+                        <li><span><input type="text" class="spinner" width="1rem"></span></li>
+                        <li class="coupon_account2_2li2">0.080kg</li>
+                        <li class="coupon_account2_2li3">￥128.00</li>
+                    </ul>
+                    <!--计数器-->
+                    <script>
+                        $(function () {
+                            $('.spinner').spinner();
+                        })
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="coupon_account3">
+            <p>
+                <span>给卖家留言：</span>
+                <textarea name="" id=""></textarea>
+            </p>
+            <div class="coupon_account3_1">
+                <dl>
+                    <dt>配送方式：</dt>
+                    <dd class="coupon_account3_dd1">普通配送<p>快递免邮</p><span>0.00</span></dd>
+                </dl>
+                <dl>
+                    <dt>发货时间：</dt>
+                    <dd>卖家承诺订单在买家付款后，48小时内发货</dd>
+                </dl>
+            </div>
+        </div>
+        <script>
+            $(function(){
+                $(".coupon_account4_1>h2>span").addClass("coupon_account4_bg1");
+                $(".coupon_account4_1>h2").click(function(){
+                    $(".coupon4_04").toggle();
+                    $(this).children("span").toggleClass("coupon_account4_bg1").toggleClass("coupon_account4_bg2")
+                })
+            })
+        </script>
+        <div class="coupon_account4_1">
+            <h2>使用优惠券<span class=""></span></h2>
+            <div class="coupon4_04" style="display: none">
+                <ul>
+                    <li class="coupon4_firstli">
+                        <dl class="coupon4_05">
+                            <dt>￥20</dt>
+                            <dd>商城全店通优惠券</dd>
+                            <dd class="coupon4_firstdd">满199-20</dd>
+                            <dd><a href="###">查看使用条件</a></dd>
+                        </dl>
+                        <dl class="coupon4_06">
+                            <dt>有效期</dt>
+                            <dd>2018.08.31</dd>
+                            <dd>至2018.09.30</dd>
+                            <dd class="coupon4_twodd">立即使用</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="coupon4_05">
+                            <dt>￥20</dt>
+                            <dd>商城全店通优惠券</dd>
+                            <dd class="coupon4_firstdd">满199-20</dd>
+                            <dd><a href="###">查看使用条件</a></dd>
+                        </dl>
+                        <dl class="coupon4_06">
+                            <dt>有效期</dt>
+                            <dd>2018.08.31</dd>
+                            <dd>至2018.09.30</dd>
+                            <dd class="coupon4_twodd">立即使用</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="coupon4_05">
+                            <dt>￥20</dt>
+                            <dd>商城全店通优惠券</dd>
+                            <dd class="coupon4_firstdd">满199-20</dd>
+                            <dd><a href="###">查看使用条件</a></dd>
+                        </dl>
+                        <dl class="coupon4_06">
+                            <dt>有效期</dt>
+                            <dd>2018.08.31</dd>
+                            <dd>至2018.09.30</dd>
+                            <dd class="coupon4_twodd">立即使用</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="coupon_account5">
+        <ul>
+            <li><p><span>1</span>件商品，总商品金额：</p><span>￥128.00</span></li>
+            <li><p>运费：</p><span>￥0.00</span></li>
+            <li><p>金额抵用：</p><span class="coupon_account5_span">￥20.00</span></li>
+        </ul>
+    </div>
+    <div class="coupon_account6">
+        <dl>
+            <dt>应付总额：<span>￥236.00</span></dt>
+            <dd>寄送至：福建省泉州市鲤城区高新科技创业中心E座8楼<p>收件人：石丽丽 152****0943</p></dd>
+        </dl>
+    </div>
+    <div class="coupon_account7">
+        <button>提交订单</button>
+    </div>
+</div>
+<dl class="footer">
+    <dt>
+        <a href="客户帮助-新手上路-常见问题.html">首页</a>|
+        <a href="客户帮助-新手上路-常见问题.html">招聘英才</a>|
+        <a href="客户帮助-新手上路-常见问题.html">广告合作</a>|
+        <a href="客户帮助-新手上路-常见问题.html">联系我们</a>|
+        <a href="客户帮助-新手上路-常见问题.html">关于采料网</a>
+    </dt>
+    <dd>
+        <p>&copy;2015-2016&nbsp;采料网&nbsp;增值电信业务经营许可证：琼B2-20150028</p>
+    </dd>
+</dl>
+<script type="text/javascript">$('.spinnerExample').spinner({});</script>
+</body>
+</html>

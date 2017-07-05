@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/buyers.css">
+    <link rel="stylesheet" href="css/coupon_get.css">
+    <script src="../../js/jquery-1.9.1.min.js"></script>
+    <script src="../../js/ion.checkRadio.min.js"></script>
+ <script>
+ $(function() {
+      $("#user-main").load('module/买家首页.html');
+    });
+    function goto(url)
+    {
+        $("#user-main").load(url);
+    }
+</script>
+<script>
+ $(function() {
+    $(".sider-nav > dl > dd > a").click(function() {
+        $(this).addClass("xz").parents().siblings().find("a").removeClass("xz");
+    })
+})
+</script>
+  </head>
+  <body >
+    <!--top begin-->
+    <div class="hb-top">
+      <div class="main">
+        <a href="#" class="top-a">hi.请登录</a>
+        <a href="#" class="top-b">免费注册</a>
+        <div class="top-user">
+          <div class="top-c">
+            <a class="top-h" href="">
+              <b>
+              </b>买家中心</a>
+            <ul class="t-u">
+              <li>
+                <a href="">已经买到的宝贝</a>
+                <a href="">店铺动态</a>
+                <a href="">好友动态</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="">
+              <b>
+              </b>卖家中心</a>
+            <ul class="t-s">
+              <li>
+                <a href="">已卖出的宝贝</a>
+                <a href="">出售中的宝贝</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="">
+              <b>
+              </b>购物车
+              <i>0</i>种商品
+              <span></span></a>
+            <ul class="t-p">
+              <!--购物车无内容-->
+              <li style="display:none;">购物车暂时为空，赶紧挑选自己喜欢的商品去</li>
+              <!--购物车无内容-->
+              <!--购物车有内容,举例多商品排列，嵌套数据调用时请删除多余-->
+              <li>
+                <h1>购物车商品总价：¥32.00</h1>
+                <dl>
+                  <dt>
+                    <img src="../../images/upfile/b-pic-4.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="../../images/upfile/b-pic-1.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="../../images/upfile/b-pic-2.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="../../images/upfile/b-pic-5.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <div class="look-shop">
+                  <a href="">查看我的购物车</a></div>
+              </li>
+              <!--购物车有内容--></ul>
+          </div>
+          <div class="top-c">
+            <a class="top-d" href="">站内短信</a></div>
+          <div class="top-c">
+            <a class="top-d" href="">我的收藏</a></div>
+          <div class="top-c">
+            <a class="top-d" href="">帮助中心</a></div>
+        </div>
+      </div>
+    </div>
+<div class="user-header db">
+ <div class="main">
+  <a class="u-logo m-5-t" href="">
+   <img src="../../images/user-logo.png">
+  </a>
+  <dl class="u-right fr db">
+   <dt class="fl">
+   <div><a class="ua" onClick="goto('index.html')">买家中心</a></div>
+   <div><a class="ua"  href="">交易</a>
+    <ul>
+     <li><a class="ua-hide" href="">我的购物车</a></li>
+     <li><a class="ua-hide" href="">已经买到的商品</a></li>
+     <li><a class="ua-hide" href="">我的收藏</a></li>
+     <li><a class="ua-hide" href="">投诉管理</a></li>
+    </ul>
+   </div>
+   <div><a class="ua"  href="">设置</a></div>
+   <div><a class="ua"  href="">消息</a></div>
+   </dt>
+   <dd class="fl">
+    <input type="text" placeholder="请输入您想要的商品名、店铺、装修公司"><input type="button" value="搜索">
+   </dd>
+  </dl>
+ </div>
+</div>
+
+<div id="user-wrap">
+     <div class="user-wrap ov db">
+       <div class="user-sider fl">
+        <div class="sider-top">我是买家<span></span></div>
+        <div class="sider-img">
+         <img src="images/user-img.jpg">
+         <a onClick="goto('module/基本信息.html')">资料管理</a>
+        </div>
+        <div class="sider-nav">
+         <dl>
+          <dt>我的购物</dt>
+          <dd><a onClick="goto('module/订单管理.html')">订单管理</a></dd>
+          <dd><a onClick="goto('module/优惠券管理.html')">优惠券管理</a></dd>
+         </dl>
+         <dl>
+          <dt>退款维权</dt>
+          <dd><a onClick="goto('module/举报列表.html')">举报管理</a></dd>
+          <dd><a onClick="goto('module/投诉管理.html')">投诉管理</a></dd>
+         </dl>
+         <dl>
+          <dt>店铺收藏</dt>
+          <dd> <a onClick="goto('module/店铺收藏.html')">店铺收藏</a></dd>
+          <dd><a onClick="goto('module/商品收藏.html')">商品收藏</a> </dd>
+         </dl>
+         <dl>
+          <dt>我的账户</dt>
+          <dd><a onClick="goto('module/基本信息.html')">个人资料</a></dd>
+          <dd><a onClick="goto('module/收货地址.html')">收货地址</a></dd>
+          <dd><a onClick="goto('module/好友列表.html')">我的好友</a></dd>
+          <dd><a onClick="goto('module/站内短信.html')">站内短信</a></dd>
+          <dd><a onClick="goto('module/充值管理.html')">充值管理</a></dd>
+          <dd><a onClick="goto('module/提现管理.html')">提现管理</a></dd>
+          <dd><a onClick="goto('module/收支明细.html')">收支明细</a></dd>
+          <dd><a onClick="goto('module/帐号捆绑.html')">帐号捆绑</a></dd>
+         </dl>
+        </div>
+       </div>
+       <div class="user-main fr" id="user-main"> </div>
+     </div>
+</div>
+
+<dl class="footer">
+      <dt>
+        <a href="客户帮助-新手上路-常见问题.html">首页</a>|
+        <a href="客户帮助-新手上路-常见问题.html">招聘英才</a>|
+        <a href="客户帮助-新手上路-常见问题.html">广告合作</a>|
+        <a href="客户帮助-新手上路-常见问题.html">联系我们</a>|
+        <a href="客户帮助-新手上路-常见问题.html">关于采料网</a></dt>
+      <dd>
+        <p>&copy;2015-2016&nbsp;采料网&nbsp;增值电信业务经营许可证：琼B2-20150028</p>
+      </dd>
+    </dl>
+
+
+  </body>
+
+</html>

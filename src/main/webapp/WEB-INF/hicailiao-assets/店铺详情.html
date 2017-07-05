@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/content.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/SimpleTree.js"></script>
+    <!--商品分类树形菜单--></head>
+  
+  <body>
+    <!--top begin-->
+    <div class="hb-top">
+      <div class="main">
+        <a href="登陆界面.html" class="top-a">hi.请登录</a>
+        <a href="注册界面.html" class="top-b">免费注册</a>
+        <div class="top-user">
+          <div class="top-c">
+            <a class="top-h" href="用户.html">
+              <b>
+              </b>买家中心</a>
+            <ul class="t-u">
+              <li>
+                <a href="用户.html">已经买到的宝贝</a>
+                <a href="用户.html">店铺动态</a>
+                <a href="用户.html">好友动态</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="用户.html">
+              <b>
+              </b>卖家中心</a>
+            <ul class="t-s">
+              <li>
+                <a href="用户.html">已卖出的宝贝</a>
+                <a href="用户.html">出售中的宝贝</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="用户.html">
+              <b>
+              </b>购物车
+              <i>0</i>种商品
+              <span></span></a>
+            <ul class="t-p">
+              <!--购物车无内容-->
+              <li style="display:none;">购物车暂时为空，赶紧挑选自己喜欢的商品去</li>
+              <!--购物车无内容-->
+              <!--购物车有内容,举例多商品排列，嵌套数据调用时请删除多余-->
+              <li>
+                <h1>购物车商品总价：¥32.00</h1>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-4.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-1.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-2.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-5.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <div class="look-shop">
+                  <a href="用户.html">查看我的购物车</a></div>
+              </li>
+              <!--购物车有内容--></ul>
+          </div>
+          <div class="top-c">
+            <a class="top-d" href="用户.html">站内短信</a></div>
+          <div class="top-c">
+            <a class="top-d" href="用户.html">我的收藏</a></div>
+          <div class="top-c">
+            <a class="top-d" href="用户.html">帮助中心</a></div>
+        </div>
+      </div>
+    </div>
+    <!--.top end-->
+    <div class="hb-logo">
+      <div class="logo">
+        <img src="images/LOGO.png"></div>
+      <dl class="hb-search">
+        <dt>
+          <input type="text" placeholder="请输入您想要的商品名、店铺、装修公司">
+          <input type="button" value="搜索"></dt>
+        <dd>
+          <b>热门搜索：</b>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a></dd>
+      </dl>
+      <dl class="eym">
+        <dt class="eym-1">
+          <img src="images/eym.png">
+          <p>专享周二采料专场</p>
+        </dt>
+        <dt class="eym-2" style="display:none">
+          <img src="images/eym.png">
+          <p>专享周日采料专场</p>
+        </dt>
+        <dd>
+          <span class="eym-btn-on"></span>
+          <span class="eym-btn-mov"></span>
+        </dd>
+      </dl>
+      <script>$(function() {
+          $(".eym-btn-mov").hover(function() {
+            $(".eym-2").show();
+            $(".eym-1").hide();
+          },
+          function() {
+            $(".eym-2").hide();
+            $(".eym-1").show();
+          })
+        })</script>
+    </div>
+    <!--.hb-logo end-->
+    <!-- 随页面浮动LOGO和输入框 -->
+    <!--<div class="fix-logo">
+    <div class="fix-main">
+    <img src="images/fix-logo.png">
+    <div class="fix-input"><input type="text" placeholder="请输入您想要的商品名、店铺、装修公司"> <input type="button" value="搜索"></div></div></div>-->
+    <!--.fix-logo end-->
+    <div class="meun-two db m-10-t">
+      <ul>
+        <li>
+          <a href="">首页</a></li>
+        <li>
+          <a href="">信用评价</a></li>
+        <li>
+          <a class="aon" href="">店铺详情</a></li>
+      </ul>
+    </div>
+    <!--.meun-two end-->
+    <div class=" list-wrap ov">
+      
+      <div class="shopexp-main">
+       <div class="shopexp-exp radius-5">
+        <div class="shopexp-top ov">
+         <dl class="fl ov">
+          <dt class="fl"><img src="images/upfile/b-ad-1.png"></dt>
+          <dd class="fl">
+           <table width="100%" class="table-no-border text-l">
+            <tr>
+             <td width="100" height="30" align="right">店铺名称：</td>
+             <td>奢陶店</td>
+            </tr>
+            <tr>
+             <td height="30"  align="right">店铺等级：</td>
+             <td>黄钻级</td>
+            </tr>
+            <tr>
+             <td height="30"  align="right">认证信息：</td>
+             <td valign="middle"><span class="di shopexp-rz"></span></td>
+            </tr>
+           </table>
+          </dd>
+         </dl>
+         <dl class="fr">
+          <dt><img src="images/135-135rem.jpg"></dt>
+          <dd class="m-10-t text-c f-w-16 f-c-000000">二维码收藏店铺</dd>
+         </dl>
+        </div>
+        
+        <dl class="shopexp-bottom ov ">
+         <dt class="db ov cl f-w-16 m-10-b">基本信息</dt>
+         <dd class="fl">
+          <p class="m-10-b">创店时间：2016-03-01</p>
+          <p class="m-10-b">详细地址：环海1</p>
+          <p class="m-10-b">商品店铺收藏：<b style="color:#1D1F88">1</b>人收藏</p>
+          <p class="m-10-b">店铺QQ：93972087</p>
+         </dd>
+         <dd class="fr text-l">
+          <p class="m-10-b">所在地区：<span class="di m-10-r">海南</span> <span class="di m-10-r">海口</span> <span class="di m-10-r">琼山区</span></p>
+          <p class="m-10-b">商品数量：<b style="color:#1D1F88">156</b>件</p>
+          <p class="m-10-b">联系电话：0898-89988988</p>
+          <p class="m-10-b">店铺MSN：erikchang@live.cn</p>
+         </dd>
+        </dl>
+        
+       </div>
+       <div class="shopexp-map radius-5">
+        API地图插件安插位置，地图的宽度默认为自适应最好。满足内间距的CSS编写。 <Br>如果无法正常自适应，请手写高宽为 width:805px; height:358px;
+       </div>
+      </div>
+      
+      
+    </div>
+    <div class="cl ov db"></div>
+    <dl class="footer">
+      <dt>
+        <a href="客户帮助-新手上路-常见问题.html">首页</a>|
+        <a href="客户帮助-新手上路-常见问题.html">招聘英才</a>|
+        <a href="客户帮助-新手上路-常见问题.html">广告合作</a>|
+        <a href="客户帮助-新手上路-常见问题.html">联系我们</a>|
+        <a href="客户帮助-新手上路-常见问题.html">关于采料网</a></dt>
+      <dd>
+        <p>&copy;2015-2016&nbsp;采料网&nbsp;增值电信业务经营许可证：琼B2-20150028</p>
+      </dd>
+    </dl>
+    <script>function tab(name, name2, cursel, n, n2, s, s2) {
+        for (i = n; i <= n2; i++) {
+          if (i == cursel) {
+            document.getElementById(name2 + i).style.display = "block";
+            document.getElementById(name + i).className = s;
+          } else {
+            document.getElementById(name2 + i).style.display = "none";
+            document.getElementById(name + i).className = s2;
+          }
+        }
+      }</script>
+  </body>
+
+</html>

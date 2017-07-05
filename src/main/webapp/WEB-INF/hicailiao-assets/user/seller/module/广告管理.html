@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/seller.css">
+  </head>
+  
+  <body >
+  
+<!--为了方便直接双击查阅，本次加入了HEAD和样式，真正模块化时请使用如下代码即可-->
+<!--复制代码-->
+
+ 
+<div class="m-box-all">
+ <div class="m-add-all"><a href="">我的账户</a><span>广告列表</span></div>
+ <div class="m-con-all">
+  
+  <div class="m-main">
+   
+<div class="m-tab">
+<span id="a1" class="tabon" onClick="tab('a','tabcon','1','1','4','tabon','taboff');">广告列表</span>
+<span id="a2" class="taboff" onClick="tab('a','tabcon','2','1','4','tabon','taboff');">我的广告</span>
+</div>
+
+<p class="db ov cl"></p>
+
+<div id="tabcon1" class="ov db  p-40-t">
+<table width="100%" class="m-table ">
+    <tr>
+     <th width="218">广告标题</th>
+     <th width="88">广告类型</th>
+     <th width="88">广告宽度</th>
+     <th width="88">广告高度</th>
+     <th width="132">广告价格</th>
+     <th width="100">显示类型</th>
+     <th width="100">操作</th>
+    </tr>
+    <tr>
+     <td>首页品牌下4个广告位</td>
+     <td>滚动</td>
+     <td>30</td>
+     <td>30</td>
+     <td>100 金币/月</td>
+     <td>随机广告</td>
+     <td><a onClick="goto('module/广告申请.html')" class="m-exp-but">购买广告</a></td>
+    </tr>
+    
+   </table>
+<div class="m-page text-r m-20-t">
+   <a class="this" href="" >首页</a>
+   <a href=""  >上一页</a>
+   <span>第1页</span>
+   <a href="" >下一页</a>
+  </div>
+
+
+
+</div>
+<div id="tabcon2" class="ov db p-40-t" style="display:none;">
+  
+  <table width="100%" class="m-table ">
+    <tr>
+     <th width="218">广告标题</th>
+     <th width="88">广告类型</th>
+     <th width="88">广告宽度</th>
+     <th width="88">广告高度</th>
+     <th width="132">广告价格</th>
+     <th width="100">显示类型</th>
+     <th width="100">操作</th>
+    </tr>
+    <tr>
+     <td>首页品牌下4个广告位</td>
+     <td>滚动</td>
+     <td>30</td>
+     <td>30</td>
+     <td>100 金币/月</td>
+     <td>随机广告</td>
+     <td><a onClick="goto('module/广告申请.html')"  class="m-exp-but">购买广告</a></td>
+    </tr>
+    
+   </table>
+<div class="m-page text-r m-20-t">
+   <a class="this" href="" >首页</a>
+   <a href=""  >上一页</a>
+   <span>第1页</span>
+   <a href="" >下一页</a>
+  </div>
+
+
+ </div>
+
+</div>
+
+
+<script>function tab(name, name2, cursel, n, n2, s, s2) {
+    for (i = n; i <= n2; i++) {
+      if (i == cursel) {
+        document.getElementById(name2 + i).style.display = "block";
+        document.getElementById(name + i).className = s;
+      } else {
+        document.getElementById(name2 + i).style.display = "none";
+        document.getElementById(name + i).className = s2;
+      }
+    }
+  }</script>
+   
+  </div>
+  
+ 
+</div>
+<!--复制代码-->
+  </body>
+
+</html>

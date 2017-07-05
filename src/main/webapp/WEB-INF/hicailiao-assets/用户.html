@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.lazyload.js"></script>
+    <script src="js/jcarousellite_1.0.1.min.js"></script>
+    <script src="js/jquery.KinSlideshow.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/ion.checkRadio.min.js"></script>
+    <script>jQuery(document).ready(function() {
+        jQuery(".shop_left_btn_con li").mouseover(function() {
+          var child_count = jQuery(this).attr("child_count");
+          if (child_count > 0) {
+            var id = jQuery(this).attr("id");
+            jQuery("#child_" + id).show();
+          }
+        }).mouseleave(function() {
+          var child_count = jQuery(this).attr("child_count");
+          if (child_count > 0) {
+            var id = jQuery(this).attr("id");
+            jQuery("#child_" + id).hide();
+          }
+        });
+        jQuery(".specialde li").mouseover(function() {
+          jQuery(this).find("i").show();
+        }).mouseleave(function() {
+          jQuery(this).find("i").hide();
+        });
+        jQuery(".productone ul").mouseover(function() {
+          jQuery(".productone ul").removeClass("this");
+          jQuery(this).addClass("this");
+        }).mouseleave(function() {
+          jQuery(".productone ul").removeClass("this");
+        });
+        jQuery(".floorul li").mouseover(function() {
+          var store_gc = jQuery(this).attr("store_gc");
+          jQuery(".floorul li[store_gc=" + store_gc + "]").css("cursor", "pointer").removeClass("this");
+          jQuery(this).addClass("this");
+          var id = jQuery(this).attr("id");
+          jQuery(".ftab[store_gc=" + store_gc + "]").hide();
+          jQuery(".ftab[store_gc=" + store_gc + "][id=" + id + "]").show();
+        });
+        jQuery(".productone img").lazyload({
+          effect: "fadeIn",
+          width: 147,
+          height: 147
+        });
+        jQuery(".rankimg img").lazyload({
+          effect: "fadeIn",
+          width: 73,
+          height: 73
+        });
+        //
+        jQuery(".index_sales_left>h3>ul>li").mouseover(function() {
+          jQuery(".index_sales_left>h3>ul>li").removeClass("this");
+          jQuery(this).addClass("this");
+          jQuery(".index_sales_box>[class^=index_sales_]").hide();
+          var div_index = jQuery(this).attr("div_index");
+          jQuery(".index_sales_" + div_index).show();
+        });
+        //
+        jQuery(".conti").jCarouselLite({
+          btnNext: "#advert_left",
+          　　btnPrev: "#advert_right",
+          auto: 5000,
+          speed: 2000,
+          visible: 1
+        });
+        //
+      });</script>
+  </head>
+  
+  <body>
+    <!--top begin-->
+    <div class="hb-top">
+      <div class="main">
+        <a href="#" class="top-a">hi.请登录</a>
+        <a href="#" class="top-b">免费注册</a>
+        <div class="top-user">
+          <div class="top-c">
+            <a class="top-h" href="">
+              <b>
+              </b>买家中心</a>
+            <ul class="t-u">
+              <li>
+                <a href="">已经买到的宝贝</a>
+                <a href="">店铺动态</a>
+                <a href="">好友动态</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="">
+              <b>
+              </b>卖家中心</a>
+            <ul class="t-s">
+              <li>
+                <a href="">已卖出的宝贝</a>
+                <a href="">出售中的宝贝</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="">
+              <b>
+              </b>购物车
+              <i>0</i>种商品
+              <span></span></a>
+            <ul class="t-p">
+              <!--购物车无内容-->
+              <li style="display:none;">购物车暂时为空，赶紧挑选自己喜欢的商品去</li>
+              <!--购物车无内容-->
+              <!--购物车有内容,举例多商品排列，嵌套数据调用时请删除多余-->
+              <li>
+                <h1>购物车商品总价：¥32.00</h1>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-4.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-1.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-2.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-5.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <div class="look-shop">
+                  <a href="">查看我的购物车</a></div>
+              </li>
+              <!--购物车有内容--></ul>
+          </div>
+          <div class="top-c">
+            <a class="top-d" href="">站内短信</a></div>
+          <div class="top-c">
+            <a class="top-d" href="">我的收藏</a></div>
+          <div class="top-c">
+            <a class="top-d" href="">帮助中心</a></div>
+        </div>
+      </div>
+    </div>
+    <!--.top end-->
+    <div class="user-header">
+      <div class="main user-top">
+        <a href="#" class="user-logo"></a>
+        <div class="user-nav">
+          <a class="u-n" href="">首页</a>
+          <dl class="u-d-1 u-d">
+            <dt>
+              <b>
+              </b>账户设置</dt>
+            <dd class="u-sh-1" style="width:200px;">asdasd</dd></dl>
+          <dl class="u-d-2 u-d">
+            <dt>
+              <b>
+              </b>社区</dt>
+            <dd class="u-sh-2" style="width:200px;">asdasdad</dd></dl>
+          <a class="u-n" href="">消息</a></div>
+        <script>$(function() {
+            $(".u-d-1").hover(function() {
+              $(".u-sh-1").show();
+            },
+            function() {
+              $(".u-sh-1").hide();
+            })
+          });
+          $(function() {
+            $(".u-d-2").hover(function() {
+              $(".u-sh-2").show();
+            },
+            function() {
+              $(".u-sh-2").hide();
+            })
+          })</script>
+      </div>
+    </div>
+    <div class="user-bg">
+      <div class="main user-main">
+        <div class="user-right">
+          <div class="user-u user ">
+            <div class="u-pic" style="background:url(images/upfile/user-p-pic.png) center center;">
+              <p class="vip">
+                <b>vip5</b>
+              </p>
+            </div>
+            <dl class="u-exp">
+              <dt>TED</dt>
+              <dd>
+                <span>账户安全：</span>
+                <span>
+                  <b>
+                  </b>
+                </span>
+                <span>较高</span></dd>
+            </dl>
+            <ul>
+              <li>
+                <p>
+                  <i class="user-u-1"></i>
+                </p>
+                <span>待付款
+                  <b>0</b>
+                </span>
+              </li>
+              <li>
+                <p>
+                  <i class="user-u-2"></i>
+                </p>
+                <span>待收货
+                  <b>10</b>
+                </span>
+              </li>
+              <li>
+                <p>
+                  <i class="user-u-3"></i>
+                </p>
+                <span>待自提
+                  <b>100</b>
+                </span>
+              </li>
+              <li>
+                <p>
+                  <i class="user-u-4"></i>
+                </p>
+                <span>待评价
+                  <b>0</b>
+                </span>
+              </li>
+            </ul>
+            <div class="u-shop-btn">
+              <b>
+              </b>
+              <span>我的购物车</span>
+              <p>99</p>
+              <input type="button"></div>
+          </div>
+          <div class="user-d user ">
+            <h1>
+              <a href="#">查看全部订单</a>我的订单</h1>
+            <div class="user-list">
+              <ul>
+                <li>
+                  <span class="check">
+                    <label>
+                      <input name="checkbox" type="checkbox" value="0" /></label>
+                  </span>
+                  <span class=" m-40-r">2016-11-09</span>
+                  <span class=" m-40-r">订单号: 2715574279116530</span>
+                  <span class=" m-40-r">妙爱旗舰店</span>
+                  <a href="#" class="di m-40-r ">和我联系</a></li>
+              </ul>
+              <div class="db m-10-t">
+                <table width="100%" class="table-no-border text-c">
+                  <tr>
+                    <td width="12%">
+                      <img src="images/upfile/sp-1.jpg" width="100" height="100"></td>
+                    <td width="22%">
+                      <div>ventry泰国水龙头纯天然正品水龙头进口水龙头泰国水龙头</div>
+                      <div class="f-c-999999 m-10-t">颜色分类：PT3按摩款</div></td>
+                    <td width="10%">￥122.14</td>
+                    <td width="5%">1</td>
+                    <td width="12%">
+                      <div class="m-10-t">退款/退货</div>
+                      <div class="m-10-t">
+                        <a href="">投诉卖家</a></div>
+                      <div class="m-10-t">
+                        <a href="">退运保险</a></div>
+                    </td>
+                    <td width="15%">
+                      <div class="f-c-000000">￥122.14</div>
+                      <div>(含运费：￥0.00)</div></td>
+                    <td width="12%">
+                      <div class="m-10-t">卖家已发货</div>
+                      <div class="m-10-t">
+                        <a href="">订单详情</a></div>
+                      <div class="m-10-t">
+                        <a href="" class="f-c-ff0000">查看物流</a></div>
+                    </td>
+                    <td width="12%">
+                      <div>还剩8天14时</div>
+                      <div>
+                        <span class="di btn-blue btn-b radius-5 cur-poi m-10-t">确认收货</span></div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <!--<div class="user-dcon">
+            <p class="zero-shop">
+            <span>您买的东西太少了，这里都是空空的，快去挑选合适的商品吧！</span>
+            <b>
+            </b>
+            </p>
+            出现商品时，自动屏蔽该提示！</div>-->
+          </div>
+          <div class="user-s user">
+            <div class="user-s-tab">
+              <a href="#">查看更多</a>
+              <h1>我关注的商品</h1></div>
+            <div class="">
+              <ul class="user-con-list">
+                <li>
+                  <a href="产品页.html">
+                    <img src="images/upfile/b-pic-1.png">
+                    <p>嘉豪微晶石1JHP870晶石</p>
+                    <span>¥188.00</span></a>
+                </li>
+                <li>
+                  <a href="产品页.html">
+                    <img src="images/upfile/b-pic-2.png">
+                    <p>嘉豪微晶石1JHP870晶石</p>
+                    <span>¥188.00</span></a>
+                </li>
+                <li>
+                  <a href="产品页.html">
+                    <img src="images/upfile/b-pic-3.png">
+                    <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                    <span>¥188.00</span></a>
+                </li>
+                <li>
+                  <a href="产品页.html">
+                    <img src="images/upfile/b-pic-4.png">
+                    <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                    <span>¥188.00</span></a>
+                </li>
+                <li>
+                  <a href="产品页.html">
+                    <img src="images/upfile/b-pic-5.png">
+                    <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                    <span>¥188.00</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="user-left">
+          <dl>
+            <dt>订单中心</dt>
+            <dd>
+              <a href="#">我的订单</a>
+              <a href="#">团购订单</a>
+              <a href="#">本地生活订单</a>
+              <a href="#">我的预售</a>
+              <a href="#">评价晒单</a>
+              <a href="#">取消订单记录</a></dd>
+          </dl>
+          <dl>
+            <dt>关注中心</dt>
+            <dd>
+              <a href="#">关注的商品</a>
+              <a href="#">关注的店铺</a>
+              <a href="#">本地生活订单</a>
+              <a href="#">关注的品牌</a>
+              <a href="#">关注的活动</a>
+              <a href="#">浏览历史</a></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="ad-bottom">
+      <a href="#">
+        <img src="images/ad-1.png"></a>
+    </div>
+    <dl class="footer">
+      <dt>
+        <a href="#">首页</a>|
+        <a href="#">招聘英才</a>|
+        <a href="#">广告合作</a>|
+        <a href="#">联系我们</a>|
+        <a href="#">关于采料网</a></dt>
+      <dd>
+        <p>&copy;2015-2016&nbsp;采料网&nbsp;增值电信业务经营许可证：琼B2-20150028</p>
+      </dd>
+    </dl>
+    <script language="javascript">$(".check").find("input").ionCheckRadio();</script></body>
+
+</html>

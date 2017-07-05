@@ -1,0 +1,61 @@
+<ul class="help-tab">
+<li id="a1" class="tabon" onClick="tab('a','tabcon','1','1','1','tabon','taboff');"><span>商城新闻</span></li>
+</ul>
+
+
+<div id="tabcon1" class="ov db">
+ <ul class="list-a">
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">如何利用直通车让站长盈利</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">新版“广告管理”功能说明</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">官方使用提示信息</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">新功能使用说明</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">正式版火爆销售中 前10名八折酬宾</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">如何利用直通车让站长盈利</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">新版“广告管理”功能说明</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">官方使用提示信息</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">新功能使用说明</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">正式版火爆销售中 前10名八折酬宾</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">如何利用直通车让站长盈利</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">新版“广告管理”功能说明</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">官方使用提示信息</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">新功能使用说明</a><i></i></li>
+  <li><a onClick="goto('客户帮助-商城新闻内容.html')">正式版火爆销售中 前10名八折酬宾</a><i></i></li>
+ </ul>
+ 
+<ul class="one-page">
+   <li style="margin-right:20px;"><a href="#">上一页</a></li>
+   <li><a href="#">1</a></li>
+   <li><a href="#">2</a></li>
+   <li><a href="#">3</a></li>
+   <li><a href="#">4</a></li>
+   <li><a href="#">5</a></li>
+   <li><b>...</b></li>
+   <li><a href="#">下一页</a></li>
+   <li><span>共100页</span></li>
+   <li><span>到第</span><input type="text"><span>页</span></li>
+   <li><input type="button" value="确定" class="bg-a"></li>
+  </ul>
+  <script>
+   $('.one-page').contents().filter(function() {
+return this.nodeType === 3;
+}).remove();
+  </script>
+</div>
+<script>
+ function tab(name,name2,cursel,n,n2,s,s2)
+{
+	for(i=n;i<=n2;i++)
+	{
+		if(i==cursel)
+		{
+			document.getElementById(name2+i).style.display="block";
+			document.getElementById(name+i).className=s;
+		}
+		else
+		{
+			document.getElementById(name2+i).style.display="none";
+			document.getElementById(name+i).className=s2;
+		}
+	}
+}
+</script>

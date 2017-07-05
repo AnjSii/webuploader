@@ -1,0 +1,50 @@
+/*注册专用*/
+.reg-logo { height:177px; width:1200px; margin:0 auto; clear:both; overflow:hidden;}
+.reg-logo a {display:inline-block; margin-top:40px;}
+.reg-big-bg { height:685px; overflow:hidden; background:url(../images/upfile/regbg.jpg) center center repeat-x;}
+.reg-main { width:1030px; height:621px; overflow:hidden; background:#fff url(../images/reg-right-bg.gif) right 30px no-repeat;box-shadow:0px 0px 20px #111; margin:30px auto; }
+.reg-main h1,.reg-main dl  { display:block; clear:both; margin-left:60px; margin-bottom:5px;}
+.reg-main dt { line-height:30px; color:#6D6D6D; font-size:16px; overflow:hidden;} 
+.reg-main dd { position:relative; overflow:hidden;}
+.reg-main dd p { background:url(../images/nav-icon.png) 0px -578px; width:30px; height:24px; display:block; position:absolute; top:10px; left:302px; cursor:pointer;}
+.reg-main h1 { font-weight:normal; font-size:20px; margin-top:35px; }
+.reg-main input , .reg-main span , .reg-main dl dd b{ display:inline-block; float:left;}
+.reg-main input.reg-i { height:45px; width:320px;}
+.reg-main input.reg-yzm { height:45px;width:140px;}
+.reg-main input.reg-yzm , .reg-main input.reg-i { border:1px #CDCDCD solid; padding:0px 10px;}
+.reg-main span  { margin-left:20px; font-size:20px; color:#C1C1C1; line-height:45px;}
+.reg-main dl dt input[type='checkbox'] , .reg-main dl dt div { float:left; display:inline-block;}
+.reg-main dl dt input[type='checkbox'] { margin-top:8px; margin-right:10px;}
+.reg-main dl dd input[type='button'] { width:340px; height:46px; background:#1D1F88; color:#fff; border:none; font-size:20px;}
+ 
+ 
+/*登录*/
+ .main { overflow:hidden;}
+ .log-main {width:440px; height:420px; overflow:hidden; background:#fff url(../images/reg-right-bg.gif) right 30px no-repeat;box-shadow:0px 0px 20px #111; margin-top:100px; float:right; margin-right:86px; font-family:"宋体"}
+ .log-main h1 ,.log-rem , .log-main input[type='button'] , .log-main a { margin-left:30px; margin-right: 35px; overflow:hidden;}
+ .log-main dl { margin-left:30px; margin-right: 35px; height:46px;} 
+ .log-main dl.log-err { border:1px #F00 solid!important;}
+ .log-main h1 { margin-top:30px; font-size:16px; overflow:hidden;}
+ .log-main h1 a { float:right; color:#1D1F88; display:inline-block;}
+ .log-main dl dt , .log-main dl dd { float:left; height:46px;}
+ .log-main dl dd { position:relative;}
+ .login_error_sp { position:absolute; left:0; top:50px; color:#F00; font-size:12px;}
+ .log-main dl { border:1px #CDCDCD solid; margin-top:30px;}
+ .log-l { width:340px;}
+ .log-s { width:180px;}
+ .log-main dl dt { background:#E2E2E4; width:44px;  text-align:center;}
+ .log-main dl dd input{ height:44px; border:none; padding:0px 10px; font-family:"宋体"; font-size:14px;}
+ .log-main dl dt b , .log-main dl dt i { display:inline-block; width:20px; height:25px; background:url(../images/nav-icon.png) no-repeat; margin-top:12px;}
+ .log-main dl dt b { background-position:0px -550px;}
+ .log-main dl dt i { background-position:-31px -550px;}
+ .log-rem input[type='checkbox'] , .log-rem span {float:left; display:inline-block;}
+ .log-rem input[type='checkbox'] { margin-top:4px; margin-right:10px; }
+ .log-rem { margin-top:25px; font-size:14px;}
+ .log-rem a { float:right;  color:#1D1F88;}
+ .log-main input[type='button'] { width:342px; height:46px; color:#fff; font-size:16px; background:#1D1F88; border:none; margin-top:35px; cursor:pointer;}
+ .log-main a { display:block;  font-size:14px;}
+ .log-err { color:#F00; display:block;  height:20px; line-height:20px;}
+ ul.log-yzm {  position:absolute; left:216px; top:2px; }
+ ul.log-yzm li{ float:left }
+ ul.log-yzm li div {overflow:hidden; cursor:pointer; font-size:12px; color:#C1C1C1; font-family:"宋体";}
+ ul.log-yzm li div img { width:80px; height:45px;}

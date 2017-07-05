@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/buyers.css">
+    <script src="../../../js/jquery-1.6.2.js"></script>
+  </head>
+  
+  <body>
+    <!--为了方便直接双击查阅，本次加入了HEAD和样式，真正模块化时请使用如下代码即可-->
+    <!--复制代码-->
+    <div class="mj-box">
+      <div class="mj-a">
+        <h3 class="fl">ted</h3>
+        <div class="vip fl">
+          <p>VIP5</p>
+        </div>
+        <dl class="fr ov">
+          <dt class="fl">你有
+            <b>99</b>条站内消息</dt>
+          <dd class="fl">
+            <a class="cur-poi" onClick="goto('module/站内短信.html')">点击管理</a></dd>
+        </dl>
+      </div>
+      <div class="user-u ">
+        <ul>
+          <li>
+            <p>
+              <i class="user-u-1"></i>
+            </p>
+            <span>待付款
+              <b>0</b>
+            </span>
+          </li>
+          <li>
+            <p>
+              <i class="user-u-2"></i>
+            </p>
+            <span>待收货
+              <b>10</b>
+            </span>
+          </li>
+          <li>
+            <p>
+              <i class="user-u-3"></i>
+            </p>
+            <span>待自提
+              <b>100</b>
+            </span>
+          </li>
+          <li>
+            <p>
+              <i class="user-u-4"></i>
+            </p>
+            <span>待评价
+              <b>0</b>
+            </span>
+          </li>
+        </ul>
+        <a href="">收货地址管理</a></div>
+      <div class="mj-b">
+        <div class="mj-editor radius-15 ">
+          <dl class="edi-top ov">
+            <dt class="fl radius-15">
+              <input type="text" placeholder="今天心情怎么样" /></dt>
+            <dd class="fr">
+              <span class="edi-1"></span>
+              <span class="edi-2"></span>
+              <span class="edi-3"></span>
+            </dd>
+          </dl>
+          <dl class="edi-bot">
+            <dt class="fl">表情
+              <span></span></dt>
+            <dd class="fr">
+              <input class=" radius-10" type="button" value="分享" />
+              <span class="fl m-15-r">0~500字</span></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="mj-c">
+        <h1>
+          <span class="f-blue">好友动态</span></h1>
+        <div class="mj-tab">
+          <span id="a1" class="tabon" onClick="tab('a','tabcon','1','1','4','tabon','taboff');">好友</span>
+          <span id="a2" class="taboff" onClick="tab('a','tabcon','2','1','4','tabon','taboff');">自己</span>
+          <span id="a3" class="taboff" onClick="tab('a','tabcon','3','1','4','tabon','taboff');">关注</span>
+          <p class="db ov cl"></p>
+          <div id="tabcon1" class="ov db">11111111111</div>
+          <div id="tabcon2" class="ov db" style="display:none;">22222222222222</div>
+          <div id="tabcon3" class="ov db" style="display:none;">33333333333333</div></div>
+        <script>function tab(name, name2, cursel, n, n2, s, s2) {
+            for (i = n; i <= n2; i++) {
+              if (i == cursel) {
+                document.getElementById(name2 + i).style.display = "block";
+                document.getElementById(name + i).className = s;
+              } else {
+                document.getElementById(name2 + i).style.display = "none";
+                document.getElementById(name + i).className = s2;
+              }
+            }
+          }</script>
+      </div>
+    </div>
+    <!--MJ-BOX-->
+    <!--复制代码--></body>
+
+</html>

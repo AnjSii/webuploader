@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/seller.css">
+  </head>
+  
+  <body >
+  
+<!--为了方便直接双击查阅，本次加入了HEAD和样式，真正模块化时请使用如下代码即可-->
+<!--复制代码-->
+
+
+ 
+<div class="m-box-all">
+ <div class="m-add-all"><a href="">卖家中心</a><span>运费模板</span></div>
+ <div class="m-con-all">
+  
+  <div class="m-main">
+   
+<div class="m-tab">
+<span id="a1" class="tabon" onClick="tab('a','tabcon','1','1','4','tabon','taboff');">添加运费模板</span>
+<span id="a2" class="taboff" onClick="tab('a','tabcon','2','1','4','tabon','taboff');">运费模板列表</span>
+</div>
+
+<p class="db ov cl"></p>
+
+<div id="tabcon1" class="ov db  p-40-t">
+
+<div class="m ov db" style=" width:780px;">
+   <table width="100%" class="m-tab-st">
+    <tbody><tr>
+     <td width="108" valign="middle" align="right">模板名称：</td>
+     <td class="p-10-l"><input type="text" style="width:210px;" class=" p-5 table-input "></td>
+    </tr>
+    <tr>
+     <td width="108" valign="top" align="right">活动说明：</td>
+     <td class="p-10-l">
+   <select class="sel-box radius-5 m-10-r"><option>11</option></select> 
+  <p class="lh-30px f-14 f-st">承诺买家付款后该时间内录入物流信息并发货，以物流公司收单信息为准</p>
+     </td>
+    </tr>
+    <tr>
+     <td width="108" valign="middle" align="right">计价方式：</td>
+     <td class="p-10-l">
+       <div class="di"><label><input name="radio"  type="radio" checked><span>按件数</span></label></div>
+       <div class="di"><label><input name="radio"  type="radio" ><span>按重量</span></label></div>
+       <div class="di"><label><input name="radio"  type="radio" ><span>按体积</span></label></div>
+     </td>
+    </tr>
+    <tr>
+     <td width="108" valign="middle" align="right">运送方式：</td>
+     <td class="p-10-l">除指定地区外，其他地区的运费采用“默认运费”</td>
+    </tr>
+    <tr>
+     <td width="108" valign="middle" align="right"></td>
+     <td class="p-10-l">
+      <div class="db m-10-b"><label><input type="checkbox" value="0" />按件数</label></div>
+      <!--功能模块-->
+      <div class="luggage">
+       <ul class="luggage-value">
+        <li>
+        <span class="fl">默认运费：</span>
+        <input class="fl" type="text" style=" width:50px;">
+        <span class="fl">件内，</span>
+        <input class="fl" type="text" style=" width:50px;">
+        <span class="fl">元， 每增加</span>
+        <input class="fl" type="text" style=" width:50px;">
+        <span class="fl">件，增加运费</span>
+        <input class="fl" type="text" style=" width:50px;">
+        <span class="fl">元</span>
+        </li>
+       </ul>
+       <div class="laggage-area">
+        <table width="100%">
+         <tr>
+          <th width="40%">运送到</th>
+          <th width="12%">首件(件)</th>
+          <th width="12%">首费(元)</th>
+          <th width="12%">续件(件)</th>
+          <th width="12%">续费(元)</th>
+          <th width="12%">操作</th>
+         </tr>
+         <tr>
+          <td valign="middle"><span class="di"><input type="checkbox"></span><div class="di">未添加区域</div><a class="di f-blue m-10-l">编辑</a></td>
+          <td><input type="text" class="lh-20px table-input text-c" style="width:50px;"></td>
+          <td><input type="text" class="lh-20px table-input text-c" style="width:50px;"></td>
+          <td><input type="text" class="lh-20px table-input text-c" style="width:50px;"></td>
+          <td><input type="text" class="lh-20px table-input text-c" style="width:50px;"></td>
+          <td align="center"><input type="submit" value="删除" class="no-bg no-border f-blue di"></td>
+         </tr>
+        </table>
+        <div class="db ov lh-35px f-blue text-i1">
+         <span class="di m-20-r">为指定地区城市设置运费</span> 
+         <input type="submit" class="no-bg lh-20px no-border di f-blue" value="批量操作"> 
+        </div>
+       </div>
+      </div>
+      <!--功能模块-->
+      <div class="db m-10-b"><label><input type="checkbox" value="0" />按重量</label></div>
+      <div class="db m-10-b"><label><input type="checkbox" value="0" />按体积</label></div>
+     </td>
+    </tr>
+    <tr>
+     <td width="108" height="100" valign="top" align="right"></td>
+     <td class="p-10-l" valign="top"><div class=" p-30-t"><input type="button" value="保存" class="s-but"></div></td>
+    </tr>
+   </tbody></table>
+  </div>
+
+</div>
+<div id="tabcon2" class="ov db p-40-t" style="display:none;">
+
+   <div class="db m-10-b">
+    <table width="100%">
+     <tr>
+      <td width="50%" class="lh-30px f-14 f-st">bb</td>
+      <td width="50%" class="lh-30px f-14 f-st"><span>最后编辑时间:2015-06-02 16:24:06</span><span class="yf">复制模板</span><span class="yf">编辑</span><span class="yf">删除</span></td>
+     </tr>
+    </table>
+   <table width="100%" class="m-table">
+    <tr>
+     <th width="30%">配送方式</th>
+     <th width="30%">配送区域</th>
+     <th width="10%">首件(件)</th>
+     <th width="10%">运费(¥)</th>
+     <th width="10%">续件(件)</th>
+     <th width="10%">运费(¥)</th>
+    </tr>
+    <tr>
+     <td>快递</td>
+     <td>全国</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+    </tr>
+    <tr>
+     <td>快递</td>
+     <td>全国</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+    </tr>
+    <tr>
+     <td>快递</td>
+     <td>景德镇、萍乡、抚州、赣州、南昌、吉安、宜春、 新余、饶、九江、鹰潭、阜阳、六安、宿州、安庆、 池州、亳州、宣城、合肥、黄山、淮</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+    </tr>
+   </table>
+  </div>
+  
+  <div class="db m-10-b">
+    <table width="100%">
+     <tr>
+      <td width="50%" class="lh-30px f-14 f-st">bb</td>
+      <td width="50%" class="lh-30px f-14 f-st"><span>最后编辑时间:2015-06-02 16:24:06</span><span class="yf">复制模板</span><span class="yf">编辑</span><span class="yf">删除</span></td>
+     </tr>
+    </table>
+   <table width="100%" class="m-table">
+    <tr>
+     <th width="30%">配送方式</th>
+     <th width="30%">配送区域</th>
+     <th width="10%">首件(件)</th>
+     <th width="10%">运费(¥)</th>
+     <th width="10%">续件(件)</th>
+     <th width="10%">运费(¥)</th>
+    </tr>
+    <tr>
+     <td>快递</td>
+     <td>全国</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+    </tr>
+    <tr>
+     <td>快递</td>
+     <td>全国</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+    </tr>
+    <tr>
+     <td>快递</td>
+     <td>景德镇、萍乡、抚州、赣州、南昌、吉安、宜春、 新余、饶、九江、鹰潭、阜阳、六安、宿州、安庆、 池州、亳州、宣城、合肥、黄山、淮</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+    </tr>
+   </table>
+  </div>
+  
+  <div class="db m-10-b">
+    <table width="100%">
+     <tr>
+      <td width="50%" class="lh-30px f-14 f-st">bb</td>
+      <td width="50%" class="lh-30px f-14 f-st"><span>最后编辑时间:2015-06-02 16:24:06</span><span class="yf">复制模板</span><span class="yf">编辑</span><span class="yf">删除</span></td>
+     </tr>
+    </table>
+   <table width="100%" class="m-table">
+    <tr>
+     <th width="30%">配送方式</th>
+     <th width="30%">配送区域</th>
+     <th width="10%">首件(件)</th>
+     <th width="10%">运费(¥)</th>
+     <th width="10%">续件(件)</th>
+     <th width="10%">运费(¥)</th>
+    </tr>
+    <tr>
+     <td>快递</td>
+     <td>全国</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+    </tr>
+    <tr>
+     <td>快递</td>
+     <td>全国</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+    </tr>
+    <tr>
+     <td>快递</td>
+     <td>景德镇、萍乡、抚州、赣州、南昌、吉安、宜春、 新余、饶、九江、鹰潭、阜阳、六安、宿州、安庆、 池州、亳州、宣城、合肥、黄山、淮</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+     <td>11</td>
+    </tr>
+   </table>
+  </div>
+
+ </div>
+
+</div>
+
+
+<script>function tab(name, name2, cursel, n, n2, s, s2) {
+    for (i = n; i <= n2; i++) {
+      if (i == cursel) {
+        document.getElementById(name2 + i).style.display = "block";
+        document.getElementById(name + i).className = s;
+      } else {
+        document.getElementById(name2 + i).style.display = "none";
+        document.getElementById(name + i).className = s2;
+      }
+    }
+  }</script>
+  
+  <script>
+  $('[name="nice-select"]').click(function(e){
+		    $('[name="nice-select"]').find('ul').hide();
+		    $(this).find('ul').show();
+			e.stopPropagation();
+		});
+		$('[name="nice-select"] li').hover(function(e){
+			$(this).toggleClass('on');
+			e.stopPropagation();
+		});
+		$('[name="nice-select"] li').click(function(e){
+			var val = $(this).text();
+			$(this).parents('[name="nice-select"]').find('input').val(val);
+			$('[name="nice-select"] ul').hide();
+			e.stopPropagation();
+		});
+		$(document).click(function(){
+			$('[name="nice-select"] ul').hide();
+		});
+    </script>
+    
+<script language="javascript">
+$(".radio").find("input").ionCheckRadio();
+$(".checkbox").find("input").ionCheckRadio();
+</script>
+   
+  </div>
+  
+ 
+</div>
+<!--复制代码-->
+  </body>
+
+</html>

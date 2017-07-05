@@ -1,0 +1,1281 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/list.css">
+    <script src="js/jquery-1.4.2.min.js"></script>
+    <script src="js/city/city-data.js"></script>
+    <!--城市联动-->
+    <script src="js/city/hzw-city-picker.min.js"></script>
+    <!--城市联动-->
+    <script src="js/city/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery.spinner.js"></script>
+    <!--计算器-->
+    <script src="js/jquery.lazyload.js"></script>
+    <script src="js/jcarousellite_1.0.1.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <!-- 图片放大镜-->
+    <script src="js/jquery.imagezoom.min.js"></script>
+    <!--商品分类树形菜单-->
+    <script type="text/javascript" src="js/SimpleTree.js"></script>
+    <script type="text/javascript" src="js/star.js"></script>
+    <script>jQuery(document).ready(function() {
+        jQuery(".shop_left_btn_con li").mouseover(function() {
+            var child_count = jQuery(this).attr("child_count");
+            if (child_count > 0) {
+                var id = jQuery(this).attr("id");
+                jQuery("#child_" + id).show();
+            }
+        }).mouseleave(function() {
+            var child_count = jQuery(this).attr("child_count");
+            if (child_count > 0) {
+                var id = jQuery(this).attr("id");
+                jQuery("#child_" + id).hide();
+            }
+        });
+        jQuery(".specialde li").mouseover(function() {
+            jQuery(this).find("i").show();
+        }).mouseleave(function() {
+            jQuery(this).find("i").hide();
+        });
+        jQuery(".productone ul").mouseover(function() {
+            jQuery(".productone ul").removeClass("this");
+            jQuery(this).addClass("this");
+        }).mouseleave(function() {
+            jQuery(".productone ul").removeClass("this");
+        });
+        jQuery(".floorul li").mouseover(function() {
+            var store_gc = jQuery(this).attr("store_gc");
+            jQuery(".floorul li[store_gc=" + store_gc + "]").css("cursor", "pointer").removeClass("this");
+            jQuery(this).addClass("this");
+            var id = jQuery(this).attr("id");
+            jQuery(".ftab[store_gc=" + store_gc + "]").hide();
+            jQuery(".ftab[store_gc=" + store_gc + "][id=" + id + "]").show();
+        });
+        jQuery(".productone img").lazyload({
+            effect: "fadeIn",
+            width: 147,
+            height: 147
+        });
+        jQuery(".rankimg img").lazyload({
+            effect: "fadeIn",
+            width: 73,
+            height: 73
+        });
+        //
+        jQuery(".index_sales_left>h3>ul>li").mouseover(function() {
+            jQuery(".index_sales_left>h3>ul>li").removeClass("this");
+            jQuery(this).addClass("this");
+            jQuery(".index_sales_box>[class^=index_sales_]").hide();
+            var div_index = jQuery(this).attr("div_index");
+            jQuery(".index_sales_" + div_index).show();
+        });
+        //
+        jQuery(".conti").jCarouselLite({
+            btnNext: "#advert_left",
+            btnPrev: "#advert_right",
+            auto: 5000,
+            speed: 2000,
+            visible: 1
+        });
+        //
+    });</script>
+</head>
+
+<body>
+<!--top begin-->
+<div class="hb-top">
+    <div class="main">
+        <a href="#" class="top-a">hi.请登录</a>
+        <a href="#" class="top-b">免费注册</a>
+        <div class="top-user">
+            <div class="top-c">
+                <a class="top-h" href="">
+                    <b>
+                    </b>买家中心</a>
+                <ul class="t-u">
+                    <li>
+                        <a href="">已经买到的宝贝</a>
+                        <a href="">店铺动态</a>
+                        <a href="">好友动态</a></li>
+                </ul>
+            </div>
+            <div class="top-c">
+                <a class="top-h" href="">
+                    <b>
+                    </b>卖家中心</a>
+                <ul class="t-s">
+                    <li>
+                        <a href="">已卖出的宝贝</a>
+                        <a href="">出售中的宝贝</a></li>
+                </ul>
+            </div>
+            <div class="top-c">
+                <a class="top-h" href="">
+                    <b>
+                    </b>购物车
+                    <i>0</i>种商品
+                    <span></span></a>
+                <ul class="t-p">
+                    <!--购物车无内容-->
+                    <li style="display:none;">购物车暂时为空，赶紧挑选自己喜欢的商品去</li>
+                    <!--购物车无内容-->
+                    <!--购物车有内容,举例多商品排列，嵌套数据调用时请删除多余-->
+                    <li>
+                        <h1>购物车商品总价：¥32.00</h1>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-4.png"></dt>
+                            <dd>
+                                <a href="">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-1.png"></dt>
+                            <dd>
+                                <a href="">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-2.png"></dt>
+                            <dd>
+                                <a href="">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-5.png"></dt>
+                            <dd>
+                                <a href="">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <div class="look-shop">
+                            <a href="">查看我的购物车</a></div>
+                    </li>
+                    <!--购物车有内容--></ul>
+            </div>
+            <div class="top-c">
+                <a class="top-d" href="">站内短信</a></div>
+            <div class="top-c">
+                <a class="top-d" href="">我的收藏</a></div>
+            <div class="top-c">
+                <a class="top-d" href="">帮助中心</a></div>
+        </div>
+    </div>
+</div>
+<!--.top end-->
+<div class="hb-logo">
+    <div class="logo">
+        <img src="images/LOGO.png"></div>
+    <dl class="hb-search">
+        <dt>
+            <input type="text" placeholder="请输入您想要的商品名、店铺、装修公司">
+            <input type="button" value="搜索"></dt>
+        <dd>
+            <b>热门搜索：</b>
+            <a href="#">接线板</a>
+            <a href="#">接线板</a>
+            <a href="#">接线板</a>
+            <a href="#">接线板</a>
+            <a href="#">接线板</a></dd>
+    </dl>
+    <dl class="eym">
+        <dt class="eym-1">
+            <img src="images/eym.png">
+        <p>专享周二采料专场</p>
+        </dt>
+        <dt class="eym-2" style="display:none">
+            <img src="images/eym.png">
+        <p>专享周日采料专场</p>
+        </dt>
+        <dd>
+            <span class="eym-btn-on"></span>
+            <span class="eym-btn-mov"></span>
+        </dd>
+    </dl>
+    <script>$(function() {
+        $(".eym-btn-mov").hover(function() {
+                    $(".eym-2").show();
+                    $(".eym-1").hide();
+                },
+                function() {
+                    $(".eym-2").hide();
+                    $(".eym-1").show();
+                })
+    })</script>
+</div>
+<!--.hb-logo end-->
+<!-- 随页面浮动LOGO和输入框 -->
+<!--<div class="fix-logo">
+<div class="fix-main">
+<img src="images/fix-logo.png">
+<div class="fix-input"><input type="text" placeholder="请输入您想要的商品名、店铺、装修公司"> <input type="button" value="搜索"></div></div>
+</div>-->
+<!--.fix-logo end-->
+<div class="hb-meun">
+    <div class="cailiaoPage border_b3_b">
+        <div class="menu_box">
+            <!--左边分类-->
+            <div class="background_b" id="nav">
+                <a class="fenlei_hd">
+                    <div class="mod_cate_hd fontF">
+                        <span></span>所有商品分类</div>
+                </a>
+                <ul class="tit" id="classPanel" style="display: none;">
+                    <li class="mod_cate">
+                        <h2>
+                            <a href="#" target="_blank">
+                                <span></span>厨房卫浴</a>
+                            <b class="mod-1"></b>
+                        </h2>
+                        <div class="mod_subcate">
+                            <div class="mod_subcate_main">
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">水管管材</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">不锈钢管/配件</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">板材</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">细木工板</a></dd>
+                                </dl>
+                            </div>﻿</div>
+                    </li>
+                    <li class="mod_cate">
+                        <h2>
+                            <a href="#" target="_blank">
+                                <span></span>五金工具</a>
+                            <b class="mod-2"></b>
+                        </h2>
+                        <div class="mod_subcate">
+                            <div class="mod_subcate_main">
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">电器控制系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">家庭影院</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">安防</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mod_cate">
+                        <h2>
+                            <a href="#" target="_blank">
+                                <span></span>基础建材</a>
+                            <b class="mod-3"></b>
+                        </h2>
+                        <div class="mod_subcate">
+                            <div class="mod_subcate_main">
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">电器控制系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">家庭影院</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">安防</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mod_cate">
+                        <h2>
+                            <a href="#" target="_blank">
+                                <span></span>墙面/地面</a>
+                            <b class="mod-4"></b>
+                        </h2>
+                        <div class="mod_subcate">
+                            <div class="mod_subcate_main">
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">电器控制系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">家庭影院</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">安防</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mod_cate">
+                        <h2>
+                            <a href="#" target="_blank">
+                                <span></span>装饰采料</a>
+                            <b class="mod-5"></b>
+                        </h2>
+                        <div class="mod_subcate">
+                            <div class="mod_subcate_main">
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">电器控制系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">家庭影院</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">安防</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mod_cate">
+                        <h2>
+                            <a href="#" target="_blank">
+                                <span></span>灯饰照明</a>
+                            <b class="mod-6"></b>
+                        </h2>
+                        <div class="mod_subcate">
+                            <div class="mod_subcate_main">
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">电器控制系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">家庭影院</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">安防</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mod_cate">
+                        <h2>
+                            <a href="#" target="_blank">
+                                <span></span>智能家居</a>
+                            <b class="mod-7"></b>
+                        </h2>
+                        <div class="mod_subcate">
+                            <div class="mod_subcate_main">
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">电器控制系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">家庭影院</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">安防</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mod_cate">
+                        <h2>
+                            <a href="#" target="_blank">
+                                <span></span>装修工具</a>
+                            <b class="mod-8"></b>
+                        </h2>
+                        <div class="mod_subcate">
+                            <div class="mod_subcate_main">
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">电器控制系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">家庭影院</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">安防</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mod_cate">
+                        <h2>
+                            <a href="#" target="_blank">
+                                <span></span>精品门窗</a>
+                            <b class="mod-9"></b>
+                        </h2>
+                        <div class="mod_subcate">
+                            <div class="mod_subcate_main">
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">电器控制系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">家庭影院</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                                    <dd>
+                                        <a href="#" target="_blank">安防</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--<script>
+            $("#nav .tit").slide({
+            type: "menu",
+            titCell: ".mod_cate",
+            targetCell: ".mod_subcate",
+            delayTime: 0,
+            triggerTime: 10,
+            defaultPlay: false,
+            returnDefault: true
+            });
+            </script>-->
+            <script>$("#nav .tit").slide({
+                type: "menu",
+                titCell: ".mod_cate",
+                targetCell: ".mod_subcate",
+                delayTime: 0,
+                triggerTime: 10,
+                defaultPlay: false,
+                returnDefault: true
+            });
+            jQuery(document).ready(function() {
+                jQuery(".fenlei_hd").mouseover(function() {
+                    $("#classPanel").show();
+                });
+                jQuery(".fenlei_hd").mouseout(function() {
+                    $("#classPanel").hide();
+                });
+                jQuery("#classPanel").mouseover(function() {
+                    $("#classPanel").show();
+                });
+                jQuery("#classPanel").mouseout(function() {
+                    $("#classPanel").hide();
+                });
+            });</script>
+            <!--首页，品牌，团购，天天特价-->
+            <div class="menu_big border-r3">
+                <ul>
+                    <li>
+                        <a href="首页.html" id="" target="_blank">首页</a>
+                        <span class="hot"></span>
+                    </li>
+                    <li>
+                        <a href="品牌页.html" id="" target="_blank">品牌</a>
+                        <span class="hot"></span>
+                    </li>
+                    <li>
+                        <a href="天天特价.html" id="" target="_blank">天天特价</a>
+                        <span class="hot"></span>
+                    </li>
+                    <li>
+                        <a href="产品页.html" id="" target="_blank">装修公司</a>
+                        <span class="hot"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="list-wrap">
+    <dl class="add-top">
+        <dt>您当前位置：</dt>
+        <dd>
+            <a href="">首页</a>
+            <span>&gt;&gt;</span>
+            <a href="">商品详情</a></dd>
+    </dl>
+    <div class="con-main">
+        <div class="con-left">
+            <div class="box">
+                <div class="tb-booth tb-pic tb-s310">
+                    <a href="images/upfile/details_01.png"><img src="images/upfile/details_01_mid.png"  rel="images/upfile/details_01.png" class="jqzoom" /></a>
+                </div>
+                <ul class="tb-thumb" id="thumblist">
+                    <li class="tb-selected"><div class="tb-pic tb-s40"><a href="#"><img  src="images/upfile/details_01_small.png" mid="images/upfile/details_01_mid.png" big="images/upfile/details_01.png"></a></div></li>
+                    <li><div class="tb-pic tb-s40"><a href="#"><img  src="images/upfile/details_02_small.png" mid="images/upfile/details_02_mid.png" big="images/upfile/details_02.png"></a></div></li>
+                    <li><div class="tb-pic tb-s40"><a href="#"><img  src="images/upfile/details_03_small.png" mid="images/upfile/details_03_mid.png" big="images/upfile/details_03.png"></a></div></li>
+                </ul>
+                <p class="con-exp-p1"><span></span><span>收藏宝贝（0人气）</span></p>
+                <script>
+                    $(function(){
+                        $(".con-exp-p1>span:first").addClass("con-exp-p2");
+                        $(".con-exp-p1").click(function(){
+                            $(".con-exp-p1>span:first").toggleClass("con-exp-p2").toggleClass("con-exp-p3")
+
+                        })
+                    })
+                </script>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $(".jqzoom").imagezoom();
+                    $("#thumblist li a").hover(function(){
+                        $(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+                        $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+                        $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+                    });
+                });
+            </script>
+        </div>
+        <div class="con-center">
+            <h1>背景墙3022B　浴室背景墙 2145K　厨房背景墙3022A 规格300*300 包装8件/箱</h1>
+            <h6><a href="#"><span>狂欢返场 下单满额立减</span><h3>点击领取!</h3></a></h6>
+            <div class="cw_div">
+                <div class="c-cdiv">
+                    <dl>
+                        <dt>原价</dt>
+                        <dd><del>￥150.00</del></dd>
+                    </dl>
+                    <dl>
+                        <dt>店铺价格</dt>
+                        <dd><b>￥66.00</b></dd>
+                    </dl>
+                </div>
+                <div class="w-wdiv">
+                    <dl>
+                        <dt>商品重量</dt>
+                        <dd class="c-dd-a">2.00千克（kg）</dd>
+                    </dl>
+                    <dl class="w-wdiv-dl">
+                        <dt>物流运费</dt>
+                        <dd>
+                            <div class="c-a cc-aa">
+                                <span>平邮：¥0.0 快递：¥0.0 EMS：¥0.0</span>
+                            </div>
+                            <div class="c-a cc-aaa">
+                                <span>海口 | 至</span>
+                                <a>
+                                    <input type="text" class="con-city" id="cityChoice">
+                                </a>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>销售情况</dt>
+                        <dd class="c-dd-a">售出100件（50条评论）
+                    </dl>
+                    <dl>
+                        <dt>关注次数</dt>
+                        <dd class="c-dd-a">40次
+                    </dl>
+                </div>
+            </div>
+            <div class="a-adiv">
+                <dl>
+                    <dt>尺寸（mm）</dt>
+                    <dd>
+                        <ul class="shop-choose">
+                            <li><a>300x300<b></b></a></li>
+                            <li><a>300x400<b></b></a></li>
+                            <li><a>300x500<b></b></a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <script>
+                    $(function(){
+                        $(".shop-choose").find("a").click(function(){
+                            $(this).addClass("this").children("b").css("display","block").parents().siblings().children("a").removeClass("this").children("b").css("display","none");
+                        })
+                    })
+                </script>
+            </div>
+            <div class="d-ddiv">
+                <dl>
+                    <dt>数量</dt>
+                    <dd>
+                        <input type="text" class="spinnerExample" />
+                        <script type="text/javascript">$('.spinnerExample').spinner({});</script>
+                    </dd>
+                    <dd class="d-ddiv_dd">（库存1件）</dd>
+                </dl>
+            </div>
+            <div class="e-ediv">
+                <input type="button" value="立即购买" class="c-c-1">
+                <input type="button" value="加入购物车" class="c-c-2">
+            </div>
+            <script>
+                var cityPicker = new HzwCityPicker({
+                    data: data,
+                    target: 'cityChoice',
+                    valType: 'k-v',
+                    hideCityInput: {
+                        name: 'city',
+                        id: 'city'
+                    },
+                    hideProvinceInput: {
+                        name: 'province',
+                        id: 'province'
+                    },
+                    callback: function() {}
+                });
+                cityPicker.init();
+            </script>
+        </div>
+        <div class="con-right">
+            <p href="#" class="jb">
+                <b>
+                </b>举报中心
+                <a class="jb-a" href="#" style="display:none;">举报此商品</a></p>
+            <script>$(function() {
+                $(".jb").hover(function() {
+                            $(".jb-a").show();
+                        },
+                        function() {
+                            $(".jb-a").hide();
+                        })
+            })</script>
+            <div style=" clear:both; overflow:hidden; display:block;"></div>
+            <div class="con-exp">
+                <h1>采料官方旗舰店</h1>
+                <dl class="con-exp-dl2">
+                    <dt>创店时间：</dt>
+                    <dd>2016-03-01</dd>
+                </dl>
+                <dl>
+                    <dt>所在地区：</dt>
+                    <dd>海南省 海口市</dd>
+                </dl>
+                <dl>
+                    <dt>站内客服：</dt>
+                    <dd class="con-exp-dd1">
+                        <a href="#">联系店员<span></span></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>店员客服：</dt>
+                    <dd class="con-exp-dd2">
+                        <a href="#">联系店员<span></span></a>
+                        <span class="qq_chatting_aa" style="cursor: pointer"></span>
+                    </dd>
+                    <dd class="qq_chatting_bb con-exp-dd2" style="display: none">
+                        <a href="#">联系店员<span></span></a>
+                    </dd>
+                </dl>
+                <script>
+                    $(function() {
+                        $(".qq_chatting_aa").click(function() {
+                                    $(".qq_chatting_bb").toggle();
+                                })
+                    })
+                </script>
+                <dl class="con-exp_dl">
+                    <dt>店铺二维码：</dt>
+                    <dd><span class="con-exp_dl_spanew"></span></dd>
+                    <div class="exp-eym" style="display:none;">
+                        <img src="images/upfile/eym.jpg">
+                        <p>
+                            <span>手机扫描二维码</span>
+                            <span>快速收藏店铺</span>
+                        </p>
+                    </div>
+                </dl>
+                <script>
+                    $(function() {
+                        $(".con-exp_dl").hover(function() {
+                                    $(".exp-eym").show();
+                                },
+                                function() {
+                                    $(".exp-eym").hide();
+                                })
+                    })
+                </script>
+                <ul class="con-pf">
+                    <li>
+                        <p>描述</p>
+                        <b>4.8 -</b>
+                    </li>
+                    <li style=" border-left:1px #ccc solid; border-right:1px #ccc solid">
+                        <p>服务</p>
+                        <b>4.9↑</b>
+                    </li>
+                    <li>
+                        <p>物流</p>
+                        <b>4.9↑</b>
+                    </li>
+                </ul>
+                <ul class="con-jdsc">
+                    <li><a href="#">进店逛逛</a></li>
+                    <li><a href="#">收藏店铺</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style=" clear:both" ></div>
+    <div class="details_contentall">
+        <div class="details_contentall_left">
+            <div class="store_search">
+                <p>店内搜索</p>
+                <div class="store_search1">
+                    <dl class="store_search2">
+                        <dt>关键字</dt>
+                        <dd><input type="text"/></dd>
+                    </dl>
+                    <dl class="store_search3">
+                        <dt>价　格</dt>
+                        <dd><span>¥</span><input type="text"/></dd>
+                        <dd class="store_search5">-</dd>
+                        <dd class="store_search4"><span>¥</span><input type="text"/></dd>
+                    </dl>
+                    <button>搜索</button>
+                </div>
+            </div>
+            <!-- 商品分类-->
+            <div class=" list-box">
+                <div class="list-box-tit">
+                    <b></b>商品分类
+                </div>
+                <div class="list-box-con">
+                    <div id="tab-acon1">
+                        <div class="tab-content st_tree">
+                            <ul>
+                                <li>
+                                    <a href="#">所有商品</a>
+                                </li>
+                                <ul show="true">
+                                    <li>
+                                        <a href="#">灯具灯饰</a>
+                                    </li>
+                                    <ul>
+                                        <li>
+                                            <a href="#">台灯</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">吊灯</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">吸顶灯</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">小夜灯</a>
+                                        </li>
+                                    </ul>
+                                    <li>
+                                        <a href="#">家装建材</a>
+                                    </li>
+                                    <ul>
+                                        <li>
+                                            <a href="#">仿古砖</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">pvc墙纸</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">无纺布墙纸</a>
+                                        </li>
+                                    </ul>
+                                    <li>
+                                        <a href="#">厨房卫浴</a>
+                                    </li>
+                                    <ul>
+                                        <li>
+                                            <a href="#">马桶</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">浴室</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">柜水槽</a>
+                                        </li>
+                                    </ul>
+                                    <li>
+                                        <a href="#">五金工具</a>
+                                    </li>
+                                    <ul>
+                                        <li>
+                                            <a href="#">锁具</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">电钻</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">拉手</a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">$(function() {
+                        $(".st_tree").SimpleTree({
+                            /* 可无视代码部分*/
+                            click: function(a) {
+                                if (!$(a).attr("hasChild")) alert($(a).attr("ref"));
+                            }
+                        });
+                    });</script>
+                </div>
+                <!-- 商品排行-->
+                <div class="list-box Commodity_list">
+                    <div class="list-box-tit">
+                        <b></b>商品排行
+                    </div>
+                    <div class="list-box-con">
+                        <div class="tab-b">
+                            <span id="tab-b1" class="tabon" onClick="tab('tab-b','tab-bcon','1','1','4','tabon','taboff');">销售量</span>
+                            <span id="tab-b2" class="taboff" onClick="tab('tab-b','tab-bcon','2','1','4','tabon','taboff');">收藏数</span>
+                        </div>
+                        <p class="db ov cl"></p>
+                        <div id="tab-bcon1" class="ov db p-15-t">
+                            <dl class="list-box-list">
+                                <dt>
+                                    <a href="#">
+                                        <img src="images/upfile/details-product-1.png">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                                    <span class="f-c-ff0000 f-w-14 db m-5-t Commodity_list1">¥188.00</span>
+                                    <p>
+                                        <span></span>出售：20笔
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl class="list-box-list">
+                                <dt>
+                                    <a href="#">
+                                        <img src="images/upfile/details-product-2.png">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                                    <span class="f-c-ff0000 f-w-14 db m-5-t Commodity_list1">¥188.00</span>
+                                    <p>
+                                        <span></span>出售：20笔
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl class="list-box-list">
+                                <dt>
+                                    <a href="#">
+                                        <img src="images/upfile/details-product-3.png">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                                    <span class="f-c-ff0000 f-w-14 db m-5-t Commodity_list1">¥188.00</span>
+                                    <p>
+                                        <span></span>出售：20笔
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl class="list-box-list">
+                                <dt>
+                                    <a href="#">
+                                        <img src="images/comm-icon-1.jpg">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                                    <span class="f-c-ff0000 f-w-14 db m-5-t Commodity_list1">¥188.00</span>
+                                    <p>
+                                        <span></span>出售：20笔
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl class="list-box-list">
+                                <dt>
+                                    <a href="#">
+                                        <img src="images/comm-icon-1.jpg">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                                    <span class="f-c-ff0000 f-w-14 db m-5-t Commodity_list1">¥188.00</span>
+                                    <p>
+                                        <span></span>出售：20笔
+                                    </p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div id="tab-bcon2" class="ov db p-15-t" style="display:none;">
+                            <dl class="list-box-list">
+                                <dt>
+                                    <a href="#">
+                                        <img src="images/upfile/details-product-1.png">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                                    <span class="f-c-ff0000 f-w-14 db m-5-t Commodity_list1">¥188.00</span>
+                                    <p>
+                                        <span></span>出售：20笔
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl class="list-box-list">
+                                <dt>
+                                    <a href="#">
+                                        <img src="images/upfile/details-product-2.png">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                                    <span class="f-c-ff0000 f-w-14 db m-5-t Commodity_list1">¥188.00</span>
+                                    <p>
+                                        <span></span>出售：20笔
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl class="list-box-list">
+                                <dt>
+                                    <a href="#">
+                                        <img src="images/upfile/details-product-3.png">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                                    <span class="f-c-ff0000 f-w-14 db m-5-t Commodity_list1">¥188.00</span>
+                                    <p>
+                                        <span></span>出售：20笔
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl class="list-box-list">
+                                <dt>
+                                    <a href="#">
+                                        <img src="images/comm-icon-1.jpg">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                                    <span class="f-c-ff0000 f-w-14 db m-5-t Commodity_list1">¥188.00</span>
+                                    <p>
+                                        <span></span>出售：20笔
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl class="list-box-list">
+                                <dt>
+                                    <a href="#">
+                                        <img src="images/comm-icon-1.jpg">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                                    <span class="f-c-ff0000 f-w-14 db m-5-t Commodity_list1">¥188.00</span>
+                                    <p>
+                                        <span></span>出售：20笔
+                                    </p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="db ov text-c">
+                            <a href="#" class="list-box-btn btn-blue Commodity_list2">查看本店其他商品</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 商品详情-->
+        <div class="con-tab commodity_content">
+            <div class="tt-tab">
+                <span id="a1" class="tabon" onClick="tab('a','tabcon','1','1','2','tabon','taboff');">商品详情</span>
+                <span id="a2" class="taboff" onClick="tab('a','tabcon','2','1','2','tabon','taboff');">评价详情</span>
+            </div>
+            <p class="db ov cl"></p>
+            <div id="tabcon1" class="exp-con">
+                <div class="shop-info">
+                    <ul class="shop-info1">
+                        <li>出租车是否可运输: 否</li>
+                        <li>型号: SF-624B</li>
+                        <li>是否可预售: 是</li>
+                    </ul>
+                    <ul class="shop-info2">
+                        <li>包装体积: 1.5</li>
+                        <li>填充物硬度: 软</li>
+                        <li>是否组装: 整装</li>
+                    </ul>
+                    <ul class="shop-info3">
+                        <li>品牌: 索曼</li>
+                        <li>安装说明详情: 无安装说明</li>
+                        <li>款式定位: 艺术风格型</li>
+                    </ul>
+                </div>
+                <div class="commodity_content_pic">
+                    <ul>
+                        <li><img src="images/upfile/details-product-4.png" alt=""/></li>
+                        <li><img src="images/upfile/details-product-4.png" alt=""/></li>
+                        <li><img src="images/upfile/details-product-4.png" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="tabcon2"  style="display:none;">
+                <div class="comm_footer_one">
+                    <div class="comm_footer_two">
+                        <dl class="comm_footer_dl">
+                            <dt>感谢您对我们的支持，坦诚相待！交易愉快！谢谢关照！如果您在使用中遇到
+                                什么问题或有什么建议，请随时与我们联系，我们会最大限度的帮您处理问题！
+                                帮您处理问题！
+                            </dt>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                            <dd class="comm_footer_dd3"><span>[追加评价]</span>感谢您对我们的支持，谢谢关照!如果你有什么问题或者建议
+                                可是联系我们的客服感谢您对我们的支持，谢谢关照!如果你有什么问题或
+                                者建议可是联系我们的客服。
+                            </dd>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                        </dl>
+                        <ul>
+                            <li>产品规格： 3.5米、黑色</li>
+                            <li class="comm_footer_li"><img src="images/upfile/details-product-5.png" alt=""/>我叫采料</li>
+                        </ul>
+                    </div>
+                    <div class="comm_footer_two">
+                        <dl class="comm_footer_dl">
+                            <dt>感谢您对我们的支持，坦诚相待！交易愉快！谢谢关照！！</dt>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                            <dd class="comm_footer_dd2"><span>[卖家回复]</span>&nbsp;&nbsp;您好，感谢您光临采料官方旗舰店，新品热卖，有
+                                任何问题可以随时咨询我们的在线售后为您服务，我们的上班
+                                时间为早9:00~晚21:00，祝您生活愉快！
+                            </dd>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                            <dd class="comm_footer_dd3"><span>[追加评价]</span>感谢您对我们的支持，谢谢关照!如果你有什么问题或者建议
+                                可是联系我们的客服感谢您对我们的支持，谢谢关照!如果你有什么问题或
+                                者建议可是联系我们的客服。
+                            </dd>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                        </dl>
+                        <ul>
+                            <li>产品规格： 3.5米、黑色</li>
+                            <li class="comm_footer_li"><img src="images/upfile/details-product-5.png" alt=""/>我叫采料</li>
+                        </ul>
+                    </div>
+                    <div class="comm_footer_two">
+                        <dl class="comm_footer_dl">
+                            <dt>感谢您对我们的支持，坦诚相待！交易愉快！谢谢关照！</dt>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                        </dl>
+                        <ul>
+                            <li>产品规格： 3.5米、黑色</li>
+                            <li class="comm_footer_li"><img src="images/upfile/details-product-5.png" alt=""/>我叫采料</li>
+                        </ul>
+                    </div>
+                    <div class="comm_footer_two">
+                        <dl class="comm_footer_dl">
+                            <dt>感谢您对我们的支持，坦诚相待！交易愉快！谢谢关照！如果您在使用中遇到
+                                什么问题或有什么建议，请随时与我们联系，我们会最大限度的帮您处理问题！
+                                帮您处理问题！
+                            </dt>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                        </dl>
+                        <ul>
+                            <li>产品规格： 3.5米、黑色</li>
+                            <li class="comm_footer_li"><img src="images/upfile/details-product-5.png" alt=""/>我叫采料</li>
+                        </ul>
+                    </div>
+                    <div class="comm_footer_two">
+                        <dl class="comm_footer_dl">
+                            <dt>感谢您对我们的支持，坦诚相待！交易愉快！谢谢关照！！</dt>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                            <dd class="comm_footer_dd2"><span>[卖家回复]</span>&nbsp;&nbsp;您好，感谢您光临采料官方旗舰店，新品热卖，有
+                                任何问题可以随时咨询我们的在线售后为您服务，我们的上班
+                                时间为早9:00~晚21:00，祝您生活愉快！</dd>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                        </dl>
+                        <ul>
+                            <li>产品规格： 3.5米、黑色</li>
+                            <li class="comm_footer_li"><img src="images/upfile/details-product-5.png" alt=""/>我叫采料</li>
+                        </ul>
+                    </div>
+                    <div class="comm_footer_two">
+                        <dl class="comm_footer_dl">
+                            <dt>感谢您对我们的支持，坦诚相待！交易愉快！谢谢关照！</dt>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                        </dl>
+                        <ul>
+                            <li>产品规格： 3.5米、黑色</li>
+                            <li class="comm_footer_li"><img src="images/upfile/details-product-5.png" alt=""/>我叫采料</li>
+                        </ul>
+                    </div>
+                    <div class="comm_footer_two">
+                        <dl class="comm_footer_dl">
+                            <dt>感谢您对我们的支持，坦诚相待！交易愉快！谢谢关照！如果您在使用中遇到
+                                什么问题或有什么建议，请随时与我们联系，我们会最大限度的帮您处理问题！
+                                帮您处理问题！
+                            </dt>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                            <dd class="comm_footer_dd3"><span>[追加评价]</span>感谢您对我们的支持，谢谢关照!如果你有什么问题或者建议
+                                可是联系我们的客服感谢您对我们的支持，谢谢关照!如果你有什么问题或
+                                者建议可是联系我们的客服。
+                            </dd>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                        </dl>
+                        <ul>
+                            <li>产品规格： 3.5米、黑色</li>
+                            <li class="comm_footer_li"><img src="images/upfile/details-product-5.png" alt=""/>我叫采料</li>
+                        </ul>
+                    </div>
+                    <div class="comm_footer_two">
+                        <dl class="comm_footer_dl">
+                            <dt>感谢您对我们的支持，坦诚相待！交易愉快！谢谢关照！！</dt>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                            <dd class="comm_footer_dd2"><span>[卖家回复]</span>&nbsp;&nbsp;您好，感谢您光临采料官方旗舰店，新品热卖，有
+                                任何问题可以随时咨询我们的在线售后为您服务，我们的上班
+                                时间为早9:00~晚21:00，祝您生活愉快！
+                            </dd>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                            <dd class="comm_footer_dd3"><span>[追加评价]</span>感谢您对我们的支持，谢谢关照!如果你有什么问题或者建议
+                                可是联系我们的客服感谢您对我们的支持，谢谢关照!如果你有什么问题或
+                                者建议可是联系我们的客服。
+                            </dd>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                        </dl>
+                        <ul>
+                            <li>产品规格： 3.5米、黑色</li>
+                            <li class="comm_footer_li"><img src="images/upfile/details-product-5.png" alt=""/>我叫采料</li>
+                        </ul>
+                    </div>
+                    <div class="comm_footer_two">
+                        <dl class="comm_footer_dl">
+                            <dt>感谢您对我们的支持，坦诚相待！交易愉快！谢谢关照！如果您在使用中遇到
+                                什么问题或有什么建议，请随时与我们联系，我们会最大限度的帮您处理问题！
+                                帮您处理问题！
+                            </dt>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                        </dl>
+                        <ul>
+                            <li>产品规格： 3.5米、黑色</li>
+                            <li class="comm_footer_li"><img src="images/upfile/details-product-5.png" alt=""/>我叫采料</li>
+                        </ul>
+                    </div>
+                    <div class="comm_footer_two comm_footer_three">
+                        <dl class="comm_footer_dl">
+                            <dt>感谢您对我们的支持，坦诚相待！交易愉快！谢谢关照！！</dt>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                            <dd class="comm_footer_dd2"><span>[卖家回复]</span>&nbsp;&nbsp;您好，感谢您光临采料官方旗舰店，新品热卖，有
+                                任何问题可以随时咨询我们的在线售后为您服务，我们的上班
+                                时间为早9:00~晚21:00，祝您生活愉快！</dd>
+                            <dd class="comm_footer_dd">[2017-03-26 20:44:45]</dd>
+                        </dl>
+                        <ul>
+                            <li>产品规格： 3.5米、黑色</li>
+                            <li class="comm_footer_li"><img src="images/upfile/details-product-5.png" alt=""/>我叫采料</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="comm_page">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><span>第</span></li>
+                        <li><a href="#" class="comm_page_this">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><b>...</b></li>
+                        <li><a href="#">10</a></li>
+                        <li><span>页</span></li>
+                        <li><a href="#">下一页</a></li>
+                        <li><a href="#">末页</a></li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                function tab(name, name2, cursel, n, n2, s, s2) {
+                    for (i = n; i <= n2; i++) {
+                        if (i == cursel) {
+                            document.getElementById(name2 + i).style.display = "block";
+                            document.getElementById(name + i).className = s;
+                        } else {
+                            document.getElementById(name2 + i).style.display = "none";
+                            document.getElementById(name + i).className = s2;
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <div style="clear:both" ></div>
+    <div class="hb-wrap-a">
+        <p class="hb-w-title">
+            <b>推荐商品</b>
+        </p>
+        <div class="hb-wrap-box">
+            <ul class="hb-con-list">
+                <li>
+                    <a href="#">
+                        <img src="images/upfile/e-pic-1.png">
+                        <p>嘉豪微晶石1JHP870晶石</p>
+                        <span>¥188.00</span>
+                        <b>查看详情</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/upfile/e-pic-2.png">
+                        <p>嘉豪微晶石1JHP870晶石</p>
+                        <span>¥188.00</span>
+                        <b>查看详情</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/upfile/e-pic-3.png">
+                        <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                        <span>¥188.00</span>
+                        <b>查看详情</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/upfile/e-pic-4.png">
+                        <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                        <span>¥188.00</span>
+                        <b>查看详情</b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/upfile/e-pic-5.png">
+                        <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                        <span>¥188.00</span>
+                        <b>查看详情</b>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--list-main-->
+<dl class="footer">
+    <dt>
+        <a href="#">首页</a>|
+        <a href="#">招聘英才</a>|
+        <a href="#">广告合作</a>|
+        <a href="#">联系我们</a>|
+        <a href="#">关于采料网</a></dt>
+    <dd>
+        <p>&copy;2015-2016&nbsp;采料网&nbsp;增值电信业务经营许可证：琼B2-20150028</p>
+    </dd>
+</dl>
+</body>
+
+</html>

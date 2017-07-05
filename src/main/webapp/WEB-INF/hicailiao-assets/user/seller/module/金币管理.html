@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/seller.css">
+  </head>
+  
+  <body >
+  
+<!--为了方便直接双击查阅，本次加入了HEAD和样式，真正模块化时请使用如下代码即可-->
+<!--复制代码-->
+
+<script>
+  $('[name="nice-select"]').click(function(e){
+		    $('[name="nice-select"]').find('ul').hide();
+		    $(this).find('ul').show();
+			e.stopPropagation();
+		});
+		$('[name="nice-select"] li').hover(function(e){
+			$(this).toggleClass('on');
+			e.stopPropagation();
+		});
+		$('[name="nice-select"] li').click(function(e){
+			var val = $(this).text();
+			$(this).parents('[name="nice-select"]').find('input').val(val);
+			$('[name="nice-select"] ul').hide();
+			e.stopPropagation();
+		});
+		$(document).click(function(){
+			$('[name="nice-select"] ul').hide();
+		});
+    </script>
+
+ 
+<div class="m-box-all">
+ <div class="m-add-all"><a href="">我的账户</a><span>金币管理</span></div>
+ <div class="m-con-all">
+  <div class="m-main">
+<div class="m-tab">
+<span id="a1" class="tabon" onClick="tab('a','tabcon','1','1','3','tabon','taboff');">金币兑换</span>
+<span id="a2" class="taboff" onClick="tab('a','tabcon','2','1','3','tabon','taboff');">兑换列表</span>
+<span id="a3" class="taboff" onClick="tab('a','tabcon','3','1','3','tabon','taboff');">金币日志</span>
+</div>
+
+<p class="db ov cl"></p>
+
+<div id="tabcon1" class="ov db  p-35-t">
+<div class="m ov db" style=" width:655px;">
+   <table width="100%" class="m-tab-st">
+    <tr>
+     <td width="108" valign="middle" align="right">兑换比例：</td>
+     <td class="p-10-l">1：10[1元兑换10金币]</td>
+    </tr>
+    <tr>
+     <td width="108" valign="middle" align="right"><b class=" f-c-ff0000">*</b>支付方式：</td>
+     <td class="p-10-l">
+      <div class="nice-select fl radius-15" name="nice-select" style="width:130px;">
+  <input type="text" value="请选择支付类别" readonly><span></span>
+   <ul style="">
+	<li data-value="1">微信支付</li>
+	<li data-value="2">中国工商银行</li>
+	<li data-value="3">中国农业银行</li>
+	<li data-value="4">信用卡</li>
+   </ul>
+ </div>
+     </td>
+    </tr>
+    <tr>
+     <td width="108" valign="middle" align="right"><b class=" f-c-ff0000">*</b>兑换人民币：</td>
+     <td class="p-10-l"><input type="text" style="width:300px;" class=" lh-30px table-input "></td>
+    </tr>
+    <tr>
+     <td width="108" valign="top" align="right">兑换备注</td>
+     <td class="p-10-l"><textarea style=" width:290px; height:170px; border:1px #eee solid; padding:5px; overflow-y:hidden;"></textarea><p class="m-10-t f-14 f-st">请输入汇款信息及其他备注</p></td>
+    </tr>
+    <tr>
+     <td width="108" height="100" valign="top" align="right"></td>
+     <td class="p-10-l" valign="top"><div class=" p-30-t"><input type="button" value="提交" class="s-but"></div></td>
+    </tr>
+   </table>
+  </div>
+</div>
+<div id="tabcon2" class="ov db p-35-t" style="display:none;">
+  
+  <table width="100%" class="m-table ">
+     <tr>
+     <th width="100">记录编号</th>
+     <th width="100">兑换时间</th>
+     <th width="110">兑换金额</th>
+     <th width="110">支付方式</th>
+     <th width="110">充值状态</th>
+     <th width="110">支付状态</th>
+     <th width="90">操作</th>
+    </tr>
+    <tr>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td><a href="" class="m-exp-but">编辑</a><span class="m-exp-but">删除</span></td>
+    </tr>
+   </table>
+ <div class="m-page text-r m-20-t">
+   <a class="this" href="" >首页</a>
+   <a href=""  >上一页</a>
+   <span>第1页</span>
+   <a href="" >下一页</a>
+  </div>
+ </div>
+ <div id="tabcon3" class="ov db" style="display:none;">
+ <div class="ov db m-20-b m-20-t"><span class="di fl f-14 f-st">当前账户余额：</span><b class="di fl f-14 f-c-ff0000 f-st">¥355074.40</b></div>
+  <table width="100%" class="m-table ">
+    <tr>
+     <th width="200">操作时间</th>
+     <th width="150">金币</th>
+     <th width="110">类型</th>
+     <th width="310">描述</th>
+    </tr>
+    <tr>
+     <td>2017-08-09 12:13:35</td>
+     <td> 720</td>
+     <td> 减少</td>
+     <td>购买广告扣除金币</td>
+    </tr>
+   </table>
+   <div class="m-page text-r m-20-t">
+   <a class="this" href="" >首页</a>
+   <a href=""  >上一页</a>
+   <span>第1页</span>
+   <a href="" >下一页</a>
+  </div>
+ </div>
+
+</div>
+
+
+<script>function tab(name, name2, cursel, n, n2, s, s2) {
+    for (i = n; i <= n2; i++) {
+      if (i == cursel) {
+        document.getElementById(name2 + i).style.display = "block";
+        document.getElementById(name + i).className = s;
+      } else {
+        document.getElementById(name2 + i).style.display = "none";
+        document.getElementById(name + i).className = s2;
+      }
+    }
+  }</script>
+   
+  </div>
+  
+ 
+</div>
+<!--复制代码-->
+  </body>
+
+</html>

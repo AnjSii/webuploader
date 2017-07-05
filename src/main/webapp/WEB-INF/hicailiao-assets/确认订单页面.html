@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/shopping_cart.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/SimpleTree.js"></script>
+    <script src="js/jquery.spinner.js"></script> <!--计算器-->
+    <style>
+        ul.hb-con-list li { height:auto;}
+    </style>
+</head>
+
+<body>
+<!--top begin-->
+<div class="hb-top">
+    <div class="main">
+        <a href="登陆界面.html" class="top-a">hi.请登录</a>
+        <a href="注册界面.html" class="top-b">免费注册</a>
+        <div class="top-user">
+            <div class="top-c">
+                <a class="top-h" href="用户.html">
+                    <b>
+                    </b>买家中心</a>
+                <ul class="t-u">
+                    <li>
+                        <a href="用户.html">已经买到的宝贝</a>
+                        <a href="用户.html">店铺动态</a>
+                        <a href="用户.html">好友动态</a></li>
+                </ul>
+            </div>
+            <div class="top-c">
+                <a class="top-h" href="用户.html">
+                    <b>
+                    </b>卖家中心</a>
+                <ul class="t-s">
+                    <li>
+                        <a href="用户.html">已卖出的宝贝</a>
+                        <a href="用户.html">出售中的宝贝</a></li>
+                </ul>
+            </div>
+            <div class="top-c">
+                <a class="top-h" href="用户.html">
+                    <b>
+                    </b>购物车
+                    <i>0</i>种商品
+                    <span></span></a>
+                <ul class="t-p">
+                    <!--购物车无内容-->
+                    <li style="display:none;">购物车暂时为空，赶紧挑选自己喜欢的商品去</li>
+                    <!--购物车无内容-->
+                    <!--购物车有内容,举例多商品排列，嵌套数据调用时请删除多余-->
+                    <li>
+                        <h1>购物车商品总价：¥32.00</h1>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-4.png"></dt>
+                            <dd>
+                                <a href="产品页.html">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-1.png"></dt>
+                            <dd>
+                                <a href="产品页.html">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-2.png"></dt>
+                            <dd>
+                                <a href="产品页.html">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="images/upfile/b-pic-5.png"></dt>
+                            <dd>
+                                <a href="产品页.html">镀金j3004-7 规...</a>
+                                <p>¥16.00×2</p>
+                                <input type="button" value="删除"></dd>
+                        </dl>
+                        <div class="look-shop">
+                            <a href="用户.html">查看我的购物车</a></div>
+                    </li>
+                    <!--购物车有内容--></ul>
+            </div>
+            <div class="top-c">
+                <a class="top-d" href="用户.html">站内短信</a></div>
+            <div class="top-c">
+                <a class="top-d" href="用户.html">我的收藏</a></div>
+            <div class="top-c">
+                <a class="top-d" href="用户.html">帮助中心</a></div>
+        </div>
+    </div>
+</div>
+<!--.top end-->
+<div class="hb-logo">
+    <div class="logo">
+        <img src="images/LOGO.png"></div>
+    <dl class="hb-search">
+        <dt>
+            <input type="text" placeholder="请输入您想要的商品名、店铺、装修公司">
+            <input type="button" value="搜索"></dt>
+        <dd>
+            <b>热门搜索：</b>
+            <a href="产品页.html">接线板</a>
+            <a href="产品页.html">接线板</a>
+            <a href="产品页.html">接线板</a>
+            <a href="产品页.html">接线板</a>
+            <a href="产品页.html">接线板</a></dd>
+    </dl>
+    <dl class="eym">
+        <dt class="eym-1">
+            <img src="images/eym.png">
+            <p>专享周二采料专场</p>
+        </dt>
+        <dt class="eym-2" style="display:none">
+            <img src="images/eym.png">
+        <p>专享周日采料专场</p>
+        </dt>
+        <dd>
+            <span class="eym-btn-on"></span>
+            <span class="eym-btn-mov"></span>
+        </dd>
+    </dl>
+    <script>$(function() {
+        $(".eym-btn-mov").hover(function() {
+                    $(".eym-2").show();
+                    $(".eym-1").hide();
+                },
+                function() {
+                    $(".eym-2").hide();
+                    $(".eym-1").show();
+                })
+    })</script>
+</div>
+<div class="main">
+    <div class="confirm_order">
+        <dl>
+            <dt><img src="images/confirm_step3.png" alt=""/></dt>
+            <dd>
+                <ul>
+                    <li>1.我的购物车</li>
+                    <li>2.填写核对订单信息</li>
+                    <li>3.成功提交订单</li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <div class="db ov pay">
+        <div id="pay-con3">
+            <div class="pay-show">
+                <p>订单信息如下</p>
+                <dl>
+                    <dt class="fl"><img src="images/confirm_safe.png" alt=""/></dt>
+                    <dd class="fl">
+                        <p class="pay-show-p">订单提交成功，请尽快付款！订单号：3278420170503151910</p>
+                        <ul>
+                            <li>收货地址：海南海口市龙华区滨江路财富广场 收货人：彭小麦 186 0505 7805</li>
+                            <li>商品名称：背景墙4040 规格400*400 包装6件/箱<span>应付金额：<b>79.8</b>元</span></li>
+                        </ul>
+                        <p class="pay-show-p2">
+                            您可以在用户中心中“
+                            <a href=""><b>我的订单</b></a>
+                            ”查看该订单详情
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="pay-bank">
+                <p>选择支付方式</p>
+                <h1>在线支付：</h1>
+                <ul>
+                    <li>
+                        <img src="images/comm_gray.png" alt=""/>
+                        <span><img src="images/bank/bank-yl.png" alt=""/></span>
+                    </li>
+                    <li>
+                        <img src="images/comm_gray.png" alt=""/>
+                        <span><img src="images/bank/bank-zfb.png" alt=""/></span>
+                    </li>
+                </ul>
+                <script>
+                    $(function () {
+                        $(".pay-bank li").each(function (index,val) {
+                            $(val).click(function () {
+                                $(this).parent().children().each(function (index,val) {
+                                    $(val).children("img").attr("src","images/comm_gray.png").siblings("span").removeClass("pay-bank-add");
+                                });
+                                $(val).children("img").attr("src","images/confirm_radio-check.png").siblings("span").addClass("pay-bank-add");
+                            })
+                        })
+                    })
+                </script>
+            </div>
+            <div class="ov db pay-bank-botton">
+                <button class="btn-blue no-border">确认支付<span>79.8元</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<dl class="footer">
+    <dt>
+        <a href="客户帮助-新手上路-常见问题.html">首页</a>|
+        <a href="客户帮助-新手上路-常见问题.html">招聘英才</a>|
+        <a href="客户帮助-新手上路-常见问题.html">广告合作</a>|
+        <a href="客户帮助-新手上路-常见问题.html">联系我们</a>|
+        <a href="客户帮助-新手上路-常见问题.html">关于采料网</a>
+    </dt>
+    <dd>
+        <p>&copy;2015-2016&nbsp;采料网&nbsp;增值电信业务经营许可证：琼B2-20150028</p>
+    </dd>
+</dl>
+<script type="text/javascript">$('.spinnerExample').spinner({});</script>
+</body>
+</html>

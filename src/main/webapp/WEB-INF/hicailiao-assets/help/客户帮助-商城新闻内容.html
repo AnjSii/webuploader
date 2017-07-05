@@ -1,0 +1,44 @@
+<ul class="help-tab">
+<li id="a1" class="tabon" onClick="tab('a','tabcon','1','1','9','tabon','taboff');"><span>商城新闻</span></li>
+</ul>
+
+<div id="tabcon1" class="ov db">
+ 
+ <h1 style="display:block; text-align:center; margin:50px 0px 80px 50px ">商城新闻</h1>
+ <div class="list-con">
+  <p style="text-indent:2em; margin-bottom:10px;">A man may usually be known by the books he reads as well as by the company he keeps; for there is a companionship of books as well as of men; and one should always live in the best company, whether it be of books or of men.</p>
+  <p style="text-indent:2em; margin-bottom:10px;">A good book may be among the best of friends. It is the same today that it always was, and it will never change. It is the most patient and cheerful of companions. It does not turn its back upon us in times of adversity or distress. It always receives us with the same kindness; amusing and instructing us in youth, and comforting and consoling us in age.</p>
+  <p style="text-indent:2em; margin-bottom:10px;">
+    Men often discover their affinity to each other by the mutual love they have for a book just as two persons sometimes discover a friend by the admiration which both entertain for a third. There is an old proverb, ‘Love me, love my dog.” But there is more wisdom in this:” Love me, love my book.” The book is a truer and higher bond of union. Men can think, feel, and sympathize with each other through their favorite author. They live in him together, and he in them.
+  </p>
+  <p style="text-indent:2em; margin-bottom:10px;">
+   A good book is often the best urn of a life enshrining the best that life could think out; for the world of a man’s life is, for the most part, but the world of his thoughts. Thus the best books are treasuries of good words, the golden thoughts, which, remembered and cherished, become our constant companions and comforters.
+  </p>
+  <p style="text-indent:2em; margin-bottom:10px;">
+   Books possess an essence of immortality. They are by far the most lasting products of human effort. Temples and statues decay, but books survive. Time is of no account with great thoughts, which are as fresh today as when they first passed through their author’s minds, ages ago. What was then said and thought still speaks to us as vividly as ever from the printed page. The only effect of time have been to sift out the bad products; for nothing in literature can long survive e but what is really good.
+  </p>
+  <p style=" margin-bottom:10px; text-align:center;">
+   <img src="i/upfile/sc-1.jpg">
+  </p>
+ <div class="list-page"><a class="l-p-l" href="">上一条：新版“广告管理”功能说明</a><a class="l-p-r" href="">下一条：官方使用提示信息</a></div> 
+ </div>
+
+</div>
+<script>
+ function tab(name,name2,cursel,n,n2,s,s2)
+{
+	for(i=n;i<=n2;i++)
+	{
+		if(i==cursel)
+		{
+			document.getElementById(name2+i).style.display="block";
+			document.getElementById(name+i).className=s;
+		}
+		else
+		{
+			document.getElementById(name2+i).style.display="none";
+			document.getElementById(name+i).className=s2;
+		}
+	}
+}
+</script>

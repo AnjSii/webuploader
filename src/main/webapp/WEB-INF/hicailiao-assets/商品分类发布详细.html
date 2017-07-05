@@ -1,0 +1,617 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/content.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/SimpleTree.js"></script>
+    <script type="text/javascript" src="js/ion.checkRadio.min.js"></script>
+    <!--商品分类树形菜单--></head>
+  
+  <body>
+    <!--top begin-->
+    <div class="hb-top">
+      <div class="main">
+        <a href="登陆界面.html" class="top-a">hi.请登录</a>
+        <a href="注册界面.html" class="top-b">免费注册</a>
+        <div class="top-user">
+          <div class="top-c">
+            <a class="top-h" href="用户.html">
+              <b>
+              </b>买家中心</a>
+            <ul class="t-u">
+              <li>
+                <a href="用户.html">已经买到的宝贝</a>
+                <a href="用户.html">店铺动态</a>
+                <a href="用户.html">好友动态</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="用户.html">
+              <b>
+              </b>卖家中心</a>
+            <ul class="t-s">
+              <li>
+                <a href="用户.html">已卖出的宝贝</a>
+                <a href="用户.html">出售中的宝贝</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="用户.html">
+              <b>
+              </b>购物车
+              <i>0</i>种商品
+              <span></span></a>
+            <ul class="t-p">
+              <!--购物车无内容-->
+              <li style="display:none;">购物车暂时为空，赶紧挑选自己喜欢的商品去</li>
+              <!--购物车无内容-->
+              <!--购物车有内容,举例多商品排列，嵌套数据调用时请删除多余-->
+              <li>
+                <h1>购物车商品总价：¥32.00</h1>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-4.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-1.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-2.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-5.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <div class="look-shop">
+                  <a href="用户.html">查看我的购物车</a></div>
+              </li>
+              <!--购物车有内容--></ul>
+          </div>
+          <div class="top-c">
+            <a class="top-d" href="用户.html">站内短信</a></div>
+          <div class="top-c">
+            <a class="top-d" href="用户.html">我的收藏</a></div>
+          <div class="top-c">
+            <a class="top-d" href="用户.html">帮助中心</a></div>
+        </div>
+      </div>
+    </div>
+    <!--.top end-->
+    <div class="hb-logo">
+      <div class="logo">
+        <img src="images/LOGO.png"></div>
+      <dl class="hb-search">
+        <dt>
+          <input type="text" placeholder="请输入您想要的商品名、店铺、装修公司">
+          <input type="button" value="搜索"></dt>
+        <dd>
+          <b>热门搜索：</b>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a></dd>
+      </dl>
+      <dl class="eym">
+        <dt class="eym-1">
+          <img src="images/eym.png">
+          <p>专享周二采料专场</p>
+        </dt>
+        <dt class="eym-2" style="display:none">
+          <img src="images/eym.png">
+          <p>专享周日采料专场</p>
+        </dt>
+        <dd>
+          <span class="eym-btn-on"></span>
+          <span class="eym-btn-mov"></span>
+        </dd>
+      </dl>
+      <script>$(function() {
+          $(".eym-btn-mov").hover(function() {
+            $(".eym-2").show();
+            $(".eym-1").hide();
+          },
+          function() {
+            $(".eym-2").hide();
+            $(".eym-1").show();
+          })
+        })</script>
+    </div>
+    <div class="main">
+      <div class="db ov m-35-t commodity ">
+        <div class="tab-commodity">
+          <b id="commodity1" class="tabon" onClick="tab('commodity','commodity-con','1','1','3','tabon','taboff');">选择商品所在分类</b>
+          <b id="commodity2" class="taboff" onClick="tab('commodity','commodity-con','2','1','3','tabon','taboff');">填写商品详细信息</b>
+          <b id="commodity3" class="taboff" onClick="tab('commodity','commodity-con','3','1','3','tabon','taboff');">商品发布成功</b></div>
+        <p class="db ov cl"></p>
+        <div id="commodity-con1" class="ov db">
+          <div class="comm-one">
+            <div class="one-a">
+              <table width="100%">
+                <tr>
+                  <td valign="middle" width="269" align="right">
+                    <div class="db p-35-r f-18 f-c-ffffff">分类搜索：</div></td>
+                  <td valign="middle" align="left">
+                    <input type="text" class="comm-input-a fl p-10-l p-10-r " style="width:609px; height:44px;">
+                    <input type="button" class="fl btn-blue p-20-l p-20-r no-border f-18" value="搜索" style="height:44px;"></td>
+                  <td valign="middle" align="left"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="one-b">
+              <table width="100%">
+                <tr>
+                  <td valign="middle" width="269" align="right">
+                    <div class="db p-35-r f-18 f-c-ffffff">你常用的商品搜索：</div></td>
+                  <td valign="middle" align="left">
+                    <input type="text" class="comm-input-a fl p-10-l p-10-r " style="width:685px; height:44px;"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="one-c">
+              <table width="100%">
+                <tr>
+                  <td valign="middle">
+                    <div class="one-c-left st_tree  radius-5">
+                      <ul>
+                        <li>
+                          <a href="#">所有商品</a></li>
+                        <ul show="true">
+                          <li>
+                            <a href="#">加装建材</a></li>
+                          <ul>
+                            <li>
+                              <a href="#">仿古砖</a></li>
+                            <li>
+                              <a href="#">pvc墙纸</a></li>
+                            <li>
+                              <a href="#">无纺布墙纸</a></li>
+                          </ul>
+                          <li>
+                            <a href="#">灯具灯饰</a></li>
+                          <ul>
+                            <li>
+                              <a href="#">台灯</a></li>
+                            <li>
+                              <a href="#">吊灯</a></li>
+                            <li>
+                              <a href="#">吸顶灯</a></li>
+                            <li>
+                              <a href="#">小夜灯</a></li>
+                          </ul>
+                          <li>
+                            <a href="#">厨房卫浴</a></li>
+                          <ul>
+                            <li>
+                              <a href="#">马桶</a></li>
+                            <li>
+                              <a href="#">浴室</a></li>
+                            <li>
+                              <a href="#">柜水槽</a></li>
+                          </ul>
+                          <li>
+                            <a href="#">五金工具</a></li>
+                          <ul>
+                            <li>
+                              <a href="#">锁具</a></li>
+                            <li>
+                              <a href="#">电钻</a></li>
+                            <li>
+                              <a href="#">拉手</a></li>
+                          </ul>
+                        </ul>
+                      </ul>
+                      <script type="text/javascript">$(function() {
+
+                          $(".st_tree").SimpleTree({
+
+                            /* 可无视代码部分*/
+                            click: function(a) {
+                              if (!$(a).attr("hasChild")) alert($(a).attr("ref"));
+                            }
+
+                          });
+
+                        });</script>
+                    </div>
+                  </td>
+                  <td align="left"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="comm-end radius-5">
+              <table width="100%" class="table-no-border">
+                <tr>
+                  <td valign="top">您当前选择的商品类别是：</td>
+                  <td valign="top"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="comm-nextbutton">
+              <input type="button" value="下一步" class="btn-blue no-border" style=" width:173px; height:36px;"></div>
+          </div>
+        </div>
+        <div id="commodity-con2" class="ov db" style="display:none;">
+          <div class="comm-two">
+            <table width="100%" class="table-comm">
+              <tr>
+                <th colspan="2">商品详细信息</th></tr>
+              <tr>
+                <td width="152" align="right" valign="top">
+                  <p class="p-5-t">商品分类：</p></td>
+                <td valign="middle">
+                  <div class="two-add di">
+                    <span>精品门窗</span>
+                    <span>精品门窗</span></div>
+                  <div class="di">
+                    <a href="" class="btn-blue no-border btn-b">编辑</a></div>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品名称：</p></td>
+                <td valign="middle">
+                  <input type="text" class="comm-two-inpt lh-30px p-5-l p-5-r" style="width:390px;">
+                  <p class="p-10-t">商品标题名称长度至少3个字符，最长50个汉字</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品原价：</p></td>
+                <td valign="middle">
+                  <input type="text" class="comm-two-inpt lh-30px p-5-l p-5-r" style="width:390px;">
+                  <p class="p-10-t">商品原价必须是0.01~1000000之间的数字</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品类型：</p></td>
+                <td valign="middle">
+                  <div class="radioa">
+                    <label>
+                      <input type="radio" name="radioa" value="0" checked />实物商品</label>
+                    <label>
+                      <input type="radio" name="radioa" value="0" checked />虚拟商品</label></div>
+                  <p class="p-10-t">装修服务、消费券等属于虚拟商品</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品类型：</p></td>
+                <td valign="middle">
+                  <div class="ov">
+                    <input type="text" class="comm-two-inpt lh-30px p-5-l p-5-r di" style="width:390px;">
+                    <span class="checka di">
+                      <label>
+                        <input name="checkboxa" type="checkbox" value="0" />是否特价商品</label></span>
+                  </div>
+                  <p class="p-10-t">商品原价必须是0.01~1000000之间的数字
+                    <Br>若启用了库存配置，请在下方商品库存区域进行管理
+                    <br>商品规格库存表中如有价格差异，店铺价格显示为价格区间形式</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">库存配置：</p></td>
+                <td valign="middle">
+                  <div class="radiob">
+                    <label>
+                      <input type="radio" name="radiob" value="0" checked />规格配置</label>
+                    <label>
+                      <input type="radio" name="radiob" value="0" checked />全局配置</label></div>
+                  <p class="p-10-t">全局配置表示所有规格无单独库存、价格配置规格配置需要配置对应属性的库存、价格</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品库存：</p></td>
+                <td valign="middle">
+                  <input type="text" class="comm-two-inpt lh-30px p-5-l p-5-r" style="width:390px;">
+                  <p class="p-10-t">商铺库存数量必须为1~1000000000之间的整数 若启用了规格配置，则系统自动计算商品的总数，此处无需卖家填写</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品货号：</p></td>
+                <td valign="middle">
+                  <input type="text" class="comm-two-inpt lh-30px p-5-l p-5-r" style="width:390px;">
+                  <p class="p-10-t">商品货号是指卖家个人管理商品的编号，买家不可见 最多可输入20个字符，支持输入中文、字母、数字、_、/、-和小数点</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品图片：</p></td>
+                <td valign="middle">
+                  <div class="ov db">
+                    <div class="di m-15-r">
+                      <input type="button" class=" btn-blue btn-c no-border radius-15" value="上传图片"></div>
+                    <div class="di m-15-r">
+                      <input type="button" class=" comm-two-wi bg-ffffff no-border radius-15" value="从用户相册选择"></div>
+                    <div class="di m-15-r">
+                      <input type="text" class="comm-two-inpt lh-30px p-5-l p-5-r" style="width:210px;"></div>
+                    <div class="di m-15-r">
+                      <input type="button" class=" btn-blue btn-c no-border radius-15" value="图片搜索"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="comm-edit ov db m radius-5">
+                    <div class="comm-edit-top">
+                      <div class="fl big-logo"></div>
+                      <div class="fl m-5-l">
+                        <input type="button" class="comm-fiupimg" value="选择上传商品图片">
+                        <ul class="ov db comm-listimg">
+                          <li>
+                            <div class="db"></div>
+                            <div class="ov">
+                              <span class="listimg-l"></span>
+                              <span class="listimg-c"></span>
+                              <span class="listimg-r"></span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="db"></div>
+                            <div class="ov">
+                              <span class="listimg-l"></span>
+                              <span class="listimg-c"></span>
+                              <span class="listimg-r"></span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="db"></div>
+                            <div class="ov">
+                              <span class="listimg-l"></span>
+                              <span class="listimg-c"></span>
+                              <span class="listimg-r"></span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="db"></div>
+                            <div class="ov">
+                              <span class="listimg-l"></span>
+                              <span class="listimg-c"></span>
+                              <span class="listimg-r"></span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="db"></div>
+                            <div class="ov">
+                              <span class="listimg-l"></span>
+                              <span class="listimg-c"></span>
+                              <span class="listimg-r"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <dl class="fr">
+                        <dt></dt>
+                        <dd>
+                          <div class="comm-poi cur-poi"></div>
+                          <span class="on"></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </dd>
+                      </dl>
+                    </div>
+                    <dl class="comm-edit-bottom ov db">
+                      <dt class="ov db">
+                        <span class="fl di"></span>
+                        <p class="di fl f-c-ff0000">最多可发布5张商品图片</p></dt>
+                      <dd>支持多图片同时选取上传。支持*.tbi;*.png;*.bmp;*.jpeg;*.jpg;*.gif格式上传，建议选择尺寸300x300以上、大小2M内的图片。用户图空间剩余:
+                        <b class="f-c-ff0000">4023.33M</b>，空间不足时将无法上传图片</dd></dl>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品重量：</p></td>
+                <td valign="middle">
+                  <input type="text" class="comm-two-inpt lh-30px p-5-l p-5-r" style="width:390px;">
+                  <p class="p-10-t">单位：千克(Kg)</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品体积：</p></td>
+                <td valign="middle">
+                  <input type="text" class="comm-two-inpt lh-30px p-5-l p-5-r" style="width:390px;">
+                  <p class="p-10-t">单位：立方米(m³)</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品体积：</p></td>
+                <td valign="middle">
+                  <div class="radioc">
+                    <label>
+                      <input type="radio" name="radioc" value="0" checked />卖家承担运费</label>
+                    <label>
+                      <input type="radio" name="radioc" value="0" checked />买家承担运费</label></div>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">商品详情描述</th></tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品品牌：</p></td>
+                <td valign="middle">
+                  <div class="nice-select fl radius-3" name="nice-select" style="width:100px;">
+                    <input type="text" value="请选择" readonly>
+                    <span></span>
+                    <ul>
+                      <li data-value="1">七匹狼</li>
+                      <li data-value="2">阿迪达斯</li></ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品描述：</p></td>
+                <td valign="middle" height="520"></td>
+              </tr>
+              <tr>
+                <th colspan="2">其他信息</th></tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">本店分类：</p></td>
+                <td valign="middle">
+                  <div>
+                    <a href="" class="comm-two-wi di m-20-r radius-3">新增类型</a>
+                    <div class="nice-select di radius-3" name="nice-select" style="width:100px;">
+                      <input type="text" value="请选择" readonly>
+                      <span></span>
+                      <ul>
+                        <li data-value="1">七匹狼</li>
+                        <li data-value="2">阿迪达斯</li></ul>
+                    </div>
+                  </div>
+                  <p class="p-10-t">商品可以从属于店铺的多个分类之下, 店铺分类可以由 "卖家中心 -> 商品管理 -> 商品分类" 中自定义</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品发布：</p></td>
+                <td valign="middle">
+                  <div class="radiod">
+                    <label>
+                      <input type="radio" name="radiod" value="0" checked />立即发布</label>
+                    <label>
+                      <input type="radio" name="radiod" value="0" checked />放入仓库</label></div>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">商品推荐：</p></td>
+                <td valign="middle">
+                  <div class="radioe">
+                    <label>
+                      <input type="radio" name="radioe" value="0" checked />是</label>
+                    <label>
+                      <input type="radio" name="radioe" value="0" checked />否</label></div>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">SEO关键字：</p></td>
+                <td valign="middle">
+                  <input type="text" class="comm-two-inpt lh-30px p-5-l p-5-r" style="width:390px;">
+                  <p class="p-10-t">SEO关键字 (keywords) 出现在商品详细页面头部的 Meta 标签中，
+                    <br>用于记录本页面商品的关键字，多个关键字间请</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top">
+                  <p class="p-5-t">SEO描述：</p></td>
+                <td valign="middle">
+                  <textarea rows="0" style="width:380px; height:130px; padding:2px 10px; border:1px #eee solid;"></textarea>
+                  <p class="p-10-t">SEO关键字 (keywords) 出现在商品详细页面头部的 Meta 标签中，
+                    <br>用于记录本页面商品的关键字，多个关键字间请</p></td>
+              </tr>
+              <tr>
+                <td align="right" valign="top"></td>
+                <td valign="top" height="169">
+                  <div class="m-40-t db">
+                    <input type="button" class=" btn-blue btn-c no-border" value="提交"></div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="commodity-con3" class="ov db" style="display:none;">
+          <div class="comm-three">
+            <dl class="fl">
+              <dt></dt>
+              <dd>
+                <p class="f-c-000000">恭喜您！商品发布成功！</p>
+                <a class="f-c-ff0000" href="">查看商品详情&gt;&gt;</a>
+                <a class="f-c-ff0000" href="">编辑刚发布的商品&gt;&gt;</a></dd>
+            </dl>
+            <div class="fr">
+              <p>您还可以:</p>
+              <p>1. 继续"
+                <a href="">发布新商品</a>"</p>
+              <p>2. 进入"
+                <a href="">用户中心</a>" 管理 "
+                <a href="">商品列表</a>"</p>
+              <p>3. 进入"
+                <a href="">直通车管理</a>" 选择商品添加申请</p>
+              <p>4. 参与"
+                <a href="">商城活动</a>"</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cl ov db"></div>
+    <dl class="footer">
+      <dt>
+        <a href="客户帮助-新手上路-常见问题.html">首页</a>|
+        <a href="客户帮助-新手上路-常见问题.html">招聘英才</a>|
+        <a href="客户帮助-新手上路-常见问题.html">广告合作</a>|
+        <a href="客户帮助-新手上路-常见问题.html">联系我们</a>|
+        <a href="客户帮助-新手上路-常见问题.html">关于采料网</a></dt>
+      <dd>
+        <p>&copy;2015-2016&nbsp;采料网&nbsp;增值电信业务经营许可证：琼B2-20150028</p>
+      </dd>
+    </dl>
+    <script>function tab(name, name2, cursel, n, n2, s, s2) {
+        for (i = n; i <= n2; i++) {
+          if (i == cursel) {
+            document.getElementById(name2 + i).style.display = "block";
+            document.getElementById(name + i).className = s;
+          } else {
+            document.getElementById(name2 + i).style.display = "none";
+            document.getElementById(name + i).className = s2;
+          }
+        }
+      }</script>
+    <script language="javascript">$(".radioa").find("input").ionCheckRadio();
+      $(".radiob").find("input").ionCheckRadio();
+      $(".radioc").find("input").ionCheckRadio();
+      $(".radiod").find("input").ionCheckRadio();
+      $(".radioe").find("input").ionCheckRadio();
+      $(".radiof").find("input").ionCheckRadio();
+      $(".checka").find("input").ionCheckRadio();</script>
+    <script>$('[name="nice-select"]').click(function(e) {
+        $('[name="nice-select"]').find('ul').hide();
+        $(this).find('ul').show();
+        e.stopPropagation();
+      });
+      $('[name="nice-select"] li').hover(function(e) {
+        $(this).toggleClass('on');
+        e.stopPropagation();
+      });
+      $('[name="nice-select"] li').click(function(e) {
+        var val = $(this).text();
+        $(this).parents('[name="nice-select"]').find('input').val(val);
+        $('[name="nice-select"] ul').hide();
+        e.stopPropagation();
+      });
+      $(document).click(function() {
+        $('[name="nice-select"] ul').hide();
+      });</script>
+  </body>
+
+</html>

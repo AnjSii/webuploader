@@ -1,0 +1,723 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/help.css">
+    <script src="js/jquery-1.6.2.js"></script>
+    <script src="js/jquery.lazyload.js"></script>
+    <script src="js/jcarousellite_1.0.1.min.js"></script>
+    <script src="js/jquery.KinSlideshow.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/help-sider.js"></script>
+    <script>jQuery(document).ready(function() {
+        jQuery(".shop_left_btn_con li").mouseover(function() {
+          var child_count = jQuery(this).attr("child_count");
+          if (child_count > 0) {
+            var id = jQuery(this).attr("id");
+            jQuery("#child_" + id).show();
+          }
+        }).mouseleave(function() {
+          var child_count = jQuery(this).attr("child_count");
+          if (child_count > 0) {
+            var id = jQuery(this).attr("id");
+            jQuery("#child_" + id).hide();
+          }
+        });
+        jQuery(".specialde li").mouseover(function() {
+          jQuery(this).find("i").show();
+        }).mouseleave(function() {
+          jQuery(this).find("i").hide();
+        });
+        jQuery(".productone ul").mouseover(function() {
+          jQuery(".productone ul").removeClass("this");
+          jQuery(this).addClass("this");
+        }).mouseleave(function() {
+          jQuery(".productone ul").removeClass("this");
+        });
+        jQuery(".floorul li").mouseover(function() {
+          var store_gc = jQuery(this).attr("store_gc");
+          jQuery(".floorul li[store_gc=" + store_gc + "]").css("cursor", "pointer").removeClass("this");
+          jQuery(this).addClass("this");
+          var id = jQuery(this).attr("id");
+          jQuery(".ftab[store_gc=" + store_gc + "]").hide();
+          jQuery(".ftab[store_gc=" + store_gc + "][id=" + id + "]").show();
+        });
+        jQuery(".productone img").lazyload({
+          effect: "fadeIn",
+          width: 147,
+          height: 147
+        });
+        jQuery(".rankimg img").lazyload({
+          effect: "fadeIn",
+          width: 73,
+          height: 73
+        });
+        //
+        jQuery(".index_sales_left>h3>ul>li").mouseover(function() {
+          jQuery(".index_sales_left>h3>ul>li").removeClass("this");
+          jQuery(this).addClass("this");
+          jQuery(".index_sales_box>[class^=index_sales_]").hide();
+          var div_index = jQuery(this).attr("div_index");
+          jQuery(".index_sales_" + div_index).show();
+        });
+        //
+        jQuery(".conti").jCarouselLite({
+          btnNext: "#advert_left",
+          　　btnPrev: "#advert_right",
+          auto: 5000,
+          speed: 2000,
+          visible: 1
+        });
+        //
+      });</script>
+  </head>
+  
+  <body onload="IFrameResize()">
+    <!--top begin-->
+    <div class="hb-top">
+      <div class="main">
+        <a href="#" class="top-a">hi.请登录</a>
+        <a href="#" class="top-b">免费注册</a>
+        <div class="top-user">
+          <div class="top-c">
+            <a class="top-h" href="">
+              <b>
+              </b>买家中心</a>
+            <ul class="t-u">
+              <li>
+                <a href="">已经买到的宝贝</a>
+                <a href="">店铺动态</a>
+                <a href="">好友动态</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="">
+              <b>
+              </b>卖家中心</a>
+            <ul class="t-s">
+              <li>
+                <a href="">已卖出的宝贝</a>
+                <a href="">出售中的宝贝</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="">
+              <b>
+              </b>购物车
+              <i>0</i>种商品
+              <span></span></a>
+            <ul class="t-p">
+              <!--购物车无内容-->
+              <li style="display:none;">购物车暂时为空，赶紧挑选自己喜欢的商品去</li>
+              <!--购物车无内容-->
+              <!--购物车有内容,举例多商品排列，嵌套数据调用时请删除多余-->
+              <li>
+                <h1>购物车商品总价：¥32.00</h1>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-4.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-1.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-2.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-5.png"></dt>
+                  <dd>
+                    <a href="">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <div class="look-shop">
+                  <a href="">查看我的购物车</a></div>
+              </li>
+              <!--购物车有内容--></ul>
+          </div>
+          <div class="top-c">
+            <a class="top-d" href="">站内短信</a></div>
+          <div class="top-c">
+            <a class="top-d" href="">我的收藏</a></div>
+          <div class="top-c">
+            <a class="top-d" href="">帮助中心</a></div>
+        </div>
+      </div>
+    </div>
+    <!--.top end-->
+    <div class="hb-logo">
+      <div class="logo">
+        <img src="images/LOGO.png"></div>
+      <dl class="hb-search">
+        <dt>
+          <input type="text" placeholder="请输入您想要的商品名、店铺、装修公司">
+          <input type="button" value="搜索"></dt>
+        <dd>
+          <b>热门搜索：</b>
+          <a href="#">接线板</a>
+          <a href="#">接线板</a>
+          <a href="#">接线板</a>
+          <a href="#">接线板</a>
+          <a href="#">接线板</a></dd>
+      </dl>
+      <dl class="eym">
+        <dt class="eym-1">
+          <img src="images/eym.png">
+          <p>专享周二采料专场</p>
+        </dt>
+        <dt class="eym-2" style="display:none">
+          <img src="images/eym.png">
+          <p>专享周日采料专场</p>
+        </dt>
+        <dd>
+          <span class="eym-btn-on"></span>
+          <span class="eym-btn-mov"></span>
+        </dd>
+      </dl>
+      <script>$(function() {
+          $(".eym-btn-mov").hover(function() {
+            $(".eym-2").show();
+            $(".eym-1").hide();
+          },
+          function() {
+            $(".eym-2").hide();
+            $(".eym-1").show();
+          })
+        })</script>
+    </div>
+    <!--.hb-logo end-->
+    <!-- 随页面浮动LOGO和输入框 -->
+    <!--<div class="fix-logo">
+    <div class="fix-main">
+    <img src="images/fix-logo.png">
+    <div class="fix-input"><input type="text" placeholder="请输入您想要的商品名、店铺、装修公司"> <input type="button" value="搜索"></div></div>
+    </div>-->
+    <!--.fix-logo end-->
+    <div class="hb-meun">
+      <div class="cailiaoPage border_b3_b">
+        <div class="menu_box">
+          <!--左边分类-->
+          <div class="background_b" id="nav">
+            <a class="fenlei_hd">
+              <div class="mod_cate_hd fontF">
+                <span></span>所有商品分类</div>
+            </a>
+            <ul class="tit" id="classPanel" style="display: none;">
+              <li class="mod_cate">
+                <h2>
+                  <a href="#" target="_blank">
+                    <span></span>厨房卫浴</a>
+                  <b class="mod-1"></b>
+                </h2>
+                <div class="mod_subcate">
+                  <div class="mod_subcate_main">
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">水管管材</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">不锈钢管/配件</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">板材</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">细木工板</a></dd>
+                    </dl>
+                  </div>﻿</div>
+              </li>
+              <li class="mod_cate">
+                <h2>
+                  <a href="#" target="_blank">
+                    <span></span>五金工具</a>
+                  <b class="mod-2"></b>
+                </h2>
+                <div class="mod_subcate">
+                  <div class="mod_subcate_main">
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">电器控制系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">家庭影院</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">安防</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="mod_cate">
+                <h2>
+                  <a href="#" target="_blank">
+                    <span></span>基础建材</a>
+                  <b class="mod-3"></b>
+                </h2>
+                <div class="mod_subcate">
+                  <div class="mod_subcate_main">
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">电器控制系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">家庭影院</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">安防</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="mod_cate">
+                <h2>
+                  <a href="#" target="_blank">
+                    <span></span>墙面/地面</a>
+                  <b class="mod-4"></b>
+                </h2>
+                <div class="mod_subcate">
+                  <div class="mod_subcate_main">
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">电器控制系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">家庭影院</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">安防</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="mod_cate">
+                <h2>
+                  <a href="#" target="_blank">
+                    <span></span>装饰采料</a>
+                  <b class="mod-5"></b>
+                </h2>
+                <div class="mod_subcate">
+                  <div class="mod_subcate_main">
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">电器控制系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">家庭影院</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">安防</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="mod_cate">
+                <h2>
+                  <a href="#" target="_blank">
+                    <span></span>灯饰照明</a>
+                  <b class="mod-6"></b>
+                </h2>
+                <div class="mod_subcate">
+                  <div class="mod_subcate_main">
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">电器控制系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">家庭影院</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">安防</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="mod_cate">
+                <h2>
+                  <a href="#" target="_blank">
+                    <span></span>智能家居</a>
+                  <b class="mod-7"></b>
+                </h2>
+                <div class="mod_subcate">
+                  <div class="mod_subcate_main">
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">电器控制系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">家庭影院</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">安防</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="mod_cate">
+                <h2>
+                  <a href="#" target="_blank">
+                    <span></span>装修工具</a>
+                  <b class="mod-8"></b>
+                </h2>
+                <div class="mod_subcate">
+                  <div class="mod_subcate_main">
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">电器控制系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">家庭影院</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">安防</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="mod_cate">
+                <h2>
+                  <a href="#" target="_blank">
+                    <span></span>精品门窗</a>
+                  <b class="mod-9"></b>
+                </h2>
+                <div class="mod_subcate">
+                  <div class="mod_subcate_main">
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">电器控制系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">家庭影院</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <a href="#" target="_blank">家庭安全系统</a></dt>
+                      <dd>
+                        <a href="#" target="_blank">安防</a></dd>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--<script>
+          $("#nav .tit").slide({
+          type: "menu",
+          titCell: ".mod_cate",
+          targetCell: ".mod_subcate",
+          delayTime: 0,
+          triggerTime: 10,
+          defaultPlay: false,
+          returnDefault: true
+          });
+          </script>-->
+          <script>$("#nav .tit").slide({
+              type: "menu",
+              titCell: ".mod_cate",
+              targetCell: ".mod_subcate",
+              delayTime: 0,
+              triggerTime: 10,
+              defaultPlay: false,
+              returnDefault: true
+            });
+            jQuery(document).ready(function() {
+              jQuery(".fenlei_hd").mouseover(function() {
+                $("#classPanel").show();
+              });
+              jQuery(".fenlei_hd").mouseout(function() {
+                $("#classPanel").hide();
+              });
+              jQuery("#classPanel").mouseover(function() {
+                $("#classPanel").show();
+              });
+              jQuery("#classPanel").mouseout(function() {
+                $("#classPanel").hide();
+              });
+            });
+
+            $(function() {　 //	$("#help-content").load('客户帮助-关于我们.html');
+            });
+            function goto(url) {
+              $("#help-content").load(url);
+            }</script>
+          <!--首页，品牌，团购，天天特价-->
+          <div class="menu_big border-r3">
+            <ul>
+              <li>
+                <a href="首页.html" id="" target="_blank">首页</a>
+                <span class="hot"></span>
+              </li>
+              <li>
+                <a href="品牌页.html" id="" target="_blank">品牌</a>
+                <span class="hot"></span>
+              </li>
+              <li>
+                <a href="天天特价.html" id="" target="_blank">天天特价</a>
+                <span class="hot"></span>
+              </li>
+              <li>
+                <a href="产品页.html" id="" target="_blank">装修公司</a>
+                <span class="hot"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" main help-wrap">
+      <h1 class="help-tit">
+        <span>您当前位置：</span>
+        <a href="#">首页</a>
+        <span>&gt;&gt;</span>
+        <span>关于我们</span></h1>
+      <div class="help-main">
+        <div class="help-left">
+          <!--代码内容-->
+          <ul class="ce">
+            <li style=" background:#E62129">
+              <a class="xz" onClick="goto('客户帮助-在线问题.html')">在线问题分类</a>
+              <ul class="er">
+                <li class="e_li">
+                  <a href="javascript:void(0);">
+                    <b>
+                    </b>新手上路</a>
+                  <ul class="thr">
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-新手上路-联系客服.html')">联系客服</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-新手上路-常见问题.html')">常见问题</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-新手上路-会员介绍.html')">会员介绍</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-新手上路-购物流程.html')">购物流程</a></li>
+                    <div class="clear"></div>
+                  </ul>
+                </li>
+                <li class="e_li">
+                  <a href="javascript:void(0);">
+                    <b>
+                    </b>支付方式</a>
+                  <ul class="thr">
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-支付方式-财付通在线支付.html')">财付通在线支付</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-支付方式-网银在线支付.html')">网银在线支付</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-支付方式-支付宝在线支付.html')">支付宝在线支付</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-支付方式-如何使用支付.html')">如何使用支付</a></li>
+                    <div class="clear"></div>
+                  </ul>
+                </li>
+                <li class="e_li">
+                  <a href="javascript:void(0);">
+                    <b>
+                    </b>售后服务</a>
+                  <ul class="thr">
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-售后服务-退换货政策.html')">退换货政策</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-售后服务-退货流程.html')">退货流程</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-售后服务-如何申请退货.html')">如何申请退货</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-售后服务-如何申请退款.html')">如何申请退款</a></li>
+                    <div class="clear"></div>
+                  </ul>
+                </li>
+                <li class="e_li">
+                  <a href="javascript:void(0);">
+                    <b>
+                    </b>帮助中心</a>
+                  <ul class="thr">
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-帮助中心-如何免费获取积分.html')">如何免费获取积分</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-帮助中心-积分兑换说明.html')">积分兑换说明</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-帮助中心-积分细则.html')">积分细则</a></li>
+                    <div class="clear"></div>
+                  </ul>
+                </li>
+                <li class="e_li">
+                  <a href="javascript:void(0);">
+                    <b>
+                    </b>客服中心</a>
+                  <ul class="thr">
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-客服中心-如何绑定手机.html')">如何绑定手机</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-客服中心-如何绑定邮箱.html')">如何绑定邮箱</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-客服中心-修改个人信息.html')">修改个人信息</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-客服中心-会员修改密码.html')">会员修改密码</a></li>
+                    <div class="clear"></div>
+                  </ul>
+                </li>
+                <li class="e_li">
+                  <a href="javascript:void(0);">
+                    <b>
+                    </b>特色服务</a>
+                  <ul class="thr">
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-特色服务-价格保护.html')">价格保护</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-特色服务-夺宝岛.html')">夺宝岛</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-特色服务-定期送.html')">定期送</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-特色服务-一键购.html')">一键购</a></li>
+                    <div class="clear"></div>
+                  </ul>
+                </li>
+                <li class="e_li">
+                  <a href="javascript:void(0);">
+                    <b>
+                    </b>店主之家</a>
+                  <ul class="thr">
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-店主之家-如何发布商品.html')">如何发布商品</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-店主之家-查看售出商品.html')">查看售出商品</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-店主之家-商城商品推荐.html')">商城商品推荐</a></li>
+                    <li>
+                      <a id="ce-o" onClick="goto('客户帮助-店主之家-如何申请开店.html')">如何申请开店</a></li>
+                    <div class="clear"></div>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <div class="clear"></div>
+          </ul>
+          <ul class="ce-other">
+            <li>
+              <a id="ce-o" href="客户帮助-关于我们.html" target="_blank" class="xz">关于我们
+                <b class="c-1"></b></a>
+            </li>
+            <li>
+              <a id="ce-o" onClick="goto('客户帮助-联系我们.html')">联系我们
+                <b class="c-2"></b></a>
+            </li>
+            <li>
+              <a id="ce-o" onClick="goto('客户帮助-商城新闻.html')">商城新闻
+                <b class="c-3"></b></a>
+            </li>
+            <li>
+              <a id="ce-o" onClick="goto('客户帮助-商城活动.html')">商城活动
+                <b class="c-4"></b></a>
+            </li>
+          </ul>
+          <!--代码内容--></div>
+        <div class="help-right" id="help-content">
+          <!--内容数据调用区域-->
+          <ul class="help-tab">
+            <li id="a1" class="tabon" onClick="tab('a','tabcon','1','1','9','tabon','taboff');">
+              <span>商城新闻</span></li>
+          </ul>
+          <p>
+          </p>
+          <div id="tabcon1" class="ov db">
+            <h1 style="display:block; text-align:center; margin:50px 0px 80px 50px ">商城新闻</h1>
+            <div class="list-con">
+              <p style="text-indent:2em; margin-bottom:10px;">A man may usually be known by the books he reads as well as by the company he keeps; for there is a companionship of books as well as of men; and one should always live in the best company, whether it be of books or of men.</p>
+              <p style="text-indent:2em; margin-bottom:10px;">A good book may be among the best of friends. It is the same today that it always was, and it will never change. It is the most patient and cheerful of companions. It does not turn its back upon us in times of adversity or distress. It always receives us with the same kindness; amusing and instructing us in youth, and comforting and consoling us in age.</p>
+              <p style="text-indent:2em; margin-bottom:10px;">Men often discover their affinity to each other by the mutual love they have for a book just as two persons sometimes discover a friend by the admiration which both entertain for a third. There is an old proverb, ‘Love me, love my dog.” But there is more wisdom in this:” Love me, love my book.” The book is a truer and higher bond of union. Men can think, feel, and sympathize with each other through their favorite author. They live in him together, and he in them.</p>
+              <p style="text-indent:2em; margin-bottom:10px;">A good book is often the best urn of a life enshrining the best that life could think out; for the world of a man’s life is, for the most part, but the world of his thoughts. Thus the best books are treasuries of good words, the golden thoughts, which, remembered and cherished, become our constant companions and comforters.</p>
+              <p style="text-indent:2em; margin-bottom:10px;">Books possess an essence of immortality. They are by far the most lasting products of human effort. Temples and statues decay, but books survive. Time is of no account with great thoughts, which are as fresh today as when they first passed through their author’s minds, ages ago. What was then said and thought still speaks to us as vividly as ever from the printed page. The only effect of time have been to sift out the bad products; for nothing in literature can long survive e but what is really good.</p>
+              <p style=" margin-bottom:10px; text-align:center;">
+                <img src="images/upfile/sc-1.jpg"></p>
+              <div class="list-page">
+                <a class="l-p-l" href="">上一条：新版“广告管理”功能说明</a>
+                <a class="l-p-r" href="">下一条：官方使用提示信息</a></div>
+            </div>
+          </div>
+          <script>function tab(name, name2, cursel, n, n2, s, s2) {
+              for (i = n; i <= n2; i++) {
+                if (i == cursel) {
+                  document.getElementById(name2 + i).style.display = "block";
+                  document.getElementById(name + i).className = s;
+                } else {
+                  document.getElementById(name2 + i).style.display = "none";
+                  document.getElementById(name + i).className = s2;
+                }
+              }
+            }</script>
+          <!--内容数据调用区域--></div>
+      </div>
+    </div>
+    <div class="ad-bottom">
+      <a href="#">
+        <img src="images/ad-1.png"></a>
+    </div>
+    <ul class="foot-exp">
+      <li>
+        <h3 class="f-a">新手上路</h3>
+        <a href="#">• 联系客服</a>
+        <a href="#">• 常见问题</a>
+        <a href="#">• 会员介绍</a>
+        <a href="#">• 购物流程</a></li>
+      <li class="b-rl">
+        <h3 class="f-b">关于支付</h3>
+        <a href="#">• 财付通在线支付</a>
+        <a href="#">• 网银在线支付</a>
+        <a href="#">• 支付宝在线支付</a>
+        <a href="#">• 如何使用支付</a></li>
+      <li>
+        <h3 class="f-c">售后服务</h3>
+        <a href="#">• 退换货政策</a>
+        <a href="#">• 退货流程</a>
+        <a href="#">• 如何申请退货</a>
+        <a href="#">• 如何申请退款</a></li>
+    </ul>
+    <dl class="footer">
+      <dt>
+        <a href="#">首页</a>|
+        <a href="#">招聘英才</a>|
+        <a href="#">广告合作</a>|
+        <a href="#">联系我们</a>|
+        <a href="#">关于采料网</a></dt>
+      <dd>
+        <p>&copy;2015-2016&nbsp;采料网&nbsp;增值电信业务经营许可证：琼B2-20150028</p>
+      </dd>
+    </dl>
+  </body>
+
+</html>

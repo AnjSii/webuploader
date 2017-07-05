@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/seller.css">
+  </head>
+  
+  <body >
+
+<!--为了方便直接双击查阅，本次加入了HEAD和样式，真正模块化时请使用如下代码即可-->
+<!--复制代码-->
+
+  <script>
+  $('[name="nice-select"]').click(function(e){
+		    $('[name="nice-select"]').find('ul').hide();
+		    $(this).find('ul').show();
+			e.stopPropagation();
+		});
+		$('[name="nice-select"] li').hover(function(e){
+			$(this).toggleClass('on');
+			e.stopPropagation();
+		});
+		$('[name="nice-select"] li').click(function(e){
+			var val = $(this).text();
+			$(this).parents('[name="nice-select"]').find('input').val(val);
+			$('[name="nice-select"] ul').hide();
+			e.stopPropagation();
+		});
+		$(document).click(function(){
+			$('[name="nice-select"] ul').hide();
+		});
+    </script>
+
+<div class="m-box-all">
+ <div class="m-add-all"><a href="">我的账户</a><span>买就送</span></div>
+ <div class="m-con-all">
+  <div class="m-main">
+  
+  <div class="m-tab">
+<span id="a1" class="tabon" onClick="tab('a','tabcon','1','1','3','tabon','taboff');">买就送商品</span>
+<span id="a2" class="taboff" onClick="tab('a','tabcon','2','1','3','tabon','taboff');">套餐购买</span>
+<span id="a3" class="taboff" onClick="tab('a','tabcon','3','1','3','tabon','taboff');">套餐购买日志</span>
+</div>
+<p class="db ov cl"></p>
+<div id="tabcon1" class="ov db p-35-t">
+    <table width="100%" class="m-table ">
+    <tr>
+     <th width="100">主体商品</th>
+     <th width="250">赠品</th>
+     <th width="90">开始时间</th>
+     <th width="90">结束时间</th>
+     <th width="50">状态</th>
+     <th width="80">操作</th>
+    </tr>
+    <tr>
+     <td>软管z</td>
+     <td>紫铜盘管 2/3/4/5/6/8/1...</td>
+     <td>2015-06-16</td>
+     <td>2015-06-16</td>
+     <td></td>
+     <td><span class="m-exp-but">删除</span></td>
+    </tr>
+   
+   </table>
+   
+   <div class="m-page text-r m-20-t">
+   <a class="this" href="" >首页</a>
+   <a href=""  >上一页</a>
+   <span>第1页</span>
+   <a href="" >下一页</a>
+  </div>
+  
+  </div><!--tabcon1-->
+  <div id="tabcon2" class="ov db p-35-t" style="display:none;">
+   
+   <div class="m ov db" style=" width:600px;">
+   <table width="100%" class="m-tab-st">
+    <tr>
+     <td width="108" valign="middle" align="right">金币余额：</td>
+     <td class="p-10-l">19110</td>
+    </tr>
+    <tr>
+     <td width="108" valign="middle" align="right">当前套餐到期：</td>
+     <td class="p-10-l">2017-08-09 12:13:35</td>
+    </tr>
+    <tr>
+     <td width="108" valign="middle" align="right">套餐购买数量：</td>
+     <td class="p-10-l"><input type="text" style="width:160px;" class=" p-5 "><p class="di">个月(60金币/月)</p></td>
+    </tr>
+    <tr>
+     <td width="108" valign="top" align="right"></td>
+     <td class="p-10-l">购买单位为月，一次最多购买12个月，购买后您可以发布商品参与组合销售活动，申请会一次性扣除所需金币数，申请成功后立即生效</td>
+    </tr>
+    <tr>
+     <td width="108" height="100" valign="top" align="right"></td>
+     <td class="p-10-l" valign="top"><div class=" p-30-t"><input type="button" value="提交" class="s-but"></div></td>
+    </tr>
+   </table>
+  </div>
+   
+  </div><!--tabcon2-->
+  <div id="tabcon3" class="ov db p-35-t" style="display:none;">
+   
+   <table width="100%" class="m-table ">
+    <tr>
+     <th width="250">套餐开始时间</th>
+     <th width="250">套餐结束时间</th>
+     <th width="90">消耗金币</th>
+     <th width="90">购买时间</th>
+    </tr>
+    <tr>
+     <td>2015-10-29 14:25:11</td>
+     <td>2017-08-09 12:13:35</td>
+     <td>720</td>
+     <td>2015-10-29 14:25:11</td>
+    </tr>
+    <tr>
+     <td>2015-10-29 14:25:11</td>
+     <td>2017-08-09 12:13:35</td>
+     <td>720</td>
+     <td>2015-10-29 14:25:11</td>
+    </tr>
+   
+   </table>
+  
+  </div><!--tabcon3-->
+ 
+  
+  
+  </div><!--m-main-->
+<script>function tab(name, name2, cursel, n, n2, s, s2) {
+    for (i = n; i <= n2; i++) {
+      if (i == cursel) {
+        document.getElementById(name2 + i).style.display = "block";
+        document.getElementById(name + i).className = s;
+      } else {
+        document.getElementById(name2 + i).style.display = "none";
+        document.getElementById(name + i).className = s2;
+      }
+    }
+  }</script>  
+ </div>
+ 
+</div>
+<!--复制代码-->
+  </body>
+
+</html>

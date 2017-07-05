@@ -1,0 +1,849 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>采料网-上采料,材购好</title>
+    <meta name="keywords" content="cailiao,采料网,hicailiao">
+    <meta name="description" content="hicailiao,上采料，材购好">
+    <meta name="generator" content="">
+    <meta name="author" content="采料网">
+    <meta name="copyright" content="采料网">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/content.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/SimpleTree.js"></script><!--商品分类树形菜单-->
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    
+    <style>
+     .fullSlide,.fullSlide .bd li  { height:488px;}
+	 .fullSlide .hd ul .on {background:#fff;}
+	 .fullSlide .prev, .fullSlide .next {display:block;position:absolute;z-index:1;top:15%;margin-top:140px;left:50%;margin-left:-450px;z-index:1;width:35px;height:35px;
+background:url(images/fullSlide-np.png) 10px -45px #000 no-repeat;cursor:pointer;filter:alpha(opacity=50);opacity:0.5;display:none;}
+.fullSlide .next {left:auto;right:50%;margin-right:-440px;background-position:8px 1px;}
+    </style>
+    
+    </head>
+  
+  <body>
+    <!--top begin-->
+    <div class="hb-top">
+      <div class="main">
+        <a href="登陆界面.html" class="top-a">hi.请登录</a>
+        <a href="注册界面.html" class="top-b">免费注册</a>
+        <div class="top-user">
+          <div class="top-c">
+            <a class="top-h" href="用户.html">
+              <b>
+              </b>买家中心</a>
+            <ul class="t-u">
+              <li>
+                <a href="用户.html">已经买到的宝贝</a>
+                <a href="用户.html">店铺动态</a>
+                <a href="用户.html">好友动态</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="用户.html">
+              <b>
+              </b>卖家中心</a>
+            <ul class="t-s">
+              <li>
+                <a href="用户.html">已卖出的宝贝</a>
+                <a href="用户.html">出售中的宝贝</a></li>
+            </ul>
+          </div>
+          <div class="top-c">
+            <a class="top-h" href="用户.html">
+              <b>
+              </b>购物车
+              <i>0</i>种商品
+              <span></span></a>
+            <ul class="t-p">
+              <!--购物车无内容-->
+              <li style="display:none;">购物车暂时为空，赶紧挑选自己喜欢的商品去</li>
+              <!--购物车无内容-->
+              <!--购物车有内容,举例多商品排列，嵌套数据调用时请删除多余-->
+              <li>
+                <h1>购物车商品总价：¥32.00</h1>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-4.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-1.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-2.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <img src="images/upfile/b-pic-5.png"></dt>
+                  <dd>
+                    <a href="产品页.html">镀金j3004-7 规...</a>
+                    <p>¥16.00×2</p>
+                    <input type="button" value="删除"></dd>
+                </dl>
+                <div class="look-shop">
+                  <a href="用户.html">查看我的购物车</a></div>
+              </li>
+              <!--购物车有内容--></ul>
+          </div>
+          <div class="top-c">
+            <a class="top-d" href="用户.html">站内短信</a></div>
+          <div class="top-c">
+            <a class="top-d" href="用户.html">我的收藏</a></div>
+          <div class="top-c">
+            <a class="top-d" href="用户.html">帮助中心</a></div>
+        </div>
+      </div>
+    </div>
+    <!--.top end-->
+    <div class="hb-logo">
+      <div class="logo">
+        <img src="images/LOGO.png"></div>
+      <dl class="hb-search">
+        <dt>
+          <input type="text" placeholder="请输入您想要的商品名、店铺、装修公司">
+          <input type="button" value="搜索"></dt>
+        <dd>
+          <b>热门搜索：</b>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a>
+          <a href="产品页.html">接线板</a></dd>
+      </dl>
+      <dl class="eym">
+        <dt class="eym-1">
+          <img src="images/eym.png">
+          <p>专享周二采料专场</p>
+        </dt>
+        <dt class="eym-2" style="display:none">
+          <img src="images/eym.png">
+          <p>专享周日采料专场</p>
+        </dt>
+        <dd>
+          <span class="eym-btn-on"></span>
+          <span class="eym-btn-mov"></span>
+        </dd>
+      </dl>
+      <script>$(function() {
+          $(".eym-btn-mov").hover(function() {
+            $(".eym-2").show();
+            $(".eym-1").hide();
+          },
+          function() {
+            $(".eym-2").hide();
+            $(".eym-1").show();
+          })
+        })</script>
+    </div>
+    <!--.hb-logo end-->
+    <!-- 随页面浮动LOGO和输入框 -->
+    <!--<div class="fix-logo">
+    <div class="fix-main">
+    <img src="images/fix-logo.png">
+    <div class="fix-input"><input type="text" placeholder="请输入您想要的商品名、店铺、装修公司"> <input type="button" value="搜索"></div></div></div>-->
+    <!--.fix-logo end-->
+    <div class="meun-two db m-10-t">
+      <ul>
+        <li>
+          <a href="">首页</a></li>
+        <li>
+          <a class="aon" href="">商品列表</a></li>
+        <li>
+          <a href="">信用评价</a></li>
+        <li>
+          <a href="">店铺详情</a></li>
+      </ul>
+    </div>
+    <!--.meun-two end-->
+    <div class=" list-wrap ov">
+      <div class="fl" style="width:269px;">
+        <div class="pos-rel db">
+          <div class="con-exp">
+            <h1>奢陶店</h1>
+            <dl>
+              <dt>店铺信息</dt>
+              <dd>
+                <p>
+                  <b>创店时间：</b>
+                  <span>2016-03-01</span></p>
+                <p>
+                  <b>所在地区：</b>
+                  <span>海南 海口 琼山区</span></p>
+              </dd>
+            </dl>
+            <dl>
+              <dt>店铺信息</dt>
+              <dd>
+                <a href="#">咨询客服
+                  <i></i>
+                </a>站内客服：</dd>
+            </dl>
+            <ul class="con-pf">
+              <li>
+                <p>描述</p>
+                <b>0.00↑</b>
+              </li>
+              <li style=" border-left:1px #ccc solid; border-right:1px #ccc solid">
+                <p>服务</p>
+                <b>0.00↑</b>
+              </li>
+              <li>
+                <p>物流</p>
+                <b>0.00↑</b>
+              </li>
+            </ul>
+          </div>
+          <div class="exp-btn">
+            <ul>
+              <li>
+                <a href="" style="background:#EAE9E9;">收藏店铺
+                  <i class="e-b-1"></i></a>
+              </li>
+              <li>
+                <a class="eym-show" href="">店铺二维码
+                  <i class="e-b-2"></i>
+                  <div class="exp-eym" style="display: none;">
+                    <img src="images/upfile/eym.jpg">
+                    <p>
+                      <span>手机扫描二维码</span>
+                      <span>快速收藏店铺</span></p>
+                  </div>
+                  <script>$(function() {
+                      $(".eym-show").hover(function() {
+                        $(".exp-eym").show();
+                      },
+                      function() {
+                        $(".exp-eym").hide();
+                      })
+                    })</script>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="search-liet-box ov">
+            <div class="db ov m-30">
+              <input type="text" class="di" value="关键词"></div>
+            <div class="db ov m-30">
+              <input type="button" value="搜索" class="btn-blue btn-c"></div>
+          </div>
+          <!--serach-liet-box-->
+          <div class=" list-box">
+            <div class="list-box-tit">
+              <b>
+              </b>商品分类</div>
+            <div class="list-box-con">
+              <div class="tab-a">
+                <a class="this">按默认</a>
+                <a>按价格</a>
+                <a>按销量</a>
+                <a>按人气</a></div>
+              <p class="db ov cl"></p>
+              <div id="tab-acon1" class="ov db">
+                <div class="tab-content st_tree">
+                  <ul>
+                    <li>
+                      <a href="#">所有商品</a></li>
+                    <ul show="true">
+                      <li>
+                        <a href="#">加装建材</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">仿古砖</a></li>
+                        <li>
+                          <a href="#">pvc墙纸</a></li>
+                        <li>
+                          <a href="#">无纺布墙纸</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">灯具灯饰</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">台灯</a></li>
+                        <li>
+                          <a href="#">吊灯</a></li>
+                        <li>
+                          <a href="#">吸顶灯</a></li>
+                        <li>
+                          <a href="#">小夜灯</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">厨房卫浴</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">马桶</a></li>
+                        <li>
+                          <a href="#">浴室</a></li>
+                        <li>
+                          <a href="#">柜水槽</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">五金工具</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">锁具</a></li>
+                        <li>
+                          <a href="#">电钻</a></li>
+                        <li>
+                          <a href="#">拉手</a></li>
+                      </ul>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+              <div id="tab-acon2" class="ov db" style="display:none;">
+                <div class="tab-content st_tree">
+                  <ul>
+                    <li>
+                      <a href="#">所有商品</a></li>
+                    <ul show="true">
+                      <li>
+                        <a href="#">加装建材</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">仿古砖</a></li>
+                        <li>
+                          <a href="#">pvc墙纸</a></li>
+                        <li>
+                          <a href="#">无纺布墙纸</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">灯具灯饰</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">台灯</a></li>
+                        <li>
+                          <a href="#">吊灯</a></li>
+                        <li>
+                          <a href="#">吸顶灯</a></li>
+                        <li>
+                          <a href="#">小夜灯</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">厨房卫浴</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">马桶</a></li>
+                        <li>
+                          <a href="#">浴室</a></li>
+                        <li>
+                          <a href="#">柜水槽</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">五金工具</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">锁具</a></li>
+                        <li>
+                          <a href="#">电钻</a></li>
+                        <li>
+                          <a href="#">拉手</a></li>
+                      </ul>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+              <div id="tab-acon3" class="ov db" style="display:none;">
+                <div class="tab-content st_tree">
+                  <ul>
+                    <li>
+                      <a href="#">所有商品</a></li>
+                    <ul show="true">
+                      <li>
+                        <a href="#">加装建材</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">仿古砖</a></li>
+                        <li>
+                          <a href="#">pvc墙纸</a></li>
+                        <li>
+                          <a href="#">无纺布墙纸</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">灯具灯饰</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">台灯</a></li>
+                        <li>
+                          <a href="#">吊灯</a></li>
+                        <li>
+                          <a href="#">吸顶灯</a></li>
+                        <li>
+                          <a href="#">小夜灯</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">厨房卫浴</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">马桶</a></li>
+                        <li>
+                          <a href="#">浴室</a></li>
+                        <li>
+                          <a href="#">柜水槽</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">五金工具</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">锁具</a></li>
+                        <li>
+                          <a href="#">电钻</a></li>
+                        <li>
+                          <a href="#">拉手</a></li>
+                      </ul>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+              <div id="tab-acon4" class="ov db" style="display:none;">
+                <div class="tab-content st_tree">
+                  <ul>
+                    <li>
+                      <a href="#">所有商品</a></li>
+                    <ul show="true">
+                      <li>
+                        <a href="#">加装建材</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">仿古砖</a></li>
+                        <li>
+                          <a href="#">pvc墙纸</a></li>
+                        <li>
+                          <a href="#">无纺布墙纸</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">灯具灯饰</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">台灯</a></li>
+                        <li>
+                          <a href="#">吊灯</a></li>
+                        <li>
+                          <a href="#">吸顶灯</a></li>
+                        <li>
+                          <a href="#">小夜灯</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">厨房卫浴</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">马桶</a></li>
+                        <li>
+                          <a href="#">浴室</a></li>
+                        <li>
+                          <a href="#">柜水槽</a></li>
+                      </ul>
+                      <li>
+                        <a href="#">五金工具</a></li>
+                      <ul>
+                        <li>
+                          <a href="#">锁具</a></li>
+                        <li>
+                          <a href="#">电钻</a></li>
+                        <li>
+                          <a href="#">拉手</a></li>
+                      </ul>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+              <script type="text/javascript">$(function() {
+
+                  $(".st_tree").SimpleTree({
+
+                    /* 可无视代码部分*/
+                    click: function(a) {
+                      if (!$(a).attr("hasChild")) alert($(a).attr("ref"));
+                    }
+
+                  });
+
+                });</script>
+            </div>
+          </div>
+          <!--list-box-->
+          <div class=" list-box">
+            <div class="list-box-tit">
+              <b>
+              </b>商品排行</div>
+            <div class="list-box-con">
+              <div class="tab-b">
+                <span id="tab-b1" class="tabon" onClick="tab('tab-b','tab-bcon','1','1','4','tabon','taboff');">热销商品排行</span>
+                <span id="tab-b2" class="taboff" onClick="tab('tab-b','tab-bcon','2','1','4','tabon','taboff');">热门收藏排行</span></div>
+              <p class="db ov cl"></p>
+              <div id="tab-bcon1" class="ov db p-15-t">
+                <dl class="list-box-list">
+                  <dt>
+                    <a href="#">
+                      <img src="images/upfile/b-pic-1.png"></a>
+                  </dt>
+                  <dd>
+                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                    <span class="f-c-ff0000 f-w-14 db m-5-t">¥188.00</span>
+                    <p>
+                      <span></span>收藏：10</p>
+                  </dd>
+                </dl>
+                <dl class="list-box-list">
+                  <dt>
+                    <a href="#">
+                      <img src="images/upfile/b-pic-1.png"></a>
+                  </dt>
+                  <dd>
+                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                    <span class="f-c-ff0000 f-w-14 db m-5-t">¥188.00</span>
+                    <p>
+                      <span></span>收藏：10</p>
+                  </dd>
+                </dl>
+                <dl class="list-box-list">
+                  <dt>
+                    <a href="#">
+                      <img src="images/upfile/b-pic-1.png"></a>
+                  </dt>
+                  <dd>
+                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                    <span class="f-c-ff0000 f-w-14 db m-5-t">¥188.00</span>
+                    <p>
+                      <span></span>收藏：10</p>
+                  </dd>
+                </dl>
+                <dl class="list-box-list">
+                  <dt>
+                    <a href="#">
+                      <img src="images/upfile/b-pic-1.png"></a>
+                  </dt>
+                  <dd>
+                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                    <span class="f-c-ff0000 f-w-14 db m-5-t">¥188.00</span>
+                    <p>
+                      <span></span>收藏：10</p>
+                  </dd>
+                </dl>
+                <dl class="list-box-list">
+                  <dt>
+                    <a href="#">
+                      <img src="images/upfile/b-pic-1.png"></a>
+                  </dt>
+                  <dd>
+                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                    <span class="f-c-ff0000 f-w-14 db m-5-t">¥188.00</span>
+                    <p>
+                      <span></span>收藏：10</p>
+                  </dd>
+                </dl>
+              </div>
+              <div id="tab-bcon2" class="ov db p-15-t" style="display:none;">
+                <dl class="list-box-list">
+                  <dt>
+                    <a href="#">
+                      <img src="images/upfile/b-pic-1.png"></a>
+                  </dt>
+                  <dd>
+                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                    <span class="f-c-ff0000 f-w-14 db m-5-t">¥188.00</span>
+                    <p>
+                      <span></span>收藏：10</p>
+                  </dd>
+                </dl>
+                <dl class="list-box-list">
+                  <dt>
+                    <a href="#">
+                      <img src="images/upfile/b-pic-1.png"></a>
+                  </dt>
+                  <dd>
+                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                    <span class="f-c-ff0000 f-w-14 db m-5-t">¥188.00</span>
+                    <p>
+                      <span></span>收藏：10</p>
+                  </dd>
+                </dl>
+                <dl class="list-box-list">
+                  <dt>
+                    <a href="#">
+                      <img src="images/upfile/b-pic-1.png"></a>
+                  </dt>
+                  <dd>
+                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                    <span class="f-c-ff0000 f-w-14 db m-5-t">¥188.00</span>
+                    <p>
+                      <span></span>收藏：10</p>
+                  </dd>
+                </dl>
+                <dl class="list-box-list">
+                  <dt>
+                    <a href="#">
+                      <img src="images/upfile/b-pic-1.png"></a>
+                  </dt>
+                  <dd>
+                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                    <span class="f-c-ff0000 f-w-14 db m-5-t">¥188.00</span>
+                    <p>
+                      <span></span>收藏：10</p>
+                  </dd>
+                </dl>
+                <dl class="list-box-list">
+                  <dt>
+                    <a href="#">
+                      <img src="images/upfile/b-pic-1.png"></a>
+                  </dt>
+                  <dd>
+                    <a href="" class="text-e">嘉豪微晶石微晶石微晶石微晶石微晶石微晶石</a>
+                    <span class="f-c-ff0000 f-w-14 db m-5-t">¥188.00</span>
+                    <p>
+                      <span></span>收藏：10</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="db ov text-c">
+                <a href="#" class="list-box-btn btn-blue ">查看本店其他商品</a></div>
+            </div>
+          </div>
+          <!--list-box-->
+          <div class=" list-box">
+            <div class="list-box-tit">
+              <b>
+              </b>友情链接</div>
+            <div class="list-box-con list-friend">
+              <ul>
+                <li>
+                  <a href="">百度</a></li>
+                <li>
+                  <a href="">搜狐</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--list-box--></div>
+        <!--pos-rel--></div>
+      <!--con-right-->
+      <div class="fr" style="width:912px;">
+        
+        <div class="shop-slide">
+         <!--大屏广告位 begin-->
+      <div class="main_advert">
+        <!--5个slide广告位-->
+        <div class="lunbo">
+          <div class="fullSlide">
+            <div class="bd">
+              <ul style="position: relative; width: 1349px; height: 577px;">
+                <li style="position: absolute; width: 1349px; left: 0px; top: 0px; display: list-item; background:url(images/upfile/banner-show-1.png) 50% 0px no-repeat rgb(238,238,238);">
+                  <a href="产品页.html" target="_blank"></a>
+                </li>
+                <li style="position: absolute; width: 1349px; left: 0px; top: 0px; display: none; background: url(images/upfile/banner-show-2.png) 50% 0px no-repeat rgb(0,0,0);">
+                  <a href="产品页.html" target="_blank"></a>
+                </li>
+                <li style="position: absolute; width: 1349px; left: 0px; top: 0px; display: none; background:url(images/upfile/banner-show-1.png) 50% 0px no-repeat rgb(238,238,238);">
+                  <a href="产品页.html" target="_blank"></a>
+                </li>
+                <li style="position: absolute; width: 1349px; left: 0px; top: 0px; display: none;background: url(images/upfile/banner-show-2.png) 50% 0px no-repeat rgb(0,0,0);">
+                  <a href="产品页.html" target="_blank"></a>
+                </li>
+                <li style="position: absolute; width: 1349px; left: 0px; top: 0px; display: none; background:url(images/upfile/banner-show-1.png) 50% 0px no-repeat rgb(238,238,238);">
+                  <a href="产品页.html" target="_blank"></a>
+                </li>
+                <li style="position: absolute; width: 1349px; left: 0px; top: 0px; display: none;background: url(images/upfile/banner-show-2.png) 50% 0px no-repeat rgb(0,0,0);">
+                  <a href="产品页.html" target="_blank"></a>
+                </li>
+              </ul>
+            </div>
+            <div class="hd"><ul><li class="on">1</li><li class="">2</li><li class="">3</li><li class="">4</li><li class="">5</li><li class="">6</li></ul></div>
+            <span class="next" style="opacity: 2; display: inline;"></span>
+            <span class="prev" style="opacity: 2; display: inline;"></span>
+            
+          </div>
+          <script>/* 控制左右按钮显示 */
+            jQuery(".fullSlide").hover(function() {
+              jQuery(this).find(".prev,.next").stop(true, true).fadeTo("show", 2)
+            },
+            function() {
+              jQuery(this).find(".prev,.next").fadeOut()
+            });
+
+            /* 调用SuperSlide */
+            jQuery(".fullSlide").slide({
+              titCell: ".hd ul",
+              mainCell: ".bd ul",
+              effect: "fold",
+              autoPlay: true,
+              autoPage: true,
+              trigger: "click",
+              startFun: function(i) {
+                var curLi = jQuery(".fullSlide .bd li").eq(i);
+                /* 当前大图的li */
+                if ( !! curLi.attr("_src")) {
+                  curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+                  /* 将_src地址赋予li背景，然后删除_src */
+                }
+              }
+            });</script>
+        </div>
+      </div>
+      <!--大屏广告位 end-->
+        </div><!--shop-slide-->
+      
+       <div class="hb-wrap-a">
+        <p class="hb-w-title">
+          <b>推荐商品</b>
+        </p>
+        <div style="width:880px; margin:0px auto;">
+          <ul class="shop-list">
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-1.png">
+                <p>嘉豪微晶石1JHP870晶石</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-2.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-3.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-4.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-1.png">
+                <p>嘉豪微晶石1JHP870晶石</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-2.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-3.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-4.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+          </ul>
+        </div>
+      </div> <!--hb-wrap-a-->
+      
+      <div class="hb-wrap-a">
+        <p class="hb-w-title">
+          <b>新品上市</b>
+        </p>
+        <div style="width:880px; margin:0px auto;">
+          <ul class="shop-list">
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-1.png">
+                <p>嘉豪微晶石1JHP870晶石</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-2.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-3.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-4.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-1.png">
+                <p>嘉豪微晶石1JHP870晶石</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-2.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-3.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+            <li>
+              <a href="产品页.html">
+                <img src="images/upfile/e-pic-4.png">
+                <p>嘉豪微晶石1JHP870晶石1JHP87008</p>
+                <span>¥188.00</span></a>
+            </li>
+          </ul>
+        </div>
+      </div> <!--hb-wrap-a-->
+        
+      </div>
+	  </div>
+      <!--fr-->
+    <div class="cl ov db"></div>
+    <dl class="footer">
+      <dt>
+        <a href="客户帮助-新手上路-常见问题.html">首页</a>|
+        <a href="客户帮助-新手上路-常见问题.html">招聘英才</a>|
+        <a href="客户帮助-新手上路-常见问题.html">广告合作</a>|
+        <a href="客户帮助-新手上路-常见问题.html">联系我们</a>|
+        <a href="客户帮助-新手上路-常见问题.html">关于采料网</a></dt>
+      <dd>
+        <p>&copy;2015-2016&nbsp;采料网&nbsp;增值电信业务经营许可证：琼B2-20150028</p>
+      </dd>
+    </dl>
+    <script>function tab(name, name2, cursel, n, n2, s, s2) {
+        for (i = n; i <= n2; i++) {
+          if (i == cursel) {
+            document.getElementById(name2 + i).style.display = "block";
+            document.getElementById(name + i).className = s;
+          } else {
+            document.getElementById(name2 + i).style.display = "none";
+            document.getElementById(name + i).className = s2;
+          }
+        }
+      }</script>
+  </body>
+
+</html>
