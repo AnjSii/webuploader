@@ -1,0 +1,60 @@
+body{font-family: "Microsoft Yahei" !important;}
+.shop_content {background-color: #ebecef;}
+.shop-tab {padding: 20px 0px;width: 1200px;margin: 0px auto;}
+.hb-search input {width: 325px;height: 40px;  }
+.hb-search a {color: white;margin-left: 20px;}
+.shop-tab-tab{padding: 38px 0 20px 0 !important;}
+.comm_one{background: #fff;padding: 28px 0 0 0;overflow: hidden;}
+.comm_one>p,.comm_footer>p{height: 47px;font-size:18px;background: #f7f7f7;line-height: 47px;padding-left: 36px;}
+.comm_one_all{overflow: hidden}
+.comm_two{width: 312px;height: 204px;text-align: center;padding: 66px 36px;font-size: 14px;float: left}
+.comm_two>dt>img{border: 1px solid #ddd;}
+.comm_two>dd{margin-top: 18px;font-weight: 600;}
+.comm_two>dd>.comm_two_span1{color: #fc3500;font-size: 20px;}
+.comm_two>dd>span>i{font-size: 14px}
+.comm_two_span2{color: #323337;margin-left: 14px;font-weight: normal}
+.comm_three_all{width: 775px;float: left;overflow: hidden;}
+.comm_three{width: 770px;height: 58px;float: left;margin-top: 36px;line-height: 58px;}
+.comm_three>li{float: left;margin-left: 52px;font-family: "Microsoft Yahei";}
+.comm_three>li>img{margin-right: 2px}
+.comm_three>.comm_th_one{margin-left: 6px;}
+.comm_three>.comm_th_two{width: 454px;font-size: 14px;line-height: 18px;color: #ff5042;float: right;}
+.comm_three>.comm_th_two>span{color: #979797}
+.comm_textarea{position: relative;float: left;}
+.comm_textarea>textarea{resize: none;overflow:auto;background-attachment:fixed;background-repeat:no-repeat;border-style:solid;border: 1px solid #ddd;width: 772px;height: 136px}
+.comm_note{position: absolute;left: 70%;top: 82%;}
+.star{float: left;margin: 26px 0 0 26px;}
+.star>dl{overflow: hidden;margin-bottom: 18px;}
+.star dt{color: #646261;font-size: 14px;float:left;}
+.star dd{float:left;overflow: hidden}
+.star dd li{float: left}
+.star_li{color: #272322;margin-left: 20px;font-size: 12px}
+.star dd li>span{background: url("../images/star.gif") no-repeat -17px -9px;display: inline-block;width: 20px;height: 20px;margin-left: 6px;}
+.star_span_last{background: url("../images/star.gif") no-repeat -70px -9px !important;}
+.star_span_la_half{background: url("../images/star.gif") no-repeat -43px -9px !important;}
+.comm_spspan>p{height: 46px;line-height: 46px;background: #f7f7f7;text-align: center;margin: 12px 0;cursor: pointer;}
+.comm_spspan>p>span{padding-left: 13px;display: inline-block;width: 14px;height: 16px;}
+.comm_spspan>p>.comm_sp_span{background: url("../images/user-icon.png") no-repeat -351px -520px;}
+.comm_spspan>p>.comm_pu_span{background: url("../images/user-icon.png") no-repeat -351px -561px;}
+.comm_four{width: 532px;margin: 30px auto 10px;color: #fff}
+.comm_four_bu1{background: #b60005}
+.comm_four_bu2{background: #c6c6c6}
+.comm_four>button{border-radius: 5px;border: 0;height: 49px;display: inline-block;width: 246px;text-align: center;font-size: 18px;line-height: 49px;color: #fff}
+.comm_four_bu3{margin-left: 34px;}
+.comm_footer{margin-top: 34px;background: #fff;}
+.comm_footer_one{width: 1064px;background: white;margin: 0 68px 22px;font-size: 12px}
+.comm_footer_two{border-bottom: 1px solid #e4e4e4;position: relative}
+.comm_footer_two>dl{width: 418px;padding: 20px 0;}
+.comm_footer_two>dl>dd{margin-top: 16px}
+.comm_footer_dd2{color: #699ebd;background: #f6fcff;padding: 8px;}
+.comm_footer_dd2>span{color: #808080}
+.comm_footer_dd{font-size: 10px;color: #bdbcbc;}
+.comm_footer_two>ul{position: absolute;top:50%;float: right;right: 6%;}
+.comm_footer_two>ul>li{float: left;font-family: "Microsoft Yahei";}
+.comm_footer_two>ul>.comm_footer_li{margin-left: 200px;}
+.comm_footer_two>ul>.comm_footer_li>img{width: 21px;height: 20px;margin-right: 5px;vertical-align: middle}
+.comm_page{height: 85px;line-height: 85px;margin-left: 664px}
+.comm_page>ul>li{float: left;margin-left: 8px;}
+.comm_page>ul>li>a{border: 1px solid #ddd;padding: 0 10px;height: 20px;display: inline-block;line-height: 20px;}
+.comm_page_this{background: #1d2087;color: #fff;}
+.comm_page>ul>li>a:hover{border: 1px solid #1d2087;background: #1d2087;color: #fff;}

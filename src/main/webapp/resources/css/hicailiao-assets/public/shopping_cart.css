@@ -1,0 +1,119 @@
+/*确认订单页面*/
+.confirm_order{text-align: right;overflow: hidden;margin:50px 0 10px 0;}
+.confirm_order dd{float: right}
+.confirm_order dd li{float: left;width: 192px;text-align: center;font-size: 14px;color: #5052c2;font-family: "Microsoft YaHei";}
+.pay-show dl dd h1,.pay-show dl dd p b { color:#1D1F88;}
+.pay-show{ border:1px #eee solid;}
+.pay-show { overflow:hidden;margin-top: 4px;border-bottom: none;}
+.pay-show>p{padding: 8px 0 0 16px;color: #1d1f88;font-size: 14px;font-family: "Microsoft YaHei";}
+.pay-show dl {overflow:hidden;margin: 52px 0 50px 37px;}
+.pay-show dl dt {margin-right: 26px;}
+.pay-show dl dt>img{width: 120px;height: 120px;}
+.pay-show dl dd>.pay-show-p{color: #1d1f88;font-size: 14px;font-family: "Microsoft YaHei";}
+.pay-show .pay-show-p2{font-size: 12px;font-weight: bold;}
+.pay-show .pay-show-p2>a{text-decoration: underline}
+.pay-show dl dd>ul{padding: 16px 24px 14px 20px;width: 971px;background: #f9f9f9;margin: 8px 0 16px 0;}
+.pay-show dl dd>ul>li{line-height: 30px;font-size: 14px;font-family: "Microsoft YaHei";color: #333a40}
+.pay-show dl dd>ul>li>span{float: right;}
+.pay-show dl dd>ul>li>span>b{font-size: 20px;color: #f20011}
+.pay-show dl dd div p { display:block; margin-bottom:10px; font-size:16px; color:#000;}
+.pay-bank{border: 1px solid #eee;margin-bottom: 36px;padding-bottom: 86px;background: #fcfcfc;border-top: none;}
+.pay-bank>p {padding: 18px 0 0 19px;color: #1d1f88;font-size: 14px;font-family: "Microsoft YaHei";}
+.pay-bank>h1{font-weight: normal;font-size: 12px;padding: 25px 0 20px 19px;font-family: "Microsoft YaHei";color: #333a40;}
+.pay-bank ul { overflow:hidden;padding-left: 73px;}
+.pay-bank ul li {width: 20%;overflow:hidden;float:left;}
+.pay-bank ul li>span{display: inline-block;width: 160px;height: 62px;border-radius: 10px;border: 2px solid #f4f4f4;}
+.pay-bank .pay-bank-add{border: 2px solid #1d1f88 !important;}
+.pay-bank ul li>span>img {width: 160px;height: 62px;border-radius: 10px;}
+.pay-bank-botton{margin: 0 auto 42px;width: 164px;}
+.pay-bank-botton>button{padding: 12px 26px;font-family: "Microsoft YaHei"}
+.pay-bank-botton>button>span{margin-left: 8px}
+/*优惠券结算页面*/
+.coupon_account{width: 1162px;margin: 0 auto;border: 1px solid #e5e5e5;padding: 12px 18px 0;font-family: "Microsoft YaHei";}
+.coupon_account1{border-bottom: 1px solid #e5e5e5;padding-bottom: 12px}
+.coupon_account1>p>a{float: right;font-size: 14px;color: #1d1f88;}
+.coupon_account1>ul{clear: both;overflow: hidden;padding-left: 20px}
+.coupon_account1>ul>li{float: left;font-size: 16px;font-family: "Microsoft YaHei";}
+.coupon_account1>ul>.coupon_account1_2>p{display: inline-block;}
+.coupon_account1>ul>.coupon_account1_2>span{font-size: 16px;color: #e71218;font-weight: bold;background: url("../images/user-icon.png") no-repeat -381px -278px;padding-left: 40px;display: inline-block;height: 32px;line-height: 32px;}
+.coupon_account1>ul .coupon_account1_3{color: #666666;font-weight: bold;position: relative;cursor: pointer;height: 32px;line-height: 32px;}
+.coupon_account1>ul .coupon_account1_3>div>span{margin-left: 20px}
+.coupon_account1>ul .coupon_account1_3>a{margin: 0 8px 0;}
+.coupon_account1>ul .coupon_account1_3 input{margin: 0 8px}
+.coupon_account1>ul .coupon_account1_3>div{display: inline-block;}
+.coupon_account1>ul .coupon_account1_4{padding-left: 88px}
+.coupon_account1>h1{font-weight: normal;font-size: 14px;padding-left: 30px;margin-top: 17px;color: #fc4545;cursor: pointer;display: inline-block;}
+.coupon_account1>h3{font-weight: normal;border-radius: 5px;border:1px solid #221f88;padding: 2px 8px;display: inline-block;font-size: 12px;color: #221f88;margin-left: 43px;cursor: pointer}
+.coupon_account2>h2{margin: 18px 0}
+.coupon_account2_1{padding: 20px 6px 28px 12px;background: #f4f8fe}
+.coupon_account2_1>ul{overflow: hidden;margin-bottom: 20px}
+.coupon_account2_1>ul>li{float: left;font-size: 16px;color: #86888a;font-family: "Microsoft YaHei";height: 28px;line-height: 28px;}
+.coupon_account2_li1{margin-right: 67px}
+.coupon_account2_li1>a>span{background: url("../images/user-icon.png") no-repeat -389px -330px;padding-left: 33px;height: 28px;display: block;float: left;}
+.coupon_account2_li1>a>p{display: inline-block}
+.coupon_account2_li2{margin-left: 18px}
+.coupon_account2_li2>a>p{display: inline-block;background: url("../images/user-icon.png") no-repeat -388px -390px;padding-left: 30px;height: 28px;float: left;position: absolute;}
+.coupon_account2_li2 span{margin-left: 17px;font-size: 12px;border: 1px solid #f39800;background: #f1c90b;color: #f20505;border-radius: 5px;padding: 0 8px 0 10px;}
+.coupon_account2_2{overflow: hidden}
+.coupon_account2_2>dl{width: 390px;overflow: hidden;float: left;font-family: "Microsoft YaHei";}
+.coupon_account2_2>dl>dt{float: left;margin-right: 14px}
+.coupon_account2_2>dl>dt>img{width: 78px;height: 78px}
+.coupon_account2_2>dl>dd{font-size: 16px;}
+.coupon_account2_2>dl>.coupon_account2_dd1>span{margin:0 7px}
+.coupon_account2_2>dl>.coupon_account2_dd2{font-size: 16px;color: #1d1f88}
+.coupon_account2_2>ul{overflow: hidden;float: right;line-height: 24px;margin-left: 170px;}
+.coupon_account2_2>ul>li{float: left;font-size: 16px;font-family: "Microsoft YaHei";}
+.coupon_account2_2li1{color: #545557;margin-right: 32px}
+.coupon_account2_2li2{color: #848587;margin: 0 60px 0 50px}
+.coupon_account2_2li3{font-size: 16px;color: #e71218;font-weight: bold}
+/*计数器开始*/
+.spinner{overflow: hidden;height: 24px;}
+button.decrease,button.increase{background:#fff;border:1px solid #ccc;width:20px;text-align:center;height: 24px;float: left;}
+input.spinner.value{text-align:center;border:none;border-top:1px solid #ccc;border-bottom:1px solid #ccc;float: left;width: 50px;height: 22px;}
+@-moz-document url-prefix() {input.spinner.value{height: 22px;width: 50px;}}
+/*计数器结束*/
+.coupon_account3{overflow: hidden;margin-top: 16px;font-family: "Microsoft YaHei";}
+.coupon_account3>p{float: left}
+.coupon_account3>p>span{font-size: 14px;color: #474747;}
+.coupon_account3>p>textarea{width: 372px;height: 98px;border: 1px solid #bbbbbb;resize : none;}
+.coupon_account3_1{float:right;width: 466px;margin: 6px 0 0 200px}
+.coupon_account3_1>dl{overflow: hidden;color: #7a7a7a;font-family: "Microsoft YaHei";line-height: 30px;}
+.coupon_account3_1>dl>dt{float: left;font-size: 16px}
+.coupon_account3_1>dl>dd{float: left;font-size: 14px}
+.coupon_account3_dd1>p{margin-left: 6px;display: inline-block}
+.coupon_account3_dd1>span{width: 263px;}
+.coupon_account3_dd1>span{float: right;display: inline-block;text-align: right;color: #f64754;font-weight: bold}
+.coupon_account4_1{margin: 33px 0 43px 0;cursor: pointer;}
+.coupon_account4_1>h2{display: inline-block;}
+.coupon_account4_bg1{background: url("../images/user-icon.png") no-repeat -398px -507px;}
+.coupon_account4_bg2{background: url("../images/user-icon.png") no-repeat -398px -551px;}
+.coupon_account4_bg1,.coupon_account4_bg2{padding-left: 33px;height: 28px;display: inline-block;}
+/*优惠券开始*/
+.coupon4_04{height: 110px;padding: 43px 0 0 16px;font-family: "Microsoft YaHei"}
+.coupon4_firstli{margin-left: 0 !important;overflow: hidden}
+.coupon4_40>ul>li{background: url("../user/buyers/images/coupon_get8.png") no-repeat !important;overflow: hidden;}
+.coupon4_40 dt,.coupon4_40 dd,.coupon4_40 dd>a,.coupon4_40 .coupon4_firstdd,.coupon4_40 .coupon4_06{color: #a9a9a9 !important;}
+.coupon4_04>ul>li{border: 1px solid #ccc;background: url("../user/buyers/images/coupon_get5.png") no-repeat;width: 245px;height: 102px;float: left;margin-left: 27px;overflow: hidden;position: relative;box-shadow:0 3px 8px #888888;border-radius: 10px;}
+.coupon4_04>ul>li>h1{position: absolute;top: 0;left:50%}
+.coupon4_04 li>.coupon4_05{float: left;width: 149px;padding: 10px 0px 10px 20px;font-size: 12px;color: #292323;font-family: "Microsoft YaHei";border-radius: 10px;}
+.coupon4_04 li>.coupon4_05>dt{color:#e62129;font-weight: bold;font-size: 25px}
+.coupon4_firstdd{color: #e95256;font-size: 12px}
+.coupon4_04 li>.coupon4_05>dd>a{font-size: 12px}
+.coupon4_04 li>.coupon4_06{padding: 21px 0px 18px;float: left;font-size: 10px;color: #fff;text-align: center;font-family: "Microsoft YaHei";width: 75px;}
+.coupon4_04 li>.coupon_60{padding: 34px 0px 18px !important;}
+.coupon4_twodd{color:#fd2106;width: 55px;height: 15px;background: #fbe552;border-radius: 10px;padding: 2px 4px;font-size: 10px;margin: 3px auto;}
+/*优惠券结束*/
+.coupon_account5{margin-top: 20px;text-align: right;padding-right: 16px;}
+.coupon_account5>ul>li{font-size: 14px;line-height: 34px;color: #a4a4a4;font-family: "Microsoft YaHei";}
+.coupon_account5>ul>li>p{display: inline-block}
+.coupon_account5>ul>li>p>span{color: #f80404;font-weight: bold}
+.coupon_account5>ul>li>span,.coupon_account6>dl>dt>span{display: inline-block;width: 152px;}
+.coupon_account5_span{color: #f80404}
+.coupon_account6{text-align: right;padding:20px 16px 20px 0;background: #eeeeee;margin-top: 10px;}
+.coupon_account6>dl{font-family: "Microsoft YaHei";}
+.coupon_account6>dl>dt{font-size: 16px;color: #787878}
+.coupon_account6>dl>dt>span{color: #f6040f;font-weight: bold;font-size: 22px}
+.coupon_account6>dl>dd{font-size: 14px;color: #9c9b9b}
+.coupon_account6>dl>dd>p{display: inline-block;margin-left: 27px}
+.coupon_account7{text-align: right;padding-right: 16px;margin: 12px 0 50px 0}
+.coupon_account7>button{padding: 12px 46px;background: #dd0a1d;border: 0;color: #fff;font-family: "Microsoft YaHei";border-radius: 5px}

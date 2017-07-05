@@ -39,7 +39,7 @@ i{ font-style:normal;}
 .navleft .nav_lefts span{ display:block; position:absolute; width:7px;height:4px; top:18px; right:20px; font-size:16px;}
 .navul{ float:left;}
 .navul li{ float:left; margin-left:20px; font-size:16px; line-height:40px;}
-.navul li .this{ background:url("../images/nav.gif") no-repeat center bottom; display:block; line-height:40px; color:#FF6600}
+.navul li .this{ background:url("../../../image/hicailiao-assets/images/nav.gif") no-repeat center bottom; display:block; line-height:40px; color:#FF6600}
 
 /*颜色--------------------------------------------------------------------*/
 
@@ -62,7 +62,7 @@ a.org{ color:#ff9900 !important;}
 #nav a {text-decoration:none;}
 #nav .mod_cate_hd {height:50px;line-height:50px;font-size:15px;padding-left:15px;position:relative;overflow:hidden;font-weight:bold;}
 
-a.fenlei_hd div{background:url(../images/bg.png) no-repeat; background-position:150px -79px; overflow:hidden; height:50px;}
+a.fenlei_hd div{background:url(../../../image/hicailiao-assets/images/bg.png) no-repeat; background-position:150px -79px; overflow:hidden; height:50px;}
 a.fenlei_hd div:hover{background-position:150px -110px;}
 .tit{ position:absolute; width:100%; background-color:#1D1F88; padding-bottom:3px;z-index: 999;}
 #nav .mod_cate {height:50px;margin:0 15px;overflow:hidden;}
@@ -94,7 +94,7 @@ a.fenlei_hd div:hover{background-position:150px -110px;}
 #nav .on h2 b.mod-8,
 #nav .on h2 b.mod-9,
 #nav .mod_cate h2 a span,
-#nav .on h2 span{ background:url(../images/nav-icon.png) no-repeat;}
+#nav .on h2 span{ background:url(../../../image/hicailiao-assets/images/nav-icon.png) no-repeat;}
 
 #nav .mod_cate h2 a span { background-position:0px -251px;}
 #nav .on h2 a span{ background-position:-32px -251px;}
@@ -153,7 +153,7 @@ a.fenlei_hd div:hover{background-position:150px -110px;}
 .fullSlide .hd ul li {cursor:pointer;display:inline-block;*display:inline;zoom:1;width:42px;height:11px;margin:1px;overflow:hidden;background:#000;filter:alpha(opacity=50);opacity:0.5;line-height:999px;}
 .fullSlide .hd ul .on {background:#f00;}
 .fullSlide .prev, .fullSlide .next {display:block;position:absolute;z-index:1;top:50%;margin-top:140px;left:50%;margin-left:360px;z-index:1;width:35px;height:35px;
-background:url(../images/fullSlide-np.png) 8px 1px #000 no-repeat;cursor:pointer;filter:alpha(opacity=50);opacity:0.5;display:none;}
+background:url(../../../image/hicailiao-assets/images/fullSlide-np.png) 8px 1px #000 no-repeat;cursor:pointer;filter:alpha(opacity=50);opacity:0.5;display:none;}
 .fullSlide .next {left:auto;right:50%;margin-right:-350px;background-position:10px -45px;}
 
 
@@ -171,11 +171,11 @@ dl.footer dd p,
 .back-btn a.back-m,
 .s-b-a,
 .top-c a.top-h span,
-.top-gw a.top-h span    { background:url(../images/icon-1.png) no-repeat;}
+.top-gw a.top-h span    { background:url(../../../image/hicailiao-assets/images/icon-1.png) no-repeat;}
 
 
 /*顶部工具条*/
-.top-c a b ,.top-c:hover a b,.top-gw a b,.top-gw:hover a b  { background:url(../images/nav-icon.png) no-repeat;}
+.top-c a b ,.top-c:hover a b,.top-gw a b,.top-gw:hover a b  { background:url(../../../image/hicailiao-assets/images/nav-icon.png) no-repeat;}
 
 .hb-top,
 .hb-top .top-a,
@@ -264,7 +264,7 @@ ul.hb-logo-list li {width:20%; float:left; }
 ul.hb-logo-list a { display:block; text-align:center;}
 ul.hb-logo-list a img { width:225px; height:90px; display:block;}
 
-.fix-logo { height:95px; position:fixed; width:100%; background:url(../images/fix-bg-ie8.png) ; /*background:#1D1F88;filter:alpha(opacity=50);-moz-opacity:0.50;opacity:0.50;*/ z-index:50; overflow:hidden; top:0; }
+.fix-logo { height:95px; position:fixed; width:100%; background:url(../../../image/hicailiao-assets/images/fix-bg-ie8.png) ; /*background:#1D1F88;filter:alpha(opacity=50);-moz-opacity:0.50;opacity:0.50;*/ z-index:50; overflow:hidden; top:0; }
 .fix-main { width:960px; margin:0 auto; position:relative; z-index:999; overflow:hidden;}
 .fix-main img,.fix-input,.fix-input input[type='text'],.fix-input input[type='button']   { float:left;}
 .fix-input { overflow:hidden; margin-left:50px; margin-top:20px;}
@@ -402,11 +402,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .btn-blue:hover { color:#fff;}
 
 /*通用弹层*/
-.elayerbox { overflow:hidden; padding:10px;  background:url(../user/buyers/images/user-imgbg.png); }
+.elayerbox { overflow:hidden; padding:10px;  background:url(../buyers/images/user-imgbg.png); }
 .elayerbox .elayerbox-main { display:block; background:#fff; overflow:hidden; }
 .elayer-tit { height:50px; line-height:50px; color:#000; border-bottom:2px #DADADA solid;}
 .elayer-tit span { display:block; float:left; padding:0px 20px; height:50px; line-height:50px; border-bottom:2px #1D1E88 solid; color:#1D1F88; font-size:18px; font-weight:700;}
-.elayer-close { background:url(../images/user-icon.png) no-repeat -477px -523px; width:25px; height:25px; float:right; margin-right:24px; margin-top:15px;}
+.elayer-close { background:url(../../../image/hicailiao-assets/images/user-icon.png) no-repeat -477px -523px; width:25px; height:25px; float:right; margin-right:24px; margin-top:15px;}
 
 /*滚动鼠标搜索框的显示与隐藏*/
 .search_bar {position:fixed;height:68px;border-bottom: 2px solid #1D1F88;background-color: #fff;width:100%;display:none;z-index: 9999;top: 0px;text-align:center;}

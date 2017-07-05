@@ -1,282 +1,368 @@
 <!doctype html>
 <html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>采料网-上采料,材购好</title>
+<meta name="keywords" content="cailiao,采料网,hicailiao">
+<meta name="description" content="hicailiao,上采料，材购好">
+<meta name="generator" content="">
+<meta name="author" content="采料网">
+<meta name="copyright" content="采料网">
+<link rel="icon" href="$!web.contextPath/resources/images/hicailiao-assets/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="$!web.contextPath/resources/css/hicailiao-assets/buyers/buyers.css">
+<link rel="stylesheet" type="text/css" href="$!web.contextPath/resources/cropper/css/1.0.0-non-jQuery/cropper.css" />
+<link rel="stylesheet" type="text/css" href="$!web.contextPath/resources/css/style.css" />
+<link rel="stylesheet" type="text/css" href="$!web.contextPath/resources/webuploader/css/webuploader.css" />
+<link rel="stylesheet" type="text/css" href="$!web.contextPath/resources/css/cropper_non_jQuery_style.css" />
+<script type="text/javascript" src="$!web.contextPath/resources/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="$!web.contextPath/resources/js/jquery/1.12.4/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="$!web.contextPath/resources/webuploader/js/webuploader.js"></script>
+<script type="text/javascript" src="$!web.contextPath/resources/cropper/1.0.0-non-jQuery/cropper-non-jQuery.js"></script>
+<script>var jq1124 = jQuery.noConflict(true);</script>
+<script>
+jq1124(document).ready(function() {
+	var BASE_URL = "$!web.contextPath";
+	jq1124(function ($) {
+		var uploader;
+		var btn = $('#ctlBtn');
+		var image = $("#image")[0];
+		var previews = document.querySelectorAll('.preview');
+		/*----------------------------------------cropper-start-------------------------------------------------------*/
+		var options = {
+			aspectRatio: 16 / 9,
+			rotatable : true,
+			scalable : true,
+			ready: function () {
+				var clone = this.cloneNode();
+				clone.className = '';
+				clone.style.cssText = (
+					'display: block;' +
+					'width: 100%;' +
+					'min-width: 0;' +
+					'min-height: 0;' +
+					'max-width: none;' +
+					'max-height: none;'
+				);
+				each(previews, function (elem) {
+					elem.appendChild(clone.cloneNode());
+				});
+			},
+			crop: function (e) {
+				var data = e.detail;
+				var cropper = this.cropper;
+				var imageData = cropper.getImageData();
+				var previewAspectRatio = data.width / data.height;
+				console.log(e.detail);
+				each(previews, function (elem) {
+					var previewImage = elem.getElementsByTagName('img').item(0);
+					var previewWidth = elem.offsetWidth;
+					var previewHeight = previewWidth / previewAspectRatio;
+					var imageScaledRatio = data.width / previewWidth;
+					elem.style.height = previewHeight + 'px';
+					previewImage.style.width = imageData.naturalWidth / imageScaledRatio + 'px';
+					previewImage.style.height = imageData.naturalHeight / imageScaledRatio + 'px';
+					previewImage.style.marginLeft = -data.x / imageScaledRatio + 'px';
+					previewImage.style.marginTop = -data.y / imageScaledRatio + 'px';
+					previewImage.style.transform ="scaleY(" + data.scaleY + ")" +
+					"scaleX(" + data.scaleX + ")" + "rotate(" + data.rotate + "deg)";
+				});
+			}
+		};
 
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <title>采料网-上采料,材购好</title>
-    <meta name="keywords" content="cailiao,采料网,hicailiao">
-    <meta name="description" content="hicailiao,上采料，材购好">
-    <meta name="generator" content="">
-    <meta name="author" content="采料网">
-    <meta name="copyright" content="采料网">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/buyers.css"></head>
+		function each(arr, callback) {
+			var length = arr.length;
+			var i;
+			for (i = 0; i < length; i++) {
+				callback.call(arr, arr[i], i, arr);
+			}
+			return arr;
+		}
 
-  <body>
-    <!--为了方便直接双击查阅，本次加入了HEAD和样式，真正模块化时请使用如下代码即可-->
-    <!--复制代码-->
-    <div class="m-box-all">
-      <div class="m-add-all">
-        <a href="">我的账户</a>
-        <span>基本信息</span></div>
-      <div class="m-con-all">
-        <div class="m-main">
-          <div class="m-tab">
-            <span id="a1" class="tabon" onClick="tab('a','tabcon','1','1','5','tabon','taboff');">基本信息</span>
-            <span id="a2" class="taboff" onClick="tab('a','tabcon','2','1','5','tabon','taboff');">修改密码</span>
-            <span id="a3" class="taboff" onClick="tab('a','tabcon','3','1','5','tabon','taboff');">修改电子邮件</span>
-            <span id="a4" class="taboff" onClick="tab('a','tabcon','4','1','5','tabon','taboff');">修改手机号码</span>
-            <span id="a5" class="taboff" onClick="tab('a','tabcon','5','1','5','tabon','taboff');">更换头像</span></div>
-          <p class="db ov cl"></p>
-          <div id="tabcon1" class="ov db p-30-t">
-            <table width="100%" class="m-table-details">
-              <tr>
-                <td width="20%" valign="middle" align="right">用户名称：</td>
-                <td width="80%" valign="middle">hicailiao</td></tr>
-              <tr>
-                <td width="20%" valign="middle" align="right">可用余额：</td>
-                <td width="80%" valign="middle">¥355074.40</td></tr>
-              <tr>
-                <td width="20%" valign="middle" align="right">冻结余额：</td>
-                <td width="80%" valign="middle">¥ 0</td></tr>
-              <tr>
-                <td width="20%" valign="middle" align="right">金币余额：</td>
-                <td width="80%" valign="middle">19110</td></tr>
-              <tr>
-                <td width="20%" valign="middle" align="right">电子邮箱：</td>
-                <td width="80%" valign="middle">
-                  <span class="di m-10-r">93972092@qq.com</span>
-                  <a href="" class="f-c-ff0000">未校验,重新发送校验邮件</a></td>
-              </tr>
-              <tr>
-                <td width="20%" valign="middle" align="right">手机号码：</td>
-                <td width="80%" valign="middle">
-                  <a class="f-14 f-st" href="">[去绑定]</a></td>
-              </tr>
-              <tr>
-                <td valign="middle" align="right">联系电话：</td>
-                <td valign="middle">
-                  <input type="text" class="db"></td>
-              </tr>
-              <tr>
-                <td valign="middle" align="right">真实姓名：</td>
-                <td valign="middle">
-                  <input type="text" class="db"></td>
-              </tr>
-              <tr>
-                <td valign="middle" align="right">性别：</td>
-                <td valign="middle">
-                  <div class="radio-box"><label><input type="radio"><span>男</span></label></div>
-                  <div class="radio-box"><label><input type="radio" ><span>女</span></label></div>
-                  <div class="radio-box"><label><input type="radio" ><span>保密</span></label></div></td>
-              </tr>
-              <tr>
-                <td valign="middle" align="right">生日：</td>
-                <td valign="middle">
-                  <input type="text" class="db"></td>
-              </tr>
-              <tr>
-                <td valign="middle" align="right">所在地区：</td>
-                <td valign="middle">
-                 <select class="sel-box radius-5 m-10-r"><option>11</option></select>
-                 <select class="sel-box radius-5 m-10-r"><option>11</option></select>
-                 <select class="sel-box radius-5 m-10-r"><option>11</option></select>
-                </td>
-              </tr>
-              <tr>
-                <td valign="middle" align="right"></td>
-                <td valign="middle">
-                  <input type="button" value="提交" class="btn-b"></td>
-              </tr>
-            </table>
-            <script>$('[name="nice-select"]').click(function(e) {
-                $('[name="nice-select"]').find('ul').hide();
-                $(this).find('ul').show();
-                e.stopPropagation();
-              });
-              $('[name="nice-select"] li').hover(function(e) {
-                $(this).toggleClass('on');
-                e.stopPropagation();
-              });
-              $('[name="nice-select"] li').click(function(e) {
-                var val = $(this).text();
-                $(this).parents('[name="nice-select"]').find('input').val(val);
-                $('[name="nice-select"] ul').hide();
-                e.stopPropagation();
-              });
-              $(document).click(function() {
-                $('[name="nice-select"] ul').hide();
-              });</script>
-          </div>
-          <div id="tabcon2" class="ov db p-35-t" style="display:none;">
-            <table width="100%" class="m-table-details">
-              <tr>
-                <td width="20%" valign="middle" align="right">
-                  <span class="f-c-ff0000">*</span>你的密码：</td>
-                <td width="80%" valign="middle">
-                  <div class="m-pos">
-                    <input type="text">
-                    <b>
-                    </b>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td width="20%" valign="middle" align="right">
-                  <span class="f-c-ff0000">*</span>新密码：</td>
-                <td width="80%" valign="middle">
-                  <div class="m-pos">
-                    <input type="text">
-                    <b>
-                    </b>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td width="20%" valign="middle" align="right">
-                  <span class="f-c-ff0000">*</span>重复密码：</td>
-                <td width="80%" valign="middle">
-                  <div class="m-pos">
-                    <input type="text">
-                    <b>
-                    </b>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td valign="middle" align="right"></td>
-                <td valign="middle">
-                  <input type="button" value="提交" class="btn-b"></td>
-              </tr>
-            </table>
-          </div>
-          <div id="tabcon3" class="ov db p-35-t" style="display:none;">
-            <table width="100%" class="m-table-details">
-              <tr>
-                <td width="20%" valign="middle" align="right">
-                  <span class="f-c-ff0000">*</span>你的密码：</td>
-                <td width="80%" valign="middle">
-                  <div class="m-pos">
-                    <input type="text">
-                    <b>
-                    </b>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td width="20%" valign="middle" align="right">
-                  <span class="f-c-ff0000">*</span>电子邮件：</td>
-                <td width="80%" valign="middle">
-                  <div class="m-pos">
-                    <input type="text"></div>
-                </td>
-              </tr>
-              <tr>
-                <td valign="middle" align="right"></td>
-                <td valign="middle">
-                  <input type="button" value="提交" class="btn-b"></td>
-              </tr>
-            </table>
-          </div>
-          <div id="tabcon4" class="ov db p-35-t" style="display:none;">
-            <table width="100%" class="m-table-details">
-              <tr>
-                <td width="20%" valign="middle" align="right">
-                  <span class="f-c-ff0000">*</span>新手机号码：</td>
-                <td width="80%" valign="middle">
-                  <div class="m-pos">
-                    <input type="text"></div>
-                  <div class="m-verification">
-                    <input type="button" value="获取验证码" class="bg-a radius-15"></div>
-                </td>
-              </tr>
-              <tr>
-                <td width="20%" valign="middle" align="right">
-                  <span class="f-c-ff0000">*</span>手机验证码：</td>
-                <td width="80%" valign="middle">
-                  <div class="m-pos">
-                    <input type="text"></div>
-                </td>
-              </tr>
-              <tr>
-                <td valign="middle" align="right"></td>
-                <td valign="middle">
-                  <input type="button" value="提交" class="btn-b"></td>
-              </tr>
-            </table>
-          </div>
-          <div id="tabcon5" class="ov db" style="display:none;">
-            <div class="upload_pic">
-              <div class="upload_pic_left">
-                <button class="upload_pic_left_bu">点击上传本地图片</button>
-                <p>仅支持GIF、JPG、JPGE、BMP、PNG、TBI图片文件，且文件小于1M</p>
-                <dl>
-                  <dt>没有预览图片</dt>
-                  <dd>
-                    <ul>
-                      <li class="upload_pic_left_li1"><span></span><b></b></li>
-                      <li class="upload_pic_left_li2"><span></span><b></b></li>
-                      <li class="upload_pic_left_li3">
-                        <span class="upload_pic_left_sp1"></span>
-                        <span class="upload_pic_left_sp2"></span>
-                        <span class="upload_pic_left_sp3"></span>
-                        <span class="upload_pic_left_sp4"></span>
-                      </li>
-                      <li class="upload_pic_left_li5"><span></span></li>
-                    </ul>
-                    <input type="submit" value="保存"/>
-                  </dd>
-                  <script>
-                    $(function(){
-                      $(".upload_pic_left input").addClass("upload_uncheck")
-                      $(".upload_pic_left input").click(function(){
-                        $(this).toggleClass("upload_uncheck").toggleClass("upload_check");
-                      })
-                    })
-                  </script>
-                </dl>
-              </div>
-              <div class="upload_pic_right">
-                <p>系统根据您上传的图片自动生成三个尺寸，请留意图片是否清晰</p>
-                <div class="upload_pic_rigle">
-                  <dl>
-                    <dt>没有预览图片</dt>
-                    <dd><span>大头像</span><b>157X157像素</b></dd>
-                  </dl>
-                </div>
-                <div class="upload_pic_rigri">
-                  <dl class="upload_pic_rigdl1">
-                    <dt>没有预览图片</dt>
-                    <dd>中头像</dd>
-                    <dd>56X56像素</dd>
-                  </dl>
-                  <dl class="upload_pic_rigdl2">
-                    <dt></dt>
-                    <dd>小头像</dd>
-                    <dd>26X26像素</dd>
-                  </dl>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <script>
-          function tab(name, name2, cursel, n, n2, s, s2) {
-            for (i = n; i <= n2; i++) {
-              if (i == cursel) {
-                document.getElementById(name2 + i).style.display = "block";
-                document.getElementById(name + i).className = s;
-              } else {
-                document.getElementById(name2 + i).style.display = "none";
-                document.getElementById(name + i).className = s2;
-              }
-            }
-          }
-        </script>
-      </div>
-    </div>
-    <!--复制代码-->
-  </body>
+		var cropper = new Cropper(image, options);
+		/*-----------------------------------------cropper-end--------------------------------------------------------*/
 
+		/*---------------------------------------WebUploader-start----------------------------------------------------*/
+		WebUploader.Uploader.register({
+			'before-send-file': 'cropImage'
+		}, {
+			cropImage: function (file) {
+				var asda123 = this.getOrientation;
+				var data = cropper.getData(),
+				image, deferred;
+				data.scale = cropper.image.naturalWidth / file._info.width;
+				file = this.request('get-file', file);
+				deferred = WebUploader.Deferred();
+				image = new WebUploader.Lib.Image();
+				deferred.always(function () {
+					image.destroy();
+					image = null;
+				});
+				image.once('error', deferred.reject);
+				image.once('load', function () {
+					var orientation;
+					if (data.scaleX === -1) {
+						orientation = 2;
+					} else if (data.scaleY === -1) {
+						orientation = 4;
+					} else if (data.rotate === -90) {
+						orientation = 8;
+					} else if (data.rotate === 90) {
+						orientation = 6;
+					}
+					image.crop(data.x, data.y, data.width, data.height, data.scale, orientation);
+				});
+				image.once('complete', function () {
+					var blob, size;
+					try {
+						blob = image.getAsBlob();
+						size = file.size;
+						file.source = blob;
+						file.size = blob.size;
+						file.trigger('resize', blob.size, size);
+						deferred.resolve();
+					} catch (e) {
+						console.log(e);
+						// 出错了直接继续，让其上传原始图片
+						deferred.resolve();
+					}
+				});
+				file._info && image.info(file._info);
+				file._meta && image.meta(file._meta);
+				image.loadFromBlob(file.source);
+				return deferred.promise();
+			}
+		});
+		uploader = WebUploader.create({
+			fileVal: 'MyFiledName',
+			server: BASE_URL + '/upload.htm',
+			pick: '#filePicker',
+			accept: {
+				title: 'Images',
+				extensions: 'gif,jpg,jpeg,bmp,png',
+				mimeTypes: 'image/gif,,image/jpg,image/jpeg,image/bmp,image/png'
+			},
+			duplicate: true,
+			thumb: {
+				crop: true
+			}
+		});
+
+		uploader.on('ready', function () {
+			window.uploader = uploader;
+		});
+
+		uploader.on('fileQueued', function (file) {
+			var img = $("#image");
+			uploader.makeThumb(file, function (error, src) {
+				if (error) {
+					img.replaceWith('<span>不能预览</span>');
+					return;
+				}
+				img.attr('src', src);
+				image.src = src;
+				cropper.destroy();
+				var previews2 = $(".preview");
+				var i = 0;
+				for (i; i < previews2.length; i++) {
+					previews2[i].innerHTML = "";
+				}
+				cropper = new Cropper(image, options);
+			}, 1, 1);
+			btn.show();
+		});
+
+		uploader.onError = function (code) {
+			if (code == "Q_TYPE_DENIED") {
+				alert("请上传" + uploader.option("accept")[0].extensions + "格式的文件");
+			} else if (code == "F_EXCEED_SIZE") {
+				alert("文件大小不能超过" + uploader.option("fileSingleSizeLimit") / (1024 * 1024) + "M");
+			} else if (code == "F_DUPLICATE") {
+				alert("文件重复");
+			} else if (code == "Q_EXCEED_NUM_LIMIT") {
+				alert("添加图片数量超出" + uploader.option("fileNumLimit"));
+			} else if (code == "Q_EXCEED_SIZE_LIMIT") {
+				alert("添加图片总大小超出" + uploader.option("fileSizeLimit") / (1024 * 1024) + "M");
+			}
+		};
+
+		uploader.on('uploadSuccess', function (file, response) {
+			if (response['code'] == 0) {
+				alert("上传成功！");
+			} else {
+				alert("上传失败！失败原因" + response['desc']);
+			}
+		});
+
+		uploader.on('uploadError', function (file) {
+			alert("图片“" + file.name + "”上传失败，请重新上传");
+		});
+
+		btn.on('click', function () {
+			uploader.upload();
+		});
+	/*---------------------------------------WebUploader-end-----------------------------------------------------*/
+	/*------------------------------------------buttons-start----------------------------------------------------------------*/
+		var functionButtons =  function (event) {
+			var e = event || window.event;
+			var target = e.target || e.srcElement;
+			var result;
+			var input;
+			var data;
+
+			if (!cropper) {
+				return;
+			}
+
+			while (target !== this) {
+				if (target.getAttribute('data-method')) {
+					break;
+				}
+				target = target.parentNode;
+			}
+
+			if (target === this || target.disabled || target.className.indexOf('disabled') > -1) {
+				return;
+			}
+
+			data = {
+				method: target.getAttribute('data-method'),
+				target: target.getAttribute('data-target'),
+				option: target.getAttribute('data-option'),
+				secondOption: target.getAttribute('data-second-option')
+			};
+
+			if (data.method) {
+					if (typeof data.target !== 'undefined') {
+					input = document.querySelector(data.target);
+
+					if (!target.hasAttribute('data-option') && data.target && input) {
+						try {
+							data.option = JSON.parse(input.value);
+						} catch (e) {
+							console.log(e.message);
+						}
+					}
+				}
+
+				if (data.method === 'getCroppedCanvas') {
+					data.option = JSON.parse(data.option);
+				}
+				result = cropper[data.method](data.option, data.secondOption);
+				switch (data.method) {
+					case 'scaleX':
+					case 'scaleY':
+					target.setAttribute('data-option', -data.option);
+					break;
+					case 'getCroppedCanvas':
+					if (result) {
+						// Bootstrap's Modal
+						$('#getCroppedCanvasModal').modal().find('.modal-body').html(result);
+					}
+					break;
+				}
+
+				if (typeof result === 'object' && result !== cropper && input) {
+					try {
+						input.value = JSON.stringify(result);
+					} catch (e) {
+						console.log(e.message);
+					}
+				}
+			}
+		};
+		$('.docs-buttons')[0].onclick = functionButtons;
+		$('.docs-buttons')[1].onclick = functionButtons;
+		/*-------------------------------------------buttons-end----------------------------------------------------------------*/
+	});
+});
+</script>
+</head>
+<body>
+<div class="m-box-all">
+	<div class="m-add-all">
+		<a href="">我的账户</a>
+		<span>基本信息</span>
+	</div>
+	<div class="m-con-all">
+		<div class="m-main">
+			<div class="m-tab">
+				<span id="a1" class="taboff">基本信息</span>
+				<span id="a2" class="taboff">修改密码</span>
+				<span id="a3" class="taboff">修改电子邮件</span>
+				<span id="a4" class="taboff">修改手机号码</span>
+				<span id="a5" class="tabon">更换头像</span>
+			</div>
+			<p class="db ov cl"></p>
+			<div id="tabcon5" class="ov db">
+				<div class="upload_pic">
+					<div class="upload_pic_left">
+						<button class="upload_pic_left_bu" id="filePicker">点击上传本地图片</button>
+						<p>仅支持GIF、JPG、JPGE、BMP、PNG、TBI图片文件，且文件小于1M</p>
+						<dl>
+							<dt>
+								<img id="image" src="$!web.contextPath/resources/image/picture.jpg">
+							</dt>
+							<dd>
+								<ul>
+									<li class="upload_pic_left_li1">
+										<span></span>
+										<b></b>
+									</li>
+									<li class="upload_pic_left_li2">
+										<span></span>
+										<b></b>
+									</li>
+									<li class="upload_pic_left_li3">
+										<span class="upload_pic_left_sp1"></span>
+										<span class="upload_pic_left_sp2"></span>
+										<span class="upload_pic_left_sp3"></span>
+										<span class="upload_pic_left_sp4"></span>
+									</li>
+									<li class="upload_pic_left_li5">
+										<span></span>
+									</li>
+								</ul>
+								<input type="submit" id="ctlBtn" value="保存"/>
+							</dd>
+							<script>
+								jQuery(function(){
+										jQuery(".upload_pic_left input").addClass("upload_uncheck")
+										jQuery(".upload_pic_left input").click(function(){
+										jQuery(this).toggleClass("upload_uncheck").toggleClass("upload_check");
+									})
+								})
+							</script>
+						</dl>
+					</div>
+					<div class="upload_pic_right">
+						<p>系统根据您上传的图片自动生成三个尺寸，请留意图片是否清晰</p>
+						<div class="upload_pic_rigle">
+							<dl>
+								<dt>没有预览图片</dt>
+								<dd>
+									<span>大头像</span>
+									<b>157X157像素</b>
+								</dd>
+							</dl>
+						</div>
+						<div class="upload_pic_rigri">
+							<dl class="upload_pic_rigdl1">
+								<dt>没有预览图片</dt>
+								<dd>中头像</dd>
+								<dd>56X56像素</dd>
+							</dl>
+							<dl class="upload_pic_rigdl2">
+								<dt></dt>
+								<dd>小头像</dd>
+								<dd>26X26像素</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
 </html>
